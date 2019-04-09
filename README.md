@@ -8,11 +8,15 @@
 
 # Team Project Repo 
 
-## Team Name
+## Team Name- Westeros
 
 ## Team Members
 
-* [Name](url_to_your_github_repo)
+* [Jaee Chhatre](url_to_your_github_repo)
+* [Mrunali Sanjay Khandat](https://github.com/monakhandat)
+* [Mugdha Wadikar](url_to_your_github_repo)
+* [Nikhil Limaye](url_to_your_github_repo)
+
 
 ## Project Name
 
