@@ -12,10 +12,16 @@
 
 ## Team Members
 
-* [Jaee Chhatre](https://github.com/c-jai)
+* [Jai Chhatre](https://github.com/c-jai)
 * [Mrunali Sanjay Khandat](https://github.com/monakhandat)
 * [Mugdha Wadikar](https://github.com/Mugdha001)
 * [Nikhil Limaye](https://github.com/NikhilLimaye/)
+
+### Contributions by team mates:
+* Jai Chhatre -
+* Mrunali Sanjay Khandat -
+* Mugdha Wadikar -
+* Nikhil Limaye -
 
 
 ## Game: Winterfell
