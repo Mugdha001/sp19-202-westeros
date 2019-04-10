@@ -31,6 +31,7 @@ Jon Snow (Player) is the protector of the castle. He fights the white walkers an
 ## Project Description
 
 ## Project Progress
+(https://docs.google.com/spreadsheets/d/1DSEwbavSd_8pse69NMivcuutHHYLBUjinzsDAwG56OA/edit?usp=sharing)
 
 ### Burndown Map
 
