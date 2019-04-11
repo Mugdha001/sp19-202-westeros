@@ -17,9 +17,10 @@ public class MyWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(750, 500,1); 
-        addObject(new Enemy() ,500 ,460);
-        addObject(new Enemy() ,300 ,460);
-        addObject(new Player(),380 ,200);
-        addObject(new Castle(),400,70);
+        addObject(new Enemy() ,450 ,460);
+        addObject(new Enemy() ,250 ,460);
+        addObject(new Player(),330 ,200);
+        addObject(new Castle(),350,70);
+        addObject(new ScoreBoard(), 730,300);
     }
 }
