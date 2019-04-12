@@ -16,7 +16,7 @@ public class IceBullet extends Actor
     {
         // Add your action code here.
         move(5.0);
-        remove();
+        remove1();
     }   
     
     public IceBullet()
@@ -26,7 +26,7 @@ public class IceBullet extends Actor
         setImage(img);
     }
     
-    public void remove()
+    public void remove1()
     {
         Actor player = getOneIntersectingObject(Player.class);
         Actor castle = getOneIntersectingObject(Castle.class);
