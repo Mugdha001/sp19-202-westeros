@@ -20,7 +20,7 @@ public class Player extends Actor
     
     public void checkKeys()
     {
-        if(Greenfoot.isKeyDown("space"))
+        if("space".equals(Greenfoot.getKey()))
         {
             shoot();
         }
@@ -36,7 +36,8 @@ public class Player extends Actor
     
     public void shoot()
     {
-        
+        PlayerBullet playerbullet = new PlayerBullet();
+        getWorld().addObject(playerbullet, getX(), getY());
     }
     
     
