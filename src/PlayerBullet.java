@@ -23,7 +23,8 @@ public class PlayerBullet extends Mover
     public void remove()
     {
         Actor enemy = getOneIntersectingObject(Enemy.class);
-        if(enemy != null)
+        Actor icebullet = getOneIntersectingObject(IceBullet.class);
+        if((enemy != null) || (icebullet != null))
         {
             getWorld().addObject(new Firesplat(), getX(), getY() );
             getWorld().removeObject(this);
