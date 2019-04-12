@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class IceBullet extends Mover
+public class IceBullet extends Actor
 {
     /**
      * Act - do whatever the IceBullet wants to do. This method is called whenever
@@ -30,7 +30,8 @@ public class IceBullet extends Mover
     {
         Actor player = getOneIntersectingObject(Player.class);
         Actor castle = getOneIntersectingObject(Castle.class);
-        if((player != null) || (castle != null))
+        Actor playerbullet = getOneIntersectingObject(PlayerBullet.class);
+        if((player != null) || (castle != null) || (playerbullet != null))
         {
             getWorld().addObject(new Snowsplat(), getX(), getY() );
             getWorld().removeObject(this);
