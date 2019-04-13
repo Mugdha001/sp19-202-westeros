@@ -1,0 +1,33 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="firesplat_sound_data" version="1.3.0" audacityversion="2.3.1" sel0="0.7427055703" sel1="0.7427055703" vpos="0" h="0.0000000000" zoom="377.0000000000" rate="48000.0" snapto="off" selectionformat="hh:mm:ss + milliseconds" frequencyformat="Hz" bandwidthformat="octaves">
+	<tags>
+		<tag name="ARTIST" value="Mona"/>
+		<tag name="TITLE" value="Explosion"/>
+		<tag name="COMMENTS" value="None"/>
+		<tag name="ALBUM" value="Bomb"/>
+		<tag name="YEAR" value="1994"/>
+		<tag name="TRACKNUMBER" value="ds"/>
+		<tag name="GENRE" value="Sad"/>
+	</tags>
+	<wavetrack name="firesplat_sound" channel="0" linked="1" mute="0" solo="0" height="150" minimized="0" isSelected="1" rate="48000" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="9676">
+				<waveblock start="0">
+					<simpleblockfile filename="e08080b3.au" len="9676" min="-0.686981" max="0.704956" rms="0.385626"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="firesplat_sound" channel="1" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="1" rate="48000" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="9676">
+				<waveblock start="0">
+					<simpleblockfile filename="e0808aa9.au" len="9676" min="-0.71283" max="0.696106" rms="0.375855"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+</project>

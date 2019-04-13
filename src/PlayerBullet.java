@@ -31,7 +31,7 @@ public class PlayerBullet extends Actor
         }
         else
         {
-            if(getX()==749||getX()==0||getY()==0||getY()==499)
+            if(getX()==749||getX()==0||getY()==0||getY()==569)
             {
                 getWorld().removeObject(this);
             }
