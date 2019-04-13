@@ -7,7 +7,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 public class FireBullet extends Actor implements Weapon
-{
+{   private int strength = 15 ;
     /**
      * Act - do whatever the FireBullet wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -18,5 +18,8 @@ public class FireBullet extends Actor implements Weapon
     }
     
     public void remove(){
+    }
+    public int getStrength(){
+        return strength ;
     }
 }

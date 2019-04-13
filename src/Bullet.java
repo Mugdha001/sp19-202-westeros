@@ -8,16 +8,16 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Bullet extends Actor implements Weapon
 {
-    private boolean spaceDown;
+    private boolean spaceDown ;
+    private int strength = 5;
     /**
      * Act - do whatever the PlayerBullet wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
- 
-        move(5.0);
-        remove();
+        move(5.0) ;
+        remove() ;
     }  
     
     public void remove()
@@ -53,6 +53,10 @@ public class Bullet extends Actor implements Weapon
         int y = (int) Math.round(getY() + Math.sin(angle) * distance);
         
         setLocation(x, y);
+    }
+    
+    public int getStrength(){
+        return strength ;
     }
     
 }

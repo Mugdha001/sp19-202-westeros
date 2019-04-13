@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class IceBullet extends Actor
+public class IceBullet extends Actor implements Weapon
 {
     /**
      * Act - do whatever the IceBullet wants to do. This method is called whenever
@@ -16,7 +16,7 @@ public class IceBullet extends Actor
     {
         // Add your action code here.
         move(5.0);
-        remove1();
+        remove();
     }   
     
     public IceBullet()
@@ -26,7 +26,7 @@ public class IceBullet extends Actor
         setImage(img);
     }
     
-    public void remove1()
+    public void remove()
     {
         Actor player = getOneIntersectingObject(Player.class);
         Actor castle = getOneIntersectingObject(Castle.class);
