@@ -39,7 +39,7 @@ public class PlayerBullet extends Actor
             getWorld().removeObject(this);
 
         }
-        else if(getX()==749||getX()==0||getY()==0||getY()==499)
+        else if(getX()==749||getX()==0||getY()==0||getY()==569)
         {
             getWorld().removeObject(this);
         }
