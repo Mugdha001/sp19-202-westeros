@@ -15,10 +15,6 @@ public class Castle extends Actor
     public void act() 
     {
         // Add your action code here.
-    }   
+    }    
     
-    public void Castle()
-    {
-       
-    }
 }

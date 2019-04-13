@@ -16,11 +16,20 @@ public class MyWorld extends World
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(750, 500,1); 
-        addObject(new Enemy() ,450 ,460);
-        addObject(new Enemy() ,250 ,460);
-        addObject(new Player(),330 ,200);
-        addObject(new Castle(),350,70);
-        addObject(new ScoreBoard(), 730,300);
+        super(750,570,1); 
+        
+        GreenfootImage bg = new GreenfootImage("snow_background.png");
+        bg.scale(getWidth(), getHeight());
+        setBackground(bg);
+        
+        addObject(new Castle(),370,145);
+        
+        addObject(new Player(), 370, 305);
+        
+        addObject(new Enemy() , 280 ,540);
+        addObject(new Enemy() , 480 ,540);
+        
+        
+        addObject(new ScoreBoard() , 740, 200);
     }
 }

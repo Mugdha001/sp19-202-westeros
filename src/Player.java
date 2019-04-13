@@ -43,9 +43,7 @@ public class Player extends Actor
     
     public Player()
     {
-        GreenfootImage img = getImage();
-        img.scale(img.getWidth() - 180 , img.getHeight() - 270);
-        setImage(img);
+
     }
     
 }
