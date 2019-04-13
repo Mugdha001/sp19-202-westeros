@@ -23,7 +23,8 @@ public class ScoreBoard extends Actor
     public ScoreBoard()
     {
         castleHealth = 100;
-        enemyHealth = 100;       
+        enemyHealth = 100;   
+        showScore();
     }
     private void showScore()
     {
