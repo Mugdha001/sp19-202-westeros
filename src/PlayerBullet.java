@@ -24,17 +24,24 @@ public class PlayerBullet extends Actor
     {
         Actor enemy = getOneIntersectingObject(Enemy.class);
         Actor icebullet = getOneIntersectingObject(IceBullet.class);
-        if((enemy != null) || (icebullet != null))
+        if(icebullet != null)
         {
             getWorld().addObject(new Firesplat(), getX(), getY() );
             getWorld().removeObject(this);
         }
-        else
+        
+        else if(enemy != null)
         {
-            if(getX()==749||getX()==0||getY()==0||getY()==499)
-            {
-                getWorld().removeObject(this);
-            }
+            MyWorld w = (MyWorld)getWorld();
+            Enemy e = w.getEnemy();
+            e.setHealth(e.getHealth()-2); 
+            getWorld().addObject(new Firesplat(), getX(), getY() );
+            getWorld().removeObject(this);
+
+        }
+        else if(getX()==749||getX()==0||getY()==0||getY()==499)
+        {
+            getWorld().removeObject(this);
         }
     }
     

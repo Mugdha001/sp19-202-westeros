@@ -16,7 +16,7 @@ public class IceBullet extends Actor
     {
         // Add your action code here.
         move(5.0);
-        remove1();
+        remove();
     }   
     
     public IceBullet()
@@ -26,24 +26,30 @@ public class IceBullet extends Actor
         setImage(img);
     }
     
-    public void remove1()
+    public void remove()
     {
         Actor player = getOneIntersectingObject(Player.class);
         Actor castle = getOneIntersectingObject(Castle.class);
         Actor playerbullet = getOneIntersectingObject(PlayerBullet.class);
-        if((player != null) || (castle != null) || (playerbullet != null))
+        if((player != null)  || (playerbullet != null))
         {
             getWorld().addObject(new Snowsplat(), getX(), getY() );
             getWorld().removeObject(this);
         }
-        else
+        else if(castle != null)
         {
-            if(getX()==749||getX()==0||getY()==0||getY()==499)
-            {
-                getWorld().removeObject(this);
-            }
+            MyWorld w = (MyWorld)getWorld();
+            Castle c = w.getCastle();
+            c.setHealth(c.getHealth()-10); 
+            getWorld().addObject(new Snowsplat(), getX(), getY() );
+            getWorld().removeObject(this);
         }
-    }
+        else if(getX()==749||getX()==0||getY()==0||getY()==499)
+        {
+                getWorld().removeObject(this);
+        }
+       }
+    
     
     public void move(double distance)
     {

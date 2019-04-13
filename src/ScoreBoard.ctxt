@@ -8,4 +8,6 @@ comment2.params=
 comment2.target=ScoreBoard()
 comment3.params=
 comment3.target=void\ showScore()
-numComments=4
+comment4.params=castle\ enemy
+comment4.target=void\ update(int,\ int)
+numComments=5

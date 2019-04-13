@@ -7,7 +7,7 @@ import greenfoot.Font;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class ScoreBoard extends Actor
+public class ScoreBoard extends Actor implements Observer
 {
     int castleHealth;
     int enemyHealth;
@@ -21,9 +21,9 @@ public class ScoreBoard extends Actor
     }   
     
     public ScoreBoard()
-    {
+    {   
         castleHealth = 100;
-        enemyHealth = 100;   
+        enemyHealth = 100;
         showScore();
     }
     private void showScore()
@@ -35,5 +35,16 @@ public class ScoreBoard extends Actor
         img.drawString(displayHealth ,5,125);
         setImage(img);
     }
+    
+    public void update(int castle , int enemy)
+    {
+        if(castle!= -1)
+            this.castleHealth = castle;
+        
+        if(enemy!= -1)
+            this.enemyHealth = enemy;
+            
+    }
+    
     
 }
