@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class PlayerBullet extends Actor
+public class Bullet extends Actor implements Weapon
 {
     private boolean spaceDown;
     /**
@@ -38,7 +38,7 @@ public class PlayerBullet extends Actor
         }
     }
     
-    public PlayerBullet()
+    public Bullet()
     {
         spaceDown = false;
         GreenfootImage img = getImage();

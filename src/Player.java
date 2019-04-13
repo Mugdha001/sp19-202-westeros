@@ -36,7 +36,7 @@ public class Player extends Actor
     
     private void shoot()
     {
-        PlayerBullet playerbullet = new PlayerBullet();
+        Bullet playerbullet = new Bullet();
         getWorld().addObject(playerbullet, getX(), getY());
     }
     

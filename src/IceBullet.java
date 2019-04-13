@@ -30,7 +30,7 @@ public class IceBullet extends Actor
     {
         Actor player = getOneIntersectingObject(Player.class);
         Actor castle = getOneIntersectingObject(Castle.class);
-        Actor playerbullet = getOneIntersectingObject(PlayerBullet.class);
+        Actor playerbullet = getOneIntersectingObject(Bullet.class);
         if((player != null) || (castle != null) || (playerbullet != null))
         {
             getWorld().addObject(new Snowsplat(), getX(), getY() );
