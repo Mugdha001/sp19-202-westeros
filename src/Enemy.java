@@ -8,7 +8,7 @@ import java.util.*;
  */
 public class Enemy extends Actor implements Subject
 {
-    private int life = 0;
+    private int timebetweenshots = 0;
     /**
      * Act - do whatever the Enemy wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -18,11 +18,11 @@ public class Enemy extends Actor implements Subject
     ArrayList<Observer> obs = new ArrayList<Observer>();
     public void act() 
     {
-        if(life % 100 == 0)
+        if(timebetweenshots % 100 == 0)
             shoot();
-        life++;
-        if(life == 1000)
-            life = 0;
+        timebetweenshots++;
+        if(timebetweenshots == 1000)
+            timebetweenshots = 0;
     }    
     
     public void shoot()

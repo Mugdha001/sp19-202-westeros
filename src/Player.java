@@ -6,9 +6,15 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Player extends Actor
+public class Player extends Actor implements Observer
 {
     private boolean spaceDown;
+    private WeaponFactory wf;
+    int castleHealth;
+    int enemyHealth;
+    int Xcoord;
+    int Ycoord;
+    ShootingStrategy currentShootingStrategy;
     /**
      * Act - do whatever the Player wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -22,7 +28,7 @@ public class Player extends Actor
     {
         if("space".equals(Greenfoot.getKey()))
         {
-            shoot();
+            doshoot();
         }
         if( Greenfoot.isKeyDown("left"))
         {
@@ -34,16 +40,37 @@ public class Player extends Actor
         }
     }
     
-    private void shoot()
+    public void doshoot()
     {
-        PlayerBullet playerbullet = new PlayerBullet();
-        getWorld().addObject(playerbullet, getX(), getY());
+        World world = getWorld();
+        Xcoord = getX();
+        Ycoord = getY();
+        updateStrategy();
+        currentShootingStrategy.shoot(world, Xcoord, Ycoord);
     }
     
     
     public Player()
     {
-
+        WeaponFactory wf = new PlayerBulletFactory();
+        currentShootingStrategy = new SingleWeaponStrategy();
+        
+    }
+    
+    public void updateStrategy()
+    {
+        currentShootingStrategy = new DoubleWeaponStrategy();
+    }
+    
+    @Override
+    public void update(int castle , int enemy)
+    {
+        if(castle!= -1)
+            this.castleHealth = castle;
+        
+        if(enemy!= -1)
+            this.enemyHealth = enemy;
+            
     }
     
 }
