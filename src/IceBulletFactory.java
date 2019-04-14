@@ -1,15 +1,15 @@
 /**
- * Write a description of class BulletFactory here.
+ * Write a description of class IceBulletFactory here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class BulletFactory extends WeaponFactory
+public class IceBulletFactory extends WeaponFactory 
 {
-   
+    
     public Weapon getWeapon()
     {
         // put your code here
-        return new Bullet();
+        return new IceBullet();
     }
 }

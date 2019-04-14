@@ -18,7 +18,6 @@ public class Enemy extends Actor implements Subject
     ArrayList<Observer> obs = new ArrayList<Observer>();
     public void act() 
     {
-        // Add your action code here.
         if(life % 100 == 0)
             shoot();
         life++;

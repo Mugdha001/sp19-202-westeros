@@ -6,16 +6,16 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class PlayerBullet extends Actor
+public class PlayerBullet extends Actor implements Weapon
 {
     private boolean spaceDown;
+    private int strength = 5;
     /**
      * Act - do whatever the PlayerBullet wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
- 
         move(5.0);
         remove();
     }  
@@ -34,7 +34,7 @@ public class PlayerBullet extends Actor
         {
             MyWorld w = (MyWorld)getWorld();
             Enemy e = w.getEnemy();
-            e.setHealth(e.getHealth()-2); 
+            e.setHealth(e.getHealth()-strength);
             getWorld().addObject(new Firesplat(), getX(), getY() );
             getWorld().removeObject(this);
 
@@ -60,6 +60,10 @@ public class PlayerBullet extends Actor
         int y = (int) Math.round(getY() + Math.sin(angle) * distance);
         
         setLocation(x, y);
+    }
+    
+    public int getStrength(){
+        return strength ;
     }
     
 }
