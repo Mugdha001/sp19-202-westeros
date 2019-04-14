@@ -43,7 +43,6 @@ public class ScoreBoard extends Actor implements Observer
         
         if(enemy!= -1)
             this.enemyHealth = enemy;
-            
     }
     
     

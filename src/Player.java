@@ -15,6 +15,7 @@ public class Player extends Actor implements Observer
     int Xcoord;
     int Ycoord;
     ShootingStrategy currentShootingStrategy;
+    Actor castle;
     /**
      * Act - do whatever the Player wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -40,12 +41,13 @@ public class Player extends Actor implements Observer
         }
     }
     
-    public void doshoot()
+    private void doshoot()
     {
         World world = getWorld();
         Xcoord = getX();
         Ycoord = getY();
-        updateStrategy();
+        if(castleHealth < 50)
+            updateStrategy();
         currentShootingStrategy.shoot(world, Xcoord, Ycoord);
     }
     
@@ -54,6 +56,8 @@ public class Player extends Actor implements Observer
     {
         WeaponFactory wf = new PlayerBulletFactory();
         currentShootingStrategy = new SingleWeaponStrategy();
+        castle = new Castle();
+  
         
     }
     
@@ -62,7 +66,7 @@ public class Player extends Actor implements Observer
         currentShootingStrategy = new DoubleWeaponStrategy();
     }
     
-    @Override
+   
     public void update(int castle , int enemy)
     {
         if(castle!= -1)
