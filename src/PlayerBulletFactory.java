@@ -10,6 +10,6 @@ public class PlayerBulletFactory extends WeaponFactory
     public Weapon getWeapon()
     {
         // put your code here
-        return new Bullet();
+        return new PlayerBullet();
     }
 }
