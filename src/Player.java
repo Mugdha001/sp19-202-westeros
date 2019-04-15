@@ -46,7 +46,8 @@ public class Player extends Actor implements Observer
         World world = getWorld();
         Xcoord = getX();
         Ycoord = getY();
-        
+        if(castleHealth <= 50)
+            updateStrategy();
         currentShootingStrategy.shoot(world, Xcoord, Ycoord);
     }
     

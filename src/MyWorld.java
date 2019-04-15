@@ -15,6 +15,7 @@ public class MyWorld extends World
      */
     Castle castle = new Castle();
     ScoreBoard score = new ScoreBoard();
+    Player p1 = new Player();
     Enemy e1 = new Enemy();
     Enemy e2 = new Enemy();
     public MyWorld()
@@ -34,7 +35,7 @@ public class MyWorld extends World
         
         addObject(castle ,370,145);
         
-        addObject(new Player(), 370, 305);
+        addObject(p1, 370, 305);
         
         addObject(e1 , 280 ,540);
         addObject(e2 , 480 ,540);
@@ -42,6 +43,7 @@ public class MyWorld extends World
         addObject(score , 740, 200);
         
         castle.attach(score);
+        castle.attach(p1);
         e1.attach(score);
     }
     
