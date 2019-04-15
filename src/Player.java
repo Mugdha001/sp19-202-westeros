@@ -33,11 +33,11 @@ public class Player extends Actor implements Observer
         }
         if( Greenfoot.isKeyDown("left"))
         {
-            move(-5);
+            move(-7);
         }
         else if(Greenfoot.isKeyDown("right"))
         {
-            move(5);
+            move(7);
         }
     }
     
@@ -56,9 +56,7 @@ public class Player extends Actor implements Observer
         WeaponFactory wf = new PlayerBulletFactory();
         currentShootingStrategy = new SingleWeaponStrategy();
         castle = new Castle();
-        castleHealth = 100;
-  
-        
+        castleHealth = 100;   
     }
     
     public void updateStrategy()
@@ -73,7 +71,7 @@ public class Player extends Actor implements Observer
             this.castleHealth = castle;
         if(castleHealth <= 50)
             updateStrategy();
-        
+
         if(enemy!= -1)
             this.enemyHealth = enemy;
             
