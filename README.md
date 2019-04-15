@@ -39,3 +39,4 @@ Jon Snow (Player) is the protector of the castle. He fights the white walkers an
 
 ### Individual Contributions
 Nikhil Limaye - https://github.com/nguyensjsu/sp19-202-westeros/blob/master/NikhilLimaye-Journal.md 
+Mrunali Sanjay Khandat - https://github.com/nguyensjsu/sp19-202-westeros/blob/master/MrunaliKhandat-Journal.MD
