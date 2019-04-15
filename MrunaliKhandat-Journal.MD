@@ -13,3 +13,9 @@
    - Design workflow of the game  
    - Suitable design patterns  
    - Task effort estimation  
+
+### What am I planning to work on next?
+    Strategy pattern based on observed health of castle
+
+### What tasks are blocked waiting on another team member?
+    None
