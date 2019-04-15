@@ -12,10 +12,11 @@ public class IceBullet extends Actor implements Weapon
      * Act - do whatever the IceBullet wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    int shootingAngle;
+    int speed;
     public void act() 
     {
-        // Add your action code here.
-        move(5.0);
+        move(speed);
         remove();
     }   
     
@@ -24,6 +25,9 @@ public class IceBullet extends Actor implements Weapon
         GreenfootImage img = getImage();
         img.scale(img.getWidth() - 5 , img.getHeight() - 5);
         setImage(img);
+        shootingAngle = getRandomNumber(240,320);
+        setRotation(shootingAngle);
+        speed = 7;
     }
     
     public void remove()
@@ -49,8 +53,15 @@ public class IceBullet extends Actor implements Weapon
                 getWorld().removeObject(this);
         }
        }
+       
+       
+     private int getRandomNumber(int start,int end)
+     {
+       int normal = Greenfoot.getRandomNumber(end-start+1);
+       return normal+start;
+     }
     
-    
+    /*
     public void move(double distance)
     {
         double angle = Math.toRadians( getRotation() ) - 1.5708 ;
@@ -58,5 +69,5 @@ public class IceBullet extends Actor implements Weapon
         int y = (int) Math.round(getY() + Math.sin(angle) * distance);
         
         setLocation(x, y);
-    }
+    }*/
 }
