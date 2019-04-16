@@ -1,4 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.ArrayList;
 
 /**
  * Write a description of class Player here.
@@ -16,6 +17,7 @@ public class Player extends Actor implements Observer
     int Ycoord;
     ShootingStrategy currentShootingStrategy;
     Actor castle;
+    private ArrayList<WeaponFactory> weaponFactoryList;
     /**
      * Act - do whatever the Player wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -23,6 +25,7 @@ public class Player extends Actor implements Observer
     public void act() 
     {
         checkKeys();
+        collectBonus();
     } 
     
     public void checkKeys()
@@ -54,6 +57,7 @@ public class Player extends Actor implements Observer
     
     public Player()
     {
+        weaponFactoryList = new ArrayList<WeaponFactory>();
         WeaponFactory wf = new PlayerBulletFactory();
         currentShootingStrategy = new SingleWeaponStrategy();
         castle = new Castle();
@@ -76,6 +80,18 @@ public class Player extends Actor implements Observer
         if(enemy!= -1)
             this.enemyHealth = enemy;
             
+    }
+    
+     private void collectBonus(){
+        Actor dragonGlassBonus = getOneIntersectingObject(DragonGlassBonus.class);
+        Actor fireBonus = getOneIntersectingObject(FireBulletBonus.class);
+        if(dragonGlassBonus != null){
+            weaponFactoryList.add(new DragonGlassFactory());
+        }
+        
+        if(fireBonus != null){
+            weaponFactoryList.add(new FireBulletFactory());
+        }
     }
     
 }

@@ -11,13 +11,17 @@ public class ScoreBoard extends Actor implements Observer
 {
     int castleHealth;
     int enemyHealth;
+    boolean setDragonGlassBonus = false;
+    boolean setFireBonus = false;
     /**
      * Act - do whatever the ScoreBoard wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        showScore();        
+        showScore();  
+        addDragonGlassBonus();
+        addFireBonus();
     }   
     
     public ScoreBoard()
@@ -43,6 +47,20 @@ public class ScoreBoard extends Actor implements Observer
         
         if(enemy!= -1)
             this.enemyHealth = enemy;
+    }
+    
+        public void addDragonGlassBonus(){
+        if(castleHealth <= 30 && !setDragonGlassBonus){
+            getWorld().addObject(new DragonGlassBonus(), 250, 305);
+            setDragonGlassBonus = true;
+        }
+    }
+    
+    public void addFireBonus(){
+        if(castleHealth <= 50 && !setFireBonus){
+            getWorld().addObject(new FireBulletBonus(), 500, 305);
+            setFireBonus = true;
+        }
     }
     
     
