@@ -11,6 +11,7 @@ public class ScoreBoard extends Actor implements Observer
 {
     int castleHealth;
     int enemyHealth;
+    int enemiesRemaining;
     boolean setDragonGlassBonus = false;
     boolean setFireBonus = false;
     /**
@@ -28,11 +29,13 @@ public class ScoreBoard extends Actor implements Observer
     {   
         castleHealth = 100;
         enemyHealth = 100;
+        enemiesRemaining = 20;
         showScore();
     }
     private void showScore()
     {
-        String displayHealth = "ScoreBoard\n\nCastle:\n"+castleHealth+"\n\n\n\nWhite Walkers:\n"+enemyHealth;
+        String displayHealth = "ScoreBoard\n\nCastle:\n"+castleHealth+"\n\nWhite Walkers:\n"+enemyHealth+
+        "\n\nWalkers remaining:\n"+enemiesRemaining;
         GreenfootImage img = new GreenfootImage(300,500); 
         img.setFont(new Font("Perpetua", false, true,24));
         img.setColor(Color.RED);
@@ -46,7 +49,24 @@ public class ScoreBoard extends Actor implements Observer
             this.castleHealth = castle;
         
         if(enemy!= -1)
+        {
             this.enemyHealth = enemy;
+            if(this.enemyHealth <= 0 && enemiesRemaining > 0)
+            {
+                enemiesRemaining--;
+                MyWorld w = (MyWorld)getWorld();
+                Actor respawn = new EnemyRespawn();
+                Enemy e = w.getEnemy();
+                e.setHealth(100);
+                w.addObject(respawn ,280 ,540 ); 
+                //w.removeObject(respawn);
+            }
+            else if (this.enemyHealth <= 0 && enemiesRemaining == 0)
+            {
+                Greenfoot.stop();
+            }
+          
+        }
     }
     
         public void addDragonGlassBonus(){
@@ -62,6 +82,7 @@ public class ScoreBoard extends Actor implements Observer
             setFireBonus = true;
         }
     }
+   
     
     
 }

@@ -16,15 +16,13 @@ public class MyWorld extends World
     Castle castle = new Castle();
     ScoreBoard score = new ScoreBoard();
     Player player = new Player();
-    Enemy e1 = new Enemy();
-    Enemy e2 = new Enemy();
+    Enemy enemy = new Enemy();
+    //Enemy e2 = new Enemy();
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(750,570,1); 
         prepare();
-        
-  
     }
     
     private void prepare()
@@ -37,14 +35,14 @@ public class MyWorld extends World
         
         addObject(player, 370, 275);
         
-        addObject(e1 , 280 ,540);
-        addObject(e2 , 480 ,540);
+        addObject(enemy , 280 ,540);
+        //addObject(e2 , 480 ,540);
 
         addObject(score , 740, 200);
         
         castle.attach(score);
         castle.attach(player);
-        e1.attach(score);
+        enemy.attach(score);
     }
     
     public Castle getCastle()
@@ -59,7 +57,10 @@ public class MyWorld extends World
     
     public Enemy getEnemy()
     {
-        return e1;
+        return enemy;
     }
+
+    
+    
 
 }
