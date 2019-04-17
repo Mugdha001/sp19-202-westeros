@@ -43,5 +43,5 @@ public class Castle extends Actor implements Subject
     {
         return castleHealth;
     }
- 
+    
 }
