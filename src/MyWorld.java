@@ -43,7 +43,7 @@ public class MyWorld extends World
         addObject(score , 740, 200);
         
         castle.attach(score);
-        castle.attach(p1);
+        castle.attach(p1); // Attaching observer for Updating strategy
         e1.attach(score);
     }
     
