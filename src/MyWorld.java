@@ -15,7 +15,7 @@ public class MyWorld extends World
      */
     Castle castle = new Castle();
     ScoreBoard score = new ScoreBoard();
-    Player p1 = new Player();
+    Player player = new Player();
     Enemy e1 = new Enemy();
     Enemy e2 = new Enemy();
     public MyWorld()
@@ -29,13 +29,13 @@ public class MyWorld extends World
     
     private void prepare()
     {
-        GreenfootImage bg = new GreenfootImage("snow_background.png");
+        GreenfootImage bg = new GreenfootImage("snow_background_2.png");
         bg.scale(getWidth(), getHeight());
         setBackground(bg);
         
-        addObject(castle ,370,145);
+        addObject(castle ,370,100);
         
-        addObject(p1, 370, 305);
+        addObject(player, 370, 275);
         
         addObject(e1 , 280 ,540);
         addObject(e2 , 480 ,540);
@@ -43,7 +43,7 @@ public class MyWorld extends World
         addObject(score , 740, 200);
         
         castle.attach(score);
-        castle.attach(p1); // Attaching observer for Updating strategy
+        castle.attach(player);
         e1.attach(score);
     }
     

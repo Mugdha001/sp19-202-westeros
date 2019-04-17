@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class PlayerBullet extends Actor implements Weapon
 {
     private boolean spaceDown;
-    private int strength = 5;
+    private int strength = 10;
     /**
      * Act - do whatever the PlayerBullet wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
