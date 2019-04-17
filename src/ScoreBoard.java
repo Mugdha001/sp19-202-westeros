@@ -14,6 +14,7 @@ public class ScoreBoard extends Actor implements Observer
     int enemiesRemaining;
     boolean setDragonGlassBonus = false;
     boolean setFireBonus = false;
+    //boolean respawn = false;
     /**
      * Act - do whatever the ScoreBoard wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -55,11 +56,9 @@ public class ScoreBoard extends Actor implements Observer
             {
                 enemiesRemaining--;
                 MyWorld w = (MyWorld)getWorld();
-                Actor respawn = new EnemyRespawn();
                 Enemy e = w.getEnemy();
                 e.setHealth(100);
-                w.addObject(respawn ,280 ,540 ); 
-                //w.removeObject(respawn);
+                w.addObject(new EnemyRespawn() ,280 ,540 );                
             }
             else if (this.enemyHealth <= 0 && enemiesRemaining == 0)
             {
@@ -82,7 +81,5 @@ public class ScoreBoard extends Actor implements Observer
             setFireBonus = true;
         }
     }
-   
-    
-    
+
 }
