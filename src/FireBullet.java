@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class FireBullet extends Actor implements Weapon
+public class FireBullet extends Weapon
 {   private int strength = 15 ;
     /**
      * Act - do whatever the FireBullet wants to do. This method is called whenever

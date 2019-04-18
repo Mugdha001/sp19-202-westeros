@@ -17,7 +17,7 @@ public class DragonGlassBonus extends Actor{
     }    
     public DragonGlassBonus(){
         GreenfootImage img = getImage();
-        img.scale(img.getWidth() - 480 , img.getHeight() - 480);
+        img.scale(img.getWidth() - 408 , img.getHeight() - 408);
         setImage(img);
     }
     

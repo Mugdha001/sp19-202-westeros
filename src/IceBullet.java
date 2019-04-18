@@ -6,16 +6,18 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class IceBullet extends Actor implements Weapon
+public class IceBullet extends Weapon
 {
     /**
      * Act - do whatever the IceBullet wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     int shootingAngle;
+    //int speed = ((MyWorld)getWorld()).getIceBulletSpeed();
     int speed;
     public void act() 
     {
+        speed = ((MyWorld)getWorld()).getIceBulletSpeed();
         move(speed);
         remove();
     }   
@@ -27,7 +29,6 @@ public class IceBullet extends Actor implements Weapon
         setImage(img);
         shootingAngle = getRandomNumber(240,320);
         setRotation(shootingAngle);
-        speed = 7;
     }
     
     public void remove()
@@ -60,7 +61,7 @@ public class IceBullet extends Actor implements Weapon
        int normal = Greenfoot.getRandomNumber(end-start+1);
        return normal+start;
      }
-    
+   
     /*
     public void move(double distance)
     {

@@ -19,7 +19,7 @@ public class FireBulletBonus extends Actor
     
     public FireBulletBonus(){
         GreenfootImage img = getImage();
-        img.scale(img.getWidth() - 260 , img.getHeight() - 260);
+        img.scale(img.getWidth() - 300 , img.getHeight() - 310);
         setImage(img);
     }
     

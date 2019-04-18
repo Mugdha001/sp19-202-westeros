@@ -30,7 +30,7 @@ public class ScoreBoard extends Actor implements Observer
     {   
         castleHealth = 100;
         enemyHealth = 100;
-        enemiesRemaining = 20;
+        enemiesRemaining = 2;
         showScore();
     }
     private void showScore()
@@ -46,6 +46,7 @@ public class ScoreBoard extends Actor implements Observer
     
     public void update(int castle , int enemy)
     {
+        MyWorld w = (MyWorld)getWorld();
         if(castle!= -1)
             this.castleHealth = castle;
         
@@ -55,20 +56,33 @@ public class ScoreBoard extends Actor implements Observer
             if(this.enemyHealth <= 0 && enemiesRemaining > 0)
             {
                 enemiesRemaining--;
-                MyWorld w = (MyWorld)getWorld();
                 Enemy e = w.getEnemy();
                 e.setHealth(100);
                 w.addObject(new EnemyRespawn() ,280 ,540 );                
             }
-            else if (this.enemyHealth <= 0 && enemiesRemaining == 0)
+            else if (this.castleHealth >= 0 && enemiesRemaining == 0)
             {
-                Greenfoot.stop();
+                int level = w.getCurrentLevel();
+                if(level == 1)
+                {
+                    w.addObject(new ScreenMessage("Level 1 Complete!"),500,200);
+                    Greenfoot.delay(50);
+                    w.addObject(new ScreenMessage("Welcome to Level 2!"),500,250);
+                    Greenfoot.delay(50);
+                    Greenfoot.setWorld(new MyWorld(2)); 
+                }
+                else
+                {
+                   w.addObject(new ScreenMessage("Winner!!"),500,200);
+                   Greenfoot.stop();
+                }
             }
           
         }
     }
     
-        public void addDragonGlassBonus(){
+    public void addDragonGlassBonus()
+    {
         if(castleHealth <= 30 && !setDragonGlassBonus){
             getWorld().addObject(new DragonGlassBonus(), 250, 305);
             setDragonGlassBonus = true;
