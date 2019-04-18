@@ -14,9 +14,12 @@ public class MyWorld extends World
      * 
      */
     Castle castle = new Castle();
+    //TrialStrategy trialStrategy = new TrialStrategy();
     ScoreBoard score = new ScoreBoard();
     Player player = new Player();
     Enemy enemy = new Enemy();
+    ShootingStrategy sw = new SingleWeaponStrategy();
+    ShootingStrategy dw = new DoubleWeaponStrategy();
     //Enemy e2 = new Enemy();
     public MyWorld()
     {    
@@ -35,7 +38,7 @@ public class MyWorld extends World
         
         addObject(player, 370, 275);
         
-        addObject(enemy , 280 ,540);
+        addObject(enemy , 370 ,540);
         //addObject(e2 , 480 ,540);
 
         addObject(score , 740, 200);

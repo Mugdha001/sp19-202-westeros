@@ -6,10 +6,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class DoubleWeaponStrategy extends Actor implements ShootingStrategy 
+public class DoubleWeaponStrategy implements ShootingStrategy 
 {
     /**
-     * Constructor for objects of class DoubleWeaponStrategy
+     * Constructor for objects of class DouxbleWeaponStrategy
      */
     private int timebetweenshots = 5;
     public DoubleWeaponStrategy()
@@ -17,14 +17,14 @@ public class DoubleWeaponStrategy extends Actor implements ShootingStrategy
     }
 
     
-    public void shoot(World world, int Xcoord, int Ycoord)
+    public void shoot(World world,WeaponFactory currentWeaponFactory,int Xcoord, int Ycoord)
     {
         //PlayerBullet playerbullet = new PlayerBullet();
        if(world != null)
-            world.addObject(new PlayerBullet(), Xcoord, Ycoord);
+            world.addObject(currentWeaponFactory.getWeapon(), Xcoord, Ycoord);
        for(timebetweenshots = 5; timebetweenshots <= 1000; timebetweenshots++)
         {}
-       world.addObject(new PlayerBullet(), Xcoord, Ycoord);
+       world.addObject(currentWeaponFactory.getWeapon(), Xcoord, Ycoord);
        timebetweenshots = 5;
     }
 }

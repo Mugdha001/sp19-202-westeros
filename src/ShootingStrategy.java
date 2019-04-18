@@ -8,6 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public interface ShootingStrategy
 {
-    public void shoot(World world, int Xcoord, int Ycoord);
+    public void shoot(World world, WeaponFactory currentWeaponFactory, int Xcoord, int Ycoord);
     
 }

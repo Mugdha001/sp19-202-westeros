@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class DragonGlass extends Actor implements Weapon
+public class DragonGlass extends Weapon
 {   
     private boolean spaceDown;
     private int strength=10 ;

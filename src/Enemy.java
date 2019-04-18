@@ -23,6 +23,7 @@ public class Enemy extends Actor implements Subject
         timebetweenshots++;
         if(timebetweenshots == 1000)
             timebetweenshots = 0;
+        randomMoveEnemy();
     }    
     
     public void shoot()
@@ -57,5 +58,10 @@ public class Enemy extends Actor implements Subject
     public int getHealth()
     {
         return enemyHealth;
+    }
+    
+    public void randomMoveEnemy(){
+        move(-1*Greenfoot.getRandomNumber(20));
+        move(Greenfoot.getRandomNumber(20));
     }
 }

@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class SingleWeaponStrategy extends Actor implements ShootingStrategy
+public class SingleWeaponStrategy implements ShootingStrategy
 {
     /**
      * Constructor for objects of class SingleWeaponStrategy
@@ -16,10 +16,10 @@ public class SingleWeaponStrategy extends Actor implements ShootingStrategy
     }
 
   
-    public void shoot(World world, int Xcoord, int Ycoord)
+    public void shoot(World world,WeaponFactory currentWeaponFactory, int Xcoord, int Ycoord)
     {
         //PlayerBullet playerbullet = new PlayerBullet();
        if(world != null)
-            world.addObject(new PlayerBullet(), Xcoord, Ycoord);
+            world.addObject(currentWeaponFactory.getWeapon(), Xcoord, Ycoord);
     }
 }

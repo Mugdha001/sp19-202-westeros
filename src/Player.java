@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class Player extends Actor implements Observer
 {
     private boolean spaceDown;
-    private WeaponFactory wf;
+    private WeaponFactory currentWeaponFactory; // what is this doing????????
     int castleHealth;
     int enemyHealth;
     int Xcoord;
@@ -51,14 +51,14 @@ public class Player extends Actor implements Observer
         Ycoord = getY();
         if(castleHealth <= 50)
             updateStrategy();
-        currentShootingStrategy.shoot(world, Xcoord, Ycoord);
+        currentShootingStrategy.shoot(world, currentWeaponFactory, Xcoord, Ycoord);
     }
     
     
     public Player()
     {
         weaponFactoryList = new ArrayList<WeaponFactory>();
-        WeaponFactory wf = new PlayerBulletFactory();
+        currentWeaponFactory = new PlayerBulletFactory();
         currentShootingStrategy = new SingleWeaponStrategy();
         castle = new Castle();
         castleHealth = 100;   
@@ -74,8 +74,7 @@ public class Player extends Actor implements Observer
     {
         if(castle!= -1)
             this.castleHealth = castle;
-        if(castleHealth <= 50)
-            updateStrategy();
+      
 
         if(enemy!= -1)
             this.enemyHealth = enemy;
