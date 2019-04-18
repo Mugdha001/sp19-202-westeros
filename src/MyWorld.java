@@ -20,12 +20,29 @@ public class MyWorld extends World
     Enemy enemy = new Enemy();
     ShootingStrategy sw = new SingleWeaponStrategy();
     ShootingStrategy dw = new DoubleWeaponStrategy();
+    public int iceBulletSpeed;
+    private int currentLevel;
     //Enemy e2 = new Enemy();
     public MyWorld()
+    {     
+        this(1);
+    }
+    
+    public MyWorld(int level)
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(750,570,1); 
+        currentLevel = level;
         prepare();
+    }
+    
+    public int getIceBulletSpeed()
+    {
+        return iceBulletSpeed;
+    }
+    
+    public int getCurrentLevel()
+    {
+        return currentLevel;
     }
     
     private void prepare()
@@ -33,19 +50,25 @@ public class MyWorld extends World
         GreenfootImage bg = new GreenfootImage("snow_background_2.png");
         bg.scale(getWidth(), getHeight());
         setBackground(bg);
-        
         addObject(castle ,370,100);
-        
         addObject(player, 370, 275);
-        
         addObject(enemy , 370 ,540);
-        //addObject(e2 , 480 ,540);
-
         addObject(score , 740, 200);
-        
         castle.attach(score);
         castle.attach(player);
         enemy.attach(score);
+        
+        switch(currentLevel)
+        {
+            case 1 : iceBulletSpeed = 5;
+                    break;
+            
+            case 2 : //set speed // add extra enemy //set whitewalker lives
+                     iceBulletSpeed = 8;
+                     break;
+        }
+        
+        
     }
     
     public Castle getCastle()
@@ -62,8 +85,6 @@ public class MyWorld extends World
     {
         return enemy;
     }
-
-    
     
 
 }

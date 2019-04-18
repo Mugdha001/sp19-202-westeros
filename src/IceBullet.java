@@ -13,9 +13,11 @@ public class IceBullet extends Weapon
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     int shootingAngle;
+    //int speed = ((MyWorld)getWorld()).getIceBulletSpeed();
     int speed;
     public void act() 
     {
+        speed = ((MyWorld)getWorld()).getIceBulletSpeed();
         move(speed);
         remove();
     }   
@@ -27,7 +29,6 @@ public class IceBullet extends Weapon
         setImage(img);
         shootingAngle = getRandomNumber(240,320);
         setRotation(shootingAngle);
-        speed = 7;
     }
     
     public void remove()
@@ -60,7 +61,7 @@ public class IceBullet extends Weapon
        int normal = Greenfoot.getRandomNumber(end-start+1);
        return normal+start;
      }
-    
+   
     /*
     public void move(double distance)
     {

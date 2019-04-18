@@ -24,6 +24,7 @@ public class Enemy extends Actor implements Subject
         if(timebetweenshots == 1000)
             timebetweenshots = 0;
         randomMoveEnemy();
+        
     }    
     
     public void shoot()
