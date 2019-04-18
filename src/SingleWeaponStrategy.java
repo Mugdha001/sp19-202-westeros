@@ -16,10 +16,10 @@ public class SingleWeaponStrategy implements ShootingStrategy
     }
 
   
-    public void shoot(World world, int Xcoord, int Ycoord)
+    public void shoot(World world,WeaponFactory currentWeaponFactory, int Xcoord, int Ycoord)
     {
         //PlayerBullet playerbullet = new PlayerBullet();
-        if(world != null)
-            world.addObject(new PlayerBullet(), Xcoord, Ycoord);
+       if(world != null)
+            world.addObject(currentWeaponFactory.getWeapon(), Xcoord, Ycoord);
     }
 }
