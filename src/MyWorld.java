@@ -14,6 +14,7 @@ public class MyWorld extends World
      * 
      */
     Castle castle = new Castle();
+    //TrialStrategy trialStrategy = new TrialStrategy();
     ScoreBoard score = new ScoreBoard();
     Player player = new Player();
     Enemy enemy = new Enemy();
