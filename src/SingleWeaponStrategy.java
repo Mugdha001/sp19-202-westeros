@@ -19,7 +19,7 @@ public class SingleWeaponStrategy extends Actor implements ShootingStrategy
     public void shoot(World world, int Xcoord, int Ycoord)
     {
         //PlayerBullet playerbullet = new PlayerBullet();
-       if(world != null)
+        if(world != null)
             world.addObject(new PlayerBullet(), Xcoord, Ycoord);
     }
 }

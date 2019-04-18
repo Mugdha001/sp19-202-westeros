@@ -17,6 +17,8 @@ public class MyWorld extends World
     ScoreBoard score = new ScoreBoard();
     Player player = new Player();
     Enemy enemy = new Enemy();
+    ShootingStrategy sw = new SingleWeaponStrategy();
+    ShootingStrategy dw = new DoubleWeaponStrategy();
     //Enemy e2 = new Enemy();
     public MyWorld()
     {    
