@@ -74,6 +74,7 @@ public class Player extends Actor implements Observer
     {
         if(castle!= -1)
             this.castleHealth = castle;
+      
 
         if(enemy!= -1)
             this.enemyHealth = enemy;
