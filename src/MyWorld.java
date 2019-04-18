@@ -38,7 +38,7 @@ public class MyWorld extends World
         
         addObject(player, 370, 275);
         
-        addObject(enemy , 280 ,540);
+        addObject(enemy , 370 ,540);
         //addObject(e2 , 480 ,540);
 
         addObject(score , 740, 200);
