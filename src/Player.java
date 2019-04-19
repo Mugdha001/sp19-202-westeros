@@ -17,6 +17,7 @@ public class Player extends Actor implements Observer
     int Ycoord;
     ShootingStrategy currentShootingStrategy;
     private FireBulletBonusButton fireBulletBonusButton;
+    private DragonGlassBonusButton dragonGlassBonusButton;
 
     Actor castle;
     private ArrayList<WeaponFactory> weaponFactoryList;
@@ -99,6 +100,10 @@ public class Player extends Actor implements Observer
     
     public void setFireBulletMenuInvoker(FireBulletBonusButton bonusInvoker){
         fireBulletBonusButton = bonusInvoker;
+    }
+    
+    public void setDragonGlassMenuInvoker(DragonGlassBonusButton bonusInvoker){
+        dragonGlassBonusButton = bonusInvoker;
     }
     public void setCurrentWeaponFactory(WeaponFactory wf){
         currentWeaponFactory = wf;

@@ -14,9 +14,13 @@ public class MyWorld extends World
      * 
      */
     Castle castle = new Castle();
+    // command pattern starts
     IBonusCommand fireBulletBonusCommand;
+    IBonusCommand dragonGlassBonusCommand;
     FireBulletBonusButton fireBulletBonusButton = new FireBulletBonusButton();
+    DragonGlassBonusButton dragonGlassBonusButton = new DragonGlassBonusButton();
     BonusWeaponsMenu bonusWeaponsMenu = new BonusWeaponsMenu();
+    //command pattern ends
     ScoreBoard score = new ScoreBoard();
     Player player = new Player();
     Enemy enemy = new Enemy();
@@ -25,7 +29,7 @@ public class MyWorld extends World
     ShootingStrategy dw = new DoubleWeaponStrategy();
     public int iceBulletSpeed;
     private int currentLevel;
-    //Enemy e2 = new Enemy();
+    
     public MyWorld()
     {     
         this(1);
@@ -51,11 +55,11 @@ public class MyWorld extends World
     private void prepare()
     {
         //command pattern starts
-        
+         //fire bullet bonus
          fireBulletBonusCommand = new BonusCommand();
+         //map command to invoker
          fireBulletBonusButton.setCommand(fireBulletBonusCommand);
-        
-        
+         //map receiver to command
          fireBulletBonusCommand.setReceiver(
           new IBonusReceiver() {
         	  
@@ -65,8 +69,23 @@ public class MyWorld extends World
               }
         }
         ) ;
-        
         player.setFireBulletMenuInvoker(fireBulletBonusButton);
+        
+        //dragon glass bonus
+         dragonGlassBonusCommand = new BonusCommand();
+         //map command to invoker
+         dragonGlassBonusButton.setCommand(dragonGlassBonusCommand);
+         //map receiver to command
+         dragonGlassBonusCommand.setReceiver(
+          new IBonusReceiver() {
+        	  
+              /** Command Action */
+              public void doAction() {
+                  player.setCurrentWeaponFactory( new DragonGlassFactory() ) ;
+              }
+        }
+        ) ;
+        player.setDragonGlassMenuInvoker(dragonGlassBonusButton);
         
         
        addObject(bonusWeaponsMenu , 150, 200);
