@@ -29,6 +29,7 @@ public class IceBullet extends Weapon
         setImage(img);
         shootingAngle = getRandomNumber(240,320);
         setRotation(shootingAngle);
+        Greenfoot.playSound("EnemyShoot.mp3");
     }
     
     public void remove()

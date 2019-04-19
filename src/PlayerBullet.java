@@ -51,6 +51,7 @@ public class PlayerBullet extends Weapon
         GreenfootImage img = getImage();
         img.scale(img.getWidth() - 45 , img.getHeight() - 45);
         setImage(img);
+        Greenfoot.playSound("PlayerShoot.mp3");
     }
     
     public void move(double distance)

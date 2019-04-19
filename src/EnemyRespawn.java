@@ -25,6 +25,7 @@ public class EnemyRespawn extends Actor
         GreenfootImage img = getImage();
         img.scale(img.getWidth() - 100 , img.getHeight() - 100);
         setImage(img);
+        Greenfoot.playSound("Respawn.mp3");
     }
     
     public void remove()

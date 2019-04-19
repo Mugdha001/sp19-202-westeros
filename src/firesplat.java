@@ -33,5 +33,6 @@ public class Firesplat extends Actor
         GreenfootImage img = getImage();
         img.scale(img.getWidth() - 160 , img.getHeight() - 160);
         setImage(img);
+        //Greenfoot.playSound("EnemyImpact.mp3");
     }
 }
