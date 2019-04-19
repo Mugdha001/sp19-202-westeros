@@ -19,6 +19,10 @@ public class DragonGlass extends Weapon
         move(5.0);
         remove();
     }  
+    
+    public void DragonGlass(){
+        Greenfoot.playSound("PlayerShoot.mp3");
+    }
     public void remove(){
         Actor enemy = getOneIntersectingObject(Enemy.class);
         Actor icebullet = getOneIntersectingObject(IceBullet.class);
