@@ -18,6 +18,15 @@ public class FireBullet extends Weapon
         remove();
     }
     
+    public FireBullet()
+    {
+
+        GreenfootImage img = getImage();
+        img.scale(img.getWidth() - 270 , img.getHeight() - 270);
+        setImage(img);
+        Greenfoot.playSound("PlayerShoot.mp3");
+    }
+    
     public void remove(){
          Actor enemy = getOneIntersectingObject(Enemy.class);
         Actor icebullet = getOneIntersectingObject(IceBullet.class);

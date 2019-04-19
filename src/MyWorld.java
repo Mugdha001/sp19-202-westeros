@@ -14,7 +14,9 @@ public class MyWorld extends World
      * 
      */
     Castle castle = new Castle();
-    //TrialStrategy trialStrategy = new TrialStrategy();
+    IBonusCommand fireBulletBonusCommand;
+    FireBulletBonusButton fireBulletBonusButton = new FireBulletBonusButton();
+    BonusWeaponsMenu bonusWeaponsMenu = new BonusWeaponsMenu();
     ScoreBoard score = new ScoreBoard();
     Player player = new Player();
     Enemy enemy = new Enemy();
@@ -48,6 +50,27 @@ public class MyWorld extends World
     
     private void prepare()
     {
+        //command pattern starts
+        
+         fireBulletBonusCommand = new BonusCommand();
+         fireBulletBonusButton.setCommand(fireBulletBonusCommand);
+        
+        
+         fireBulletBonusCommand.setReceiver(
+          new IBonusReceiver() {
+        	  
+              /** Command Action */
+              public void doAction() {
+                  player.setCurrentWeaponFactory( new FireBulletFactory() ) ;
+              }
+        }
+        ) ;
+        
+        player.setFireBulletMenuInvoker(fireBulletBonusButton);
+        
+        
+       addObject(bonusWeaponsMenu , 150, 200);
+        //command pattern ends
         GreenfootImage bg = new GreenfootImage("snow_background_2.png");
         bg.scale(getWidth(), getHeight());
         setBackground(bg);

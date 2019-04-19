@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class PlayerBullet extends Weapon
 {
-    private boolean spaceDown;
+   // private boolean spaceDown;
     private int strength = 10;
     /**
      * Act - do whatever the PlayerBullet wants to do. This method is called whenever
@@ -47,7 +47,7 @@ public class PlayerBullet extends Weapon
     
     public PlayerBullet()
     {
-        spaceDown = false;
+        //spaceDown = false;
         GreenfootImage img = getImage();
         img.scale(img.getWidth() - 45 , img.getHeight() - 45);
         setImage(img);

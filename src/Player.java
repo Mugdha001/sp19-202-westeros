@@ -16,6 +16,8 @@ public class Player extends Actor implements Observer
     int Xcoord;
     int Ycoord;
     ShootingStrategy currentShootingStrategy;
+    private FireBulletBonusButton fireBulletBonusButton;
+
     Actor castle;
     private ArrayList<WeaponFactory> weaponFactoryList;
     /**
@@ -85,12 +87,21 @@ public class Player extends Actor implements Observer
         Actor dragonGlassBonus = getOneIntersectingObject(DragonGlassBonus.class);
         Actor fireBonus = getOneIntersectingObject(FireBulletBonus.class);
         if(dragonGlassBonus != null){
-            weaponFactoryList.add(new DragonGlassFactory());
+            getWorld().addObject(fireBulletBonusButton, 100, 275);
+            //weaponFactoryList.add(new DragonGlassFactory());
         }
         
         if(fireBonus != null){
-            weaponFactoryList.add(new FireBulletFactory());
+            getWorld().addObject(fireBulletBonusButton, 55, 110);
+            getWorld().addObject(new BonusMenuInstruction("a/ A"), 230, 240);
         }
+    }
+    
+    public void setFireBulletMenuInvoker(FireBulletBonusButton bonusInvoker){
+        fireBulletBonusButton = bonusInvoker;
+    }
+    public void setCurrentWeaponFactory(WeaponFactory wf){
+        currentWeaponFactory = wf;
     }
     
 }

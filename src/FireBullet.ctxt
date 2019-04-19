@@ -1,13 +1,15 @@
 #BlueJ class context
 comment0.target=FireBullet
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ FireBullet\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\n\ Write\ a\ description\ of\ class\ FireBullet\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
 comment1.target=void\ act()
-comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ FireBullet\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment1.text=\n\ Act\ -\ do\ whatever\ the\ FireBullet\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
 comment2.params=
-comment2.target=void\ remove()
-comment3.params=distance
-comment3.target=void\ move(double)
-comment4.params=
-comment4.target=int\ getStrength()
-numComments=5
+comment2.target=FireBullet()
+comment3.params=
+comment3.target=void\ remove()
+comment4.params=distance
+comment4.target=void\ move(double)
+comment5.params=
+comment5.target=int\ getStrength()
+numComments=6
