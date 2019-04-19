@@ -9,8 +9,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class DragonGlassBonusButton extends Actor
 {
     IBonusCommand bonusCommand;
+    String key;
     
     public DragonGlassBonusButton(){
+        key = "b";
         GreenfootImage img = getImage();
         img.scale(img.getWidth() - 408 , img.getHeight() - 408);
         setImage(img);
@@ -18,7 +20,7 @@ public class DragonGlassBonusButton extends Actor
     
     public void act() 
     {
-        if(Greenfoot.isKeyDown("a"))
+        if(Greenfoot.isKeyDown(key))
         {
             click();
         }

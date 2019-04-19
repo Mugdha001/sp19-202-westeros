@@ -9,8 +9,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class FireBulletBonusButton extends Actor implements IBonusInvoker 
 {
     IBonusCommand bonusCommand;
-    
+    String key;
     public FireBulletBonusButton(){
+        key = "a";
         GreenfootImage img = getImage();
         img.scale(img.getWidth() - 300 , img.getHeight() - 310);
         setImage(img);
@@ -18,7 +19,7 @@ public class FireBulletBonusButton extends Actor implements IBonusInvoker
     
     public void act() 
     {
-        if(Greenfoot.isKeyDown("a"))
+        if(Greenfoot.isKeyDown(key))
         {
             click();
         }
