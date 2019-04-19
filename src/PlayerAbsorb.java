@@ -1,37 +1,34 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class firesplat here.
+ * Write a description of class PlayerAbsorb here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Firesplat extends Actor
+public class PlayerAbsorb extends Actor
 {
     /**
-     * Act - do whatever the firesplat wants to do. This method is called whenever
+     * Act - do whatever the PlayerAbsorb wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     private int life = 5;
     public void act() 
     {
-        // Add your action code here.
-       
-        //Greenfoot.playSound("firesplat_sound.wav");
         life--;
         if(life == 0)
-            remove();
-    }   
+            remove(); 
+    }    
     
     public void remove()
     {
         getWorld().removeObject(this);
     }
     
-    public Firesplat()
+    public PlayerAbsorb()
     {
         GreenfootImage img = getImage();
-        img.scale(img.getWidth() - 160 , img.getHeight() - 160);
+        img.scale(img.getWidth() - 100 , img.getHeight() - 100);
         setImage(img);
     }
 }

@@ -36,9 +36,14 @@ public class IceBullet extends Weapon
         Actor player = getOneIntersectingObject(Player.class);
         Actor castle = getOneIntersectingObject(Castle.class);
         Actor playerbullet = getOneIntersectingObject(PlayerBullet.class);
-        if((player != null)  || (playerbullet != null))
+        if(playerbullet != null)
         {
             getWorld().addObject(new Snowsplat(), getX(), getY() );
+            getWorld().removeObject(this);
+        }
+        else if (player != null)
+        {
+            getWorld().addObject(new PlayerAbsorb(), getX(), getY() );
             getWorld().removeObject(this);
         }
         else if(castle != null)

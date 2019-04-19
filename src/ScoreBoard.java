@@ -30,7 +30,7 @@ public class ScoreBoard extends Actor implements Observer
     {   
         castleHealth = 100;
         enemyHealth = 100;
-        enemiesRemaining = 1;
+        enemiesRemaining = 2;
         showScore();
     }
     private void showScore()
@@ -58,7 +58,9 @@ public class ScoreBoard extends Actor implements Observer
                 enemiesRemaining--;
                 Enemy e = w.getEnemy();
                 e.setHealth(100);
-                w.addObject(new EnemyRespawn() ,280 ,540 );                
+                int x = e.getX();
+                int y = e.getY();
+                w.addObject(new EnemyRespawn() ,x,y );                
             }
             else if (this.castleHealth >= 0 && enemiesRemaining == 0)
             {
@@ -75,7 +77,9 @@ public class ScoreBoard extends Actor implements Observer
                 }
                 else
                 {
-                   w.addObject(new ScreenMessage("Winner!!"),500,200);
+                   ScreenMessage sm = new ScreenMessage("Winner!!");
+                   w.addObject(sm,500,200);
+                   sm.blink();
                    Greenfoot.stop();
                 }
             }

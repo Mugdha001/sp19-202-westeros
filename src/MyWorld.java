@@ -18,6 +18,7 @@ public class MyWorld extends World
     ScoreBoard score = new ScoreBoard();
     Player player = new Player();
     Enemy enemy = new Enemy();
+    Enemy anotherEnemy = new Enemy();
     ShootingStrategy sw = new SingleWeaponStrategy();
     ShootingStrategy dw = new DoubleWeaponStrategy();
     public int iceBulletSpeed;
@@ -64,7 +65,10 @@ public class MyWorld extends World
                     break;
             
             case 2 : //set speed // add extra enemy //set whitewalker lives
-                     iceBulletSpeed = 8;
+                     addObject(anotherEnemy ,420 ,540);
+                     enemy.setHealth(200);
+                     anotherEnemy.setHealth(200);
+                     iceBulletSpeed = 5;
                      break;
         }
         
