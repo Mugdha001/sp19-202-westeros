@@ -12,10 +12,11 @@ public class ScreenMessage extends Actor
      * Act - do whatever the ScreenMessage wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    //private String message;
+    
     public void act() 
     {
-        setRotation(90);
-        move(1);
+        blink();
     }  
     
     public ScreenMessage(String message)
@@ -25,5 +26,20 @@ public class ScreenMessage extends Actor
         img.setColor(Color.RED);
         img.drawString(message,100,450);
         setImage(img);
+    }
+    
+    public void blink()
+    {
+        int count = 10;
+        while(count!=0)
+        {
+            GreenfootImage img = getImage();
+            int t = img.getTransparency();
+            Greenfoot.delay(5);
+            img.setTransparency(0);
+            Greenfoot.delay(5);
+            img.setTransparency(t);
+            count--;
+        }
     }
 }

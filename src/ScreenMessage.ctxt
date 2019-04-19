@@ -6,4 +6,6 @@ comment1.target=void\ act()
 comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ ScreenMessage\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
 comment2.params=message
 comment2.target=ScreenMessage(java.lang.String)
-numComments=3
+comment3.params=
+comment3.target=void\ blink()
+numComments=4
