@@ -90,10 +90,10 @@ public class MyWorld extends World
         
        addObject(bonusWeaponsMenu , 150, 200);
         //command pattern ends
-        GreenfootImage bg = new GreenfootImage("snow_background_2.png");
+        GreenfootImage bg = new GreenfootImage("snow_background_22.png");
         bg.scale(getWidth(), getHeight());
         setBackground(bg);
-        addObject(castle ,370,100);
+        addObject(castle ,370,170);
         addObject(player, 370, 275);
         addObject(enemy , 370 ,540);
         addObject(score , 740, 200);
