@@ -88,13 +88,13 @@ public class Player extends Actor implements Observer
         Actor dragonGlassBonus = getOneIntersectingObject(DragonGlassBonus.class);
         Actor fireBonus = getOneIntersectingObject(FireBulletBonus.class);
         if(dragonGlassBonus != null){
-            getWorld().addObject(dragonGlassBonusButton, 55, 160);
-            getWorld().addObject(new BonusMenuInstruction("b/ B"), 230, 290);
+            getWorld().addObject(dragonGlassBonusButton, 55, 120);
+            getWorld().addObject(new BonusMenuInstruction("b/ B"), 230, 250);
         }
         
         if(fireBonus != null){
-            getWorld().addObject(fireBulletBonusButton, 55, 110);
-            getWorld().addObject(new BonusMenuInstruction("a/ A"), 230, 240);
+            getWorld().addObject(fireBulletBonusButton, 55, 70);
+            getWorld().addObject(new BonusMenuInstruction("a/ A"), 230, 200);
         }
     }
     
