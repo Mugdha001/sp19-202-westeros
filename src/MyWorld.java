@@ -88,7 +88,7 @@ public class MyWorld extends World
         player.setDragonGlassMenuInvoker(dragonGlassBonusButton);
         
         
-       addObject(bonusWeaponsMenu , 150, 200);
+       addObject(bonusWeaponsMenu , 150, 160);
         //command pattern ends
         GreenfootImage bg = new GreenfootImage("snow_background_21.png");
         bg.scale(getWidth(), getHeight());
