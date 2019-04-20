@@ -90,7 +90,7 @@ public class MyWorld extends World
         
        addObject(bonusWeaponsMenu , 150, 200);
         //command pattern ends
-        GreenfootImage bg = new GreenfootImage("snow_background_22.png");
+        GreenfootImage bg = new GreenfootImage("snow_background_21.png");
         bg.scale(getWidth(), getHeight());
         setBackground(bg);
         addObject(castle ,370,170);
