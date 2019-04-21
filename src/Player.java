@@ -18,6 +18,7 @@ public class Player extends Actor implements Observer
     ShootingStrategy currentShootingStrategy;
     private FireBulletBonusButton fireBulletBonusButton;
     private DragonGlassBonusButton dragonGlassBonusButton;
+    private DefaultBulletButton defaultBulletButton;
 
     Actor castle;
     private ArrayList<WeaponFactory> weaponFactoryList;
@@ -87,15 +88,19 @@ public class Player extends Actor implements Observer
      private void collectBonus(){
         Actor dragonGlassBonus = getOneIntersectingObject(DragonGlassBonus.class);
         Actor fireBonus = getOneIntersectingObject(FireBulletBonus.class);
+        if(fireBonus != null){
+            getWorld().addObject(defaultBulletButton, 55, 45);
+            getWorld().addObject(new BonusMenuInstruction("d"), 230, 175);
+            
+            getWorld().addObject(fireBulletBonusButton, 55, 80);
+            getWorld().addObject(new BonusMenuInstruction("a"), 230, 210);
+        }
         if(dragonGlassBonus != null){
             getWorld().addObject(dragonGlassBonusButton, 55, 120);
-            getWorld().addObject(new BonusMenuInstruction("s/ S"), 230, 250);
+            getWorld().addObject(new BonusMenuInstruction("s"), 230, 250);
         }
         
-        if(fireBonus != null){
-            getWorld().addObject(fireBulletBonusButton, 55, 70);
-            getWorld().addObject(new BonusMenuInstruction("a/ A"), 230, 200);
-        }
+        
     }
     
     public void setFireBulletMenuInvoker(FireBulletBonusButton bonusInvoker){
@@ -104,6 +109,10 @@ public class Player extends Actor implements Observer
     
     public void setDragonGlassMenuInvoker(DragonGlassBonusButton bonusInvoker){
         dragonGlassBonusButton = bonusInvoker;
+    }
+    
+    public void setDefaultBulletMenuInvoker(DefaultBulletButton bonusInvoker){
+        defaultBulletButton = bonusInvoker;
     }
     public void setCurrentWeaponFactory(WeaponFactory wf){
         currentWeaponFactory = wf;

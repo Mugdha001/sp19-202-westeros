@@ -15,10 +15,12 @@ public class MyWorld extends World
      */
     Castle castle = new Castle();
     // command pattern starts
-    IBonusCommand fireBulletBonusCommand;
-    IBonusCommand dragonGlassBonusCommand;
+    IBonusCommand fireBulletBonusCommand = new BonusCommand();
+    IBonusCommand dragonGlassBonusCommand = new BonusCommand();
+    IBonusCommand defaultBulletCommand = new BonusCommand();
     FireBulletBonusButton fireBulletBonusButton = new FireBulletBonusButton();
     DragonGlassBonusButton dragonGlassBonusButton = new DragonGlassBonusButton();
+    DefaultBulletButton defaultBulletButton = new DefaultBulletButton();
     BonusWeaponsMenu bonusWeaponsMenu = new BonusWeaponsMenu();
     //command pattern ends
     ScoreBoard score = new ScoreBoard();
@@ -55,8 +57,23 @@ public class MyWorld extends World
     private void prepare()
     {
         //command pattern starts
+         
+         //map command to invoker
+         defaultBulletButton.setCommand(defaultBulletCommand);
+         //map receiver to command
+         defaultBulletCommand.setReceiver(
+          new IBonusReceiver() {
+        	  
+              /** Command Action */
+              public void doAction() {
+                  player.setCurrentWeaponFactory( new PlayerBulletFactory() ) ;
+              }
+        }
+        ) ;
+        player.setDefaultBulletMenuInvoker(defaultBulletButton);
+        
          //fire bullet bonus
-         fireBulletBonusCommand = new BonusCommand();
+
          //map command to invoker
          fireBulletBonusButton.setCommand(fireBulletBonusCommand);
          //map receiver to command
@@ -72,7 +89,7 @@ public class MyWorld extends World
         player.setFireBulletMenuInvoker(fireBulletBonusButton);
         
         //dragon glass bonus
-         dragonGlassBonusCommand = new BonusCommand();
+
          //map command to invoker
          dragonGlassBonusButton.setCommand(dragonGlassBonusCommand);
          //map receiver to command
@@ -88,7 +105,7 @@ public class MyWorld extends World
         player.setDragonGlassMenuInvoker(dragonGlassBonusButton);
         
         
-       addObject(bonusWeaponsMenu , 150, 160);
+       addObject(bonusWeaponsMenu , 150, 150);
         //command pattern ends
         GreenfootImage bg = new GreenfootImage("snow_background_21.png");
         bg.scale(getWidth(), getHeight());

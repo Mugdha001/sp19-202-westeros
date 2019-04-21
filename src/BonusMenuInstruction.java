@@ -24,7 +24,7 @@ public class BonusMenuInstruction extends Actor
     
     private void showInstruction()
     {
-        String instruction = ": Press " + key;
+        String instruction = ": Press '" + key + "'";
         GreenfootImage img = new GreenfootImage(300,500); 
         img.setFont(new Font("Perpetua", false, true,17));
         img.setColor(Color.RED);
