@@ -89,15 +89,15 @@ public class ScoreBoard extends Actor implements Observer
     
     public void addDragonGlassBonus()
     {
-        if(castleHealth <= 30 && !setDragonGlassBonus){
-            getWorld().addObject(new DragonGlassBonus(), 250, 305);
+        if(castleHealth <= 40 && !setDragonGlassBonus){
+            getWorld().addObject(new DragonGlassBonus(), 250, 290);
             setDragonGlassBonus = true;
         }
     }
     
     public void addFireBonus(){
-        if(castleHealth <= 50 && !setFireBonus){
-            getWorld().addObject(new FireBulletBonus(), 500, 305);
+        if(castleHealth <= 60 && !setFireBonus){
+            getWorld().addObject(new FireBulletBonus(), 500, 290);
             setFireBonus = true;
         }
     }
