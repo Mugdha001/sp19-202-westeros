@@ -6,15 +6,15 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class DragonGlassBonusButton extends Actor
+public class DragonGlassBonusButton extends Actor implements IBonusInvoker
 {
     IBonusCommand bonusCommand;
     String key;
     
     public DragonGlassBonusButton(){
-        key = "b";
+        key = "s";
         GreenfootImage img = getImage();
-        img.scale(img.getWidth() - 408 , img.getHeight() - 408);
+        img.scale(img.getWidth() - 421 , img.getHeight() - 421);
         setImage(img);
     }
     
@@ -22,11 +22,11 @@ public class DragonGlassBonusButton extends Actor
     {
         if(Greenfoot.isKeyDown(key))
         {
-            click();
+            keyPressed();
         }
     }  
     
-    public void click(){
+    public void keyPressed(){
         bonusCommand.execute();
     }
     

@@ -13,7 +13,7 @@ public class FireBulletBonusButton extends Actor implements IBonusInvoker
     public FireBulletBonusButton(){
         key = "a";
         GreenfootImage img = getImage();
-        img.scale(img.getWidth() - 300 , img.getHeight() - 310);
+        img.scale(img.getWidth() - 313 , img.getHeight() - 323);
         setImage(img);
     }
     
@@ -21,11 +21,11 @@ public class FireBulletBonusButton extends Actor implements IBonusInvoker
     {
         if(Greenfoot.isKeyDown(key))
         {
-            click();
+            keyPressed();
         }
     }  
     
-    public void click(){
+    public void keyPressed(){
         bonusCommand.execute();
     }
     

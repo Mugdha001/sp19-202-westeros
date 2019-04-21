@@ -7,5 +7,5 @@
 public interface IBonusInvoker  
 {
     public void setCommand(IBonusCommand cmd);
-    public void click();
+    public void keyPressed();
 }
