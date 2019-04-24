@@ -14,6 +14,15 @@ public class Clouds extends Actor
      */
     //private static final double scrollSpeed = 2.5;
     //private int scrollPosition = 0;
+    /*public Clouds()
+    {    
+        
+        setBackground(bgImageName);
+        bgImage = new GreenfootImage(getBackground());
+        bgBase = new GreenfootImage(picWidth, getHeight());
+        bgBase.drawImage(bgImage, 0, 0);
+    }*/
+    
     public void act() 
     {
         // Add your action code here.
