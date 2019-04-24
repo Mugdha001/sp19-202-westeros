@@ -57,20 +57,8 @@ public class MyWorld extends World
     private void prepare()
     {
         //command pattern starts
+         setupCommandPatternForBonusWeapons();
          
-         //map command to invoker
-         defaultBulletButton.setCommand(defaultBulletCommand);
-         //map receiver to command
-         defaultBulletCommand.setReceiver(
-          new IBonusReceiver() {
-        	  
-              /** Command Action */
-              public void doAction() {
-                  player.setCurrentWeaponFactory( new PlayerBulletFactory() ) ;
-              }
-        }
-        ) ;
-        player.setDefaultBulletMenuInvoker(defaultBulletButton);
         
          //fire bullet bonus
 
@@ -132,6 +120,24 @@ public class MyWorld extends World
         }
         
         
+    }
+    
+    public void setupCommandPatternForBonusWeapons(){
+        
+        // Default Bullet weapon
+        //map command to invoker
+         defaultBulletButton.setCommand(defaultBulletCommand);
+         //map receiver to command
+         defaultBulletCommand.setReceiver(
+          new IBonusReceiver() {
+        	  
+              /** Command Action */
+              public void doAction() {
+                  player.setCurrentWeaponFactory( new PlayerBulletFactory() ) ;
+              }
+        }
+        ) ;
+        player.setDefaultBulletMenuInvoker(defaultBulletButton);
     }
     
     public Castle getCastle()
