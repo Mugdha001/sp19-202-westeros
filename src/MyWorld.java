@@ -58,25 +58,7 @@ public class MyWorld extends World
     {
         //command pattern starts
          setupCommandPatternForBonusWeapons();
-        
-        //dragon glass bonus
-
-         //map command to invoker
-         dragonGlassBonusButton.setCommand(dragonGlassBonusCommand);
-         //map receiver to command
-         dragonGlassBonusCommand.setReceiver(
-          new IBonusReceiver() {
-        	  
-              /** Command Action */
-              public void doAction() {
-                  player.setCurrentWeaponFactory( new DragonGlassFactory() ) ;
-              }
-        }
-        ) ;
-        player.setDragonGlassMenuInvoker(dragonGlassBonusButton);
-        
-        
-       addObject(bonusWeaponsMenu , 150, 150);
+       
         //command pattern ends
         GreenfootImage bg = new GreenfootImage("snow_background_21.png");
         bg.scale(getWidth(), getHeight());
@@ -138,6 +120,26 @@ public class MyWorld extends World
         }
         ) ;
         player.setFireBulletMenuInvoker(fireBulletBonusButton);
+        
+         
+        //dragon glass bonus
+
+         //map command to invoker
+         dragonGlassBonusButton.setCommand(dragonGlassBonusCommand);
+         //map receiver to command
+         dragonGlassBonusCommand.setReceiver(
+          new IBonusReceiver() {
+        	  
+              /** Command Action */
+              public void doAction() {
+                  player.setCurrentWeaponFactory( new DragonGlassFactory() ) ;
+              }
+        }
+        ) ;
+        player.setDragonGlassMenuInvoker(dragonGlassBonusButton);
+        
+        
+       addObject(bonusWeaponsMenu , 150, 150);
     }
     
     public Castle getCastle()
