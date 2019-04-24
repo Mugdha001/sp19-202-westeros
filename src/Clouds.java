@@ -22,5 +22,8 @@ public class Clouds extends Actor
         //while(scrollSpeed < 0 && scrollPosition > 0) scrollPosition -= picWidth;
         //paint(scrollPosition);
         move(1);
+        
+        
+        
     }    
 }
