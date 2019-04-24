@@ -67,6 +67,7 @@ public class MyWorld extends World
         addObject(player, 370, 275);
         addObject(enemy , 370 ,540);
         addObject(score , 740, 200);
+        addObject(new Clouds(),340, 50);
         castle.attach(score);
         castle.attach(player);
         enemy.attach(score);
@@ -95,7 +96,7 @@ public class MyWorld extends World
          //map receiver to command
          defaultBulletCommand.setReceiver(
           new IBonusReceiver() {
-        	  
+              
               /** Command Action */
               public void doAction() {
                   player.setCurrentWeaponFactory( new PlayerBulletFactory() ) ;
@@ -112,7 +113,7 @@ public class MyWorld extends World
          //map receiver to command
          fireBulletBonusCommand.setReceiver(
           new IBonusReceiver() {
-        	  
+              
               /** Command Action */
               public void doAction() {
                   player.setCurrentWeaponFactory( new FireBulletFactory() ) ;
@@ -129,7 +130,7 @@ public class MyWorld extends World
          //map receiver to command
          dragonGlassBonusCommand.setReceiver(
           new IBonusReceiver() {
-        	  
+              
               /** Command Action */
               public void doAction() {
                   player.setCurrentWeaponFactory( new DragonGlassFactory() ) ;
