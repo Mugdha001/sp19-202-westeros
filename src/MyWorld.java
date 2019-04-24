@@ -58,23 +58,6 @@ public class MyWorld extends World
     {
         //command pattern starts
          setupCommandPatternForBonusWeapons();
-         
-        
-         //fire bullet bonus
-
-         //map command to invoker
-         fireBulletBonusButton.setCommand(fireBulletBonusCommand);
-         //map receiver to command
-         fireBulletBonusCommand.setReceiver(
-          new IBonusReceiver() {
-        	  
-              /** Command Action */
-              public void doAction() {
-                  player.setCurrentWeaponFactory( new FireBulletFactory() ) ;
-              }
-        }
-        ) ;
-        player.setFireBulletMenuInvoker(fireBulletBonusButton);
         
         //dragon glass bonus
 
@@ -138,6 +121,23 @@ public class MyWorld extends World
         }
         ) ;
         player.setDefaultBulletMenuInvoker(defaultBulletButton);
+        
+        
+          //fire bullet bonus
+
+         //map command to invoker
+         fireBulletBonusButton.setCommand(fireBulletBonusCommand);
+         //map receiver to command
+         fireBulletBonusCommand.setReceiver(
+          new IBonusReceiver() {
+        	  
+              /** Command Action */
+              public void doAction() {
+                  player.setCurrentWeaponFactory( new FireBulletFactory() ) ;
+              }
+        }
+        ) ;
+        player.setFireBulletMenuInvoker(fireBulletBonusButton);
     }
     
     public Castle getCastle()
