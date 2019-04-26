@@ -31,8 +31,19 @@ public class Clouds extends Actor
         //while(scrollSpeed < 0 && scrollPosition > 0) scrollPosition -= picWidth;
         //paint(scrollPosition);
         move(1);
+        remove();
         
         
-        
-    }    
+    } 
+    
+    public void remove()
+    {
+        if (isAtEdge()) 
+        {
+            
+            getWorld().addObject(new Clouds(),10, 50);
+            getWorld().removeObject(this);
+        }
+    
+    }
 }
