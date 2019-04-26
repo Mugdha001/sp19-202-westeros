@@ -18,14 +18,28 @@ public class Enemy extends Actor implements Subject
     ArrayList<Observer> obs = new ArrayList<Observer>();
     public void act() 
     {
+        
         if(timebetweenshots % 100 == 0)
             shoot();
         timebetweenshots++;
         if(timebetweenshots == 1000)
             timebetweenshots = 0;
-        randomMoveEnemy();
+        if(atWorldEdge()){
+            randomMoveEnemy();
+        }
+        move(3);
         
-    }    
+    }  
+    
+    public boolean atWorldEdge()
+    {
+        if(getX() < 100 || getX() > getWorld().getWidth() - 100){
+            //System.out.println("At right");
+            return true;
+        }
+        else
+            return false;
+    }
     
     public void shoot()
     {
@@ -62,7 +76,15 @@ public class Enemy extends Actor implements Subject
     }
     
     public void randomMoveEnemy(){
-        move(-1*Greenfoot.getRandomNumber(20));
-        move(Greenfoot.getRandomNumber(20));
+         if (getX() <= getWorld().getWidth() -2 && getX()>100) {
+         setLocation(getX() - 2, getY());
+         turn(180);         
+         setImage("nightking.png");  
+     }  
+     else if (getX() <=100)  {
+         setLocation(getX() + 10, getY());  
+         turn(180);
+         setImage("nightkingupright.png");
+      }
     }
 }

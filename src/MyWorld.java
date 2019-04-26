@@ -78,7 +78,7 @@ public class MyWorld extends World
                     break;
             
             case 2 : //set speed // add extra enemy //set whitewalker lives
-                     addObject(anotherEnemy ,420 ,540);
+                     addObject(anotherEnemy ,105 ,540);
                      enemy.setHealth(200);
                      anotherEnemy.setHealth(200);
                      iceBulletSpeed = 5;
