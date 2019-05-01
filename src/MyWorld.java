@@ -30,11 +30,24 @@ public class MyWorld extends World
     ShootingStrategy sw = new SingleWeaponStrategy();
     ShootingStrategy dw = new DoubleWeaponStrategy();
     public int iceBulletSpeed;
-    private int currentLevel;
+    private int currentLevel = 0;
+
+    private void setup()
+    {
+        GreenfootImage bg = new GreenfootImage("welcomescreen.png");
+        bg.scale(getWidth(), getHeight());
+        setBackground(bg);
+        addObject(new Button("Start") , 240,200);
+        addObject(new Button("Quit") , 240,265);
+        addObject(new Button("Help") , 240,330);
+        addObject(new GameTitle() , 380,70);
+        addObject(new Wolf(), 60,100);
+        addObject(new Wolf(), 690,100);
+    }
     
     public MyWorld()
-    {     
-        this(1);
+    {   
+        this(0);
     }
     
     public MyWorld(int level)
@@ -57,8 +70,13 @@ public class MyWorld extends World
     private void prepare()
     {
         //command pattern starts
-         setupCommandPatternForBonusWeapons();
-       
+        setupCommandPatternForBonusWeapons();
+        if(currentLevel == 0)
+        {
+            setup();
+            return;
+        }
+        
         //command pattern ends
         GreenfootImage bg = new GreenfootImage("snow_background_21.png");
         bg.scale(getWidth(), getHeight());
