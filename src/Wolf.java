@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Wolf here.
+ * Write a description of class Targeryn here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -9,11 +9,19 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Wolf extends Actor
 {
     /**
-     * Act - do whatever the Wolf wants to do. This method is called whenever
+     * Act - do whatever the Targeryn wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        // Add your action code here.
-    }    
+       
+    }  
+    
+    public Wolf()
+    {
+        GreenfootImage img = getImage();
+        img.scale(img.getWidth() - 320 , img.getHeight() - 370);
+        setImage(img);
+    }
+
 }
