@@ -25,6 +25,7 @@ public class MyWorld extends World
     //command pattern ends
     ScoreBoard score = new ScoreBoard();
     Player player = new Player();
+    Player2 player2 = new Player2();
     Enemy enemy = new Enemy();
     Enemy anotherEnemy = new Enemy();
     ShootingStrategy sw = new SingleWeaponStrategy();
@@ -82,7 +83,7 @@ public class MyWorld extends World
         bg.scale(getWidth(), getHeight());
         setBackground(bg);
         addObject(castle ,370,170);
-        addObject(player, 370, 275);
+        addObject(player2, 370, 275);
         addObject(enemy , 370 ,540);
         addObject(score , 740, 200);
         addObject(new Clouds(),340, 50);
