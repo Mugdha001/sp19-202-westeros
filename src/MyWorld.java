@@ -25,6 +25,8 @@ public class MyWorld extends World
     BonusWeaponsMenu bonusWeaponsMenu = new BonusWeaponsMenu();
     //command pattern ends
     ScoreBoard score = new ScoreBoard();
+    CastleScoreboard castleScoreboard = new CastleScoreboard();
+    EnemyScoreboard enemyScoreboard = new EnemyScoreboard();
     Player player = new Player();
     Player2 player2 = new Player2();
     Enemy enemy = new Enemy();
@@ -56,7 +58,7 @@ public class MyWorld extends World
     public MyWorld(int level)
     {    
         super(750,570,1); 
-        backgroundMusic.playLoop();
+        //backgroundMusic.playLoop();
         currentLevel = level;
         prepare();
     }
@@ -87,10 +89,12 @@ public class MyWorld extends World
         setBackground(bg);
         //addObject(backgroundScore , 150,0);
         addObject(bonusWeaponsMenu , 150, 150);
-        addObject(score , 600, 150);
+        addObject(score , 740, 93);
         addObject(castle ,370,170);
         addObject(player, 370, 275);
-        addObject(enemy , 370 ,540);        
+        addObject(enemy , 370 ,540);
+        addObject(castleScoreboard , 559 ,51);
+        addObject(enemyScoreboard , 630 ,51);
         //addObject(new Clouds(),340, 50);
         addObject(new SnowTree(), 25, 500);
         addObject(new SnowTree(), 35, 400);
