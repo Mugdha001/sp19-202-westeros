@@ -31,6 +31,17 @@ public class Button extends Actor
             Greenfoot.setWorld(new MyWorld(1)); 
             Greenfoot.playSound("Respawn.mp3");
         }
+        else if(Greenfoot.mousePressed(this) && function == "Help")
+        {
+            Greenfoot.setWorld(new Help()); 
+            Greenfoot.playSound("Respawn.mp3");
+        }
+        else if(Greenfoot.mousePressed(this) && function == "Back")
+        {
+            
+            Greenfoot.setWorld(new MyWorld(0));
+            Greenfoot.playSound("Respawn.mp3");
+        }
         else if(Greenfoot.mousePressed(this))
         {
             Greenfoot.playSound("Respawn.mp3");
