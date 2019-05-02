@@ -1,17 +1,17 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class FirTree here.
+ * Write a description of class PineTree here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class FirTree extends Actor implements ITreeInterface
+public class PineTree extends Actor implements ITreeInterface
 {
       private String type;
       private int size;
       
-      public FirTree(String t){
+      public PineTree(String t){
           type = t;
       }
       
@@ -22,5 +22,5 @@ public class FirTree extends Actor implements ITreeInterface
         }
         
         setImage(img);
-      }    
+      }
 }
