@@ -85,7 +85,7 @@ public class MyWorld extends World
         bg.scale(getWidth(), getHeight());
         setBackground(bg);
         addObject(castle ,370,170);
-        addObject(player2, 370, 275);
+        addObject(player, 370, 275);
         addObject(enemy , 370 ,540);
         addObject(score , 740, 200);
         addObject(new Clouds(),340, 50);
