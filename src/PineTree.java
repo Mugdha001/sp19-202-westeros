@@ -9,20 +9,26 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class PineTree extends Tree
 {
       private String type;
-      private int size; //extrinsic
+      private int size; 
       
-      public PineTree(String t){
+      public PineTree(String t, int s){
           type = t;
+          size = s;
+          setSize();
+          
+          System.out.println("Pine tree size " + size + " created");
       }
       
-      public void setSize(int s){
+      private void setSize(){
         GreenfootImage img = getImage();
-        if(s == 1){
-            img.scale(img.getWidth() - 50 , img.getHeight() - 200);
+        //smallest
+        if(size == 1){
+            img.scale(img.getWidth() - 170 , img.getHeight() - 450);
         }
         
-        else if(s == 3){
-            img.scale(img.getWidth() +60 , img.getHeight() + 100);
+        //biggest
+        else if(size == 2){
+            img.scale(img.getWidth() -140 , img.getHeight() - 360);
         }
         
         setImage(img);
