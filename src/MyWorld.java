@@ -13,6 +13,7 @@ public class MyWorld extends World
      * Constructor for objects of class MyWorld.
      * 
      */
+    GreenfootSound backgroundMusic = new GreenfootSound("backgroundMusic.mp3");
     Castle castle = new Castle();
     // command pattern starts
     IBonusCommand fireBulletBonusCommand = new BonusCommand();
@@ -54,6 +55,7 @@ public class MyWorld extends World
     public MyWorld(int level)
     {    
         super(750,570,1); 
+        backgroundMusic.playLoop();
         currentLevel = level;
         prepare();
     }
