@@ -29,8 +29,8 @@ public class ScoreBoard extends Actor implements Observer
     public ScoreBoard()
     {   
         castleHealth = 100;
-        enemyHealth = 100;
-        enemiesRemaining = 2;
+        enemyHealth = 20;
+        enemiesRemaining = 1;
         showScore();
     }
     private void showScore()
@@ -73,15 +73,18 @@ public class ScoreBoard extends Actor implements Observer
                     sm = new ScreenMessage("Welcome to Level 2!");
                     w.addObject(sm,500,250);
                     sm.blink();
-                    Greenfoot.setWorld(new MyWorld(2)); 
                     */
-                   getWorld().addObject(new TransitionScreen(), 100,100);
+                   getWorld().addObject(new TransitionScreen("Level 1 Complete!"), 375,280);
+                   Greenfoot.delay(300);
+                   Greenfoot.setWorld(new MyWorld(2)); 
                 }
                 else
                 {
-                   ScreenMessage sm = new ScreenMessage("Winner!!");
-                   w.addObject(sm,500,200);
-                   sm.blink();
+                   //ScreenMessage sm = new ScreenMessage("Winner!!");
+                   //w.addObject(sm,500,200);
+                   //sm.blink();
+                   getWorld().addObject(new TransitionScreen("You win!"), 375,290);
+                   Greenfoot.delay(300);
                    Greenfoot.stop();
                 }
             }
