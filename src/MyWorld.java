@@ -22,7 +22,7 @@ public class MyWorld extends World
     FireBulletBonusButton fireBulletBonusButton = new FireBulletBonusButton();
     DragonGlassBonusButton dragonGlassBonusButton = new DragonGlassBonusButton();
     DefaultBulletButton defaultBulletButton = new DefaultBulletButton();
-    BonusWeaponsMenu bonusWeaponsMenu = new BonusWeaponsMenu();
+    //BonusWeaponsMenu bonusWeaponsMenu = new BonusWeaponsMenu();
     //command pattern ends
     ScoreBoard score = new ScoreBoard();
     Player player = new Player();
