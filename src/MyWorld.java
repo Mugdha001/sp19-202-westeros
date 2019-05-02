@@ -94,6 +94,7 @@ public class MyWorld extends World
         addObject(new SnowTree(), 45, 300);
         addObject(new SnowTree(), 625, 400);
         addObject(new SnowTree(), 615, 500);
+        addObject(bonusWeaponsMenu , 150, 150);
         castle.attach(score);
         castle.attach(player);
         enemy.attach(score);
@@ -168,7 +169,7 @@ public class MyWorld extends World
         player.setDragonGlassMenuInvoker(dragonGlassBonusButton);
         
         
-       addObject(bonusWeaponsMenu , 150, 150);
+       
     }
     
     public Castle getCastle()
