@@ -25,7 +25,7 @@ public class BonusWeaponsMenu extends Actor
     {
         String menuString = "** Bonus/ Weapons Menu **";
         GreenfootImage img = new GreenfootImage(300,500); 
-        img.setFont(new Font("Perpetua", false, true,20));
+        img.setFont(new Font("Perpetua", false, true,14));
         img.setColor(Color.RED);
         img.drawString(menuString ,5,125);
         setImage(img);

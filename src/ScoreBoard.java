@@ -35,11 +35,11 @@ public class ScoreBoard extends Actor implements Observer
     }
     private void showScore()
     {
-        String displayHealth = "ScoreBoard\n\nCastle:\n"+castleHealth+"\n\nWhite Walkers:\n"+enemyHealth+
-        "\n\nWalkers remaining:\n"+enemiesRemaining;
-        GreenfootImage img = new GreenfootImage(300,500); 
-        img.setFont(new Font("Perpetua", false, true,24));
-        img.setColor(Color.RED);
+        String displayHealth = "ScoreBoard\nCastle\t:"+castleHealth+"White Walkers\t:"+enemyHealth+
+        "Walkers remaining:\t"+enemiesRemaining;
+        GreenfootImage img = new GreenfootImage(400,500); 
+        img.setFont(new Font("Helvetica", false, true,14));
+        img.setColor(Color.WHITE);
         img.drawString(displayHealth ,5,125);
         setImage(img);
     }
@@ -67,13 +67,15 @@ public class ScoreBoard extends Actor implements Observer
                 int level = w.getCurrentLevel();
                 if(level == 1)
                 {
-                    ScreenMessage sm = new ScreenMessage("Level 1 Complete!");
+                   /* ScreenMessage sm = new ScreenMessage("Level 1 Complete!");
                     w.addObject(sm,500,200);
                     sm.blink();
                     sm = new ScreenMessage("Welcome to Level 2!");
                     w.addObject(sm,500,250);
                     sm.blink();
                     Greenfoot.setWorld(new MyWorld(2)); 
+                    */
+                   getWorld().addObject(new TransitionScreen(), 100,100);
                 }
                 else
                 {

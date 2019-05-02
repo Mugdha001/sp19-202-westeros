@@ -31,6 +31,7 @@ public class MyWorld extends World
     Enemy anotherEnemy = new Enemy();
     ShootingStrategy sw = new SingleWeaponStrategy();
     ShootingStrategy dw = new DoubleWeaponStrategy();
+    BackgroundScore backgroundScore = new BackgroundScore();
     public int iceBulletSpeed;
     private int currentLevel = 0;
 
@@ -84,17 +85,19 @@ public class MyWorld extends World
         GreenfootImage bg = new GreenfootImage("snow_background_21.png");
         bg.scale(getWidth(), getHeight());
         setBackground(bg);
+        addObject(backgroundScore , 150,0);
+        addObject(bonusWeaponsMenu , 150, 150);
+        addObject(score , 600, 150);
         addObject(castle ,370,170);
         addObject(player, 370, 275);
-        addObject(enemy , 370 ,540);
-        addObject(score , 740, 200);
-        addObject(new Clouds(),340, 50);
+        addObject(enemy , 370 ,540);        
+        //addObject(new Clouds(),340, 50);
         addObject(new SnowTree(), 25, 500);
         addObject(new SnowTree(), 35, 400);
         addObject(new SnowTree(), 45, 300);
         addObject(new SnowTree(), 625, 400);
         addObject(new SnowTree(), 615, 500);
-        addObject(bonusWeaponsMenu , 150, 150);
+       
         castle.attach(score);
         castle.attach(player);
         enemy.attach(score);
