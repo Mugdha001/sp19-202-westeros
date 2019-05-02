@@ -39,7 +39,7 @@ public class ScoreBoard extends Actor implements Observer
         "Walkers remaining:\t"+enemiesRemaining;
         GreenfootImage img = new GreenfootImage(400,500); 
         img.setFont(new Font("Helvetica", false, true,14));
-        img.setColor(Color.WHITE);
+        img.setColor(Color.BLACK);
         img.drawString(displayHealth ,5,125);
         setImage(img);
     }
