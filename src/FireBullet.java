@@ -21,9 +21,11 @@ public class FireBullet extends Weapon
     public FireBullet()
     {
 
+
         GreenfootImage img = getImage();
-        img.scale(img.getWidth() - 270 , img.getHeight() - 270);
+        img.scale(img.getWidth() - 640, img.getHeight() - 625);
         setImage(img);
+
         Greenfoot.playSound("PlayerShoot.mp3");
     }
     
