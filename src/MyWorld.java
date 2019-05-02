@@ -33,7 +33,6 @@ public class MyWorld extends World
     Enemy anotherEnemy = new Enemy();
     ShootingStrategy sw = new SingleWeaponStrategy();
     ShootingStrategy dw = new DoubleWeaponStrategy();
-    BackgroundScore backgroundScore = new BackgroundScore();
     public int iceBulletSpeed;
     private int currentLevel = 0;
 
