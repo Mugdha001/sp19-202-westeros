@@ -13,6 +13,7 @@ public class MyWorld extends World
      * Constructor for objects of class MyWorld.
      * 
      */
+    GreenfootSound backgroundMusic = new GreenfootSound("backgroundMusic.mp3");
     Castle castle = new Castle();
     // command pattern starts
     IBonusCommand fireBulletBonusCommand = new BonusCommand();
@@ -30,17 +31,32 @@ public class MyWorld extends World
     Enemy anotherEnemy = new Enemy();
     ShootingStrategy sw = new SingleWeaponStrategy();
     ShootingStrategy dw = new DoubleWeaponStrategy();
+    BackgroundScore backgroundScore = new BackgroundScore();
     public int iceBulletSpeed;
-    private int currentLevel;
+    private int currentLevel = 0;
+
+    private void setup()
+    {
+        GreenfootImage bg = new GreenfootImage("welcomescreen.png");
+        bg.scale(getWidth(), getHeight());
+        setBackground(bg);
+        addObject(new Button("Start") , 240,200);
+        addObject(new Button("Quit") , 240,265);
+        addObject(new Button("Help") , 240,330);
+        addObject(new GameTitle() , 380,70);
+        addObject(new Wolf(), 60,100);
+        addObject(new Wolf(), 690,100);
+    }
     
     public MyWorld()
-    {     
-        this(1);
+    {   
+        this(0);
     }
     
     public MyWorld(int level)
     {    
         super(750,570,1); 
+        backgroundMusic.playLoop();
         currentLevel = level;
         prepare();
     }
@@ -58,22 +74,30 @@ public class MyWorld extends World
     private void prepare()
     {
         //command pattern starts
-         setupCommandPatternForBonusWeapons();
-       
+        setupCommandPatternForBonusWeapons();
+        if(currentLevel == 0)
+        {
+            setup();
+            return;
+        }
+        
         //command pattern ends
         GreenfootImage bg = new GreenfootImage("snow_background_21.png");
         bg.scale(getWidth(), getHeight());
         setBackground(bg);
+        addObject(backgroundScore , 150,0);
+        addObject(bonusWeaponsMenu , 150, 150);
+        addObject(score , 600, 150);
         addObject(castle ,370,170);
         addObject(player, 370, 275);
-        addObject(enemy , 370 ,540);
-        addObject(score , 740, 200);
-        addObject(new Clouds(),340, 50);
+        addObject(enemy , 370 ,540);        
+        //addObject(new Clouds(),340, 50);
         addObject(new SnowTree(), 25, 500);
         addObject(new SnowTree(), 35, 400);
         addObject(new SnowTree(), 45, 300);
         addObject(new SnowTree(), 625, 400);
         addObject(new SnowTree(), 615, 500);
+       
         castle.attach(score);
         castle.attach(player);
         enemy.attach(score);
@@ -149,7 +173,7 @@ public class MyWorld extends World
         player.setDragonGlassMenuInvoker(dragonGlassBonusButton);
         
         
-       addObject(bonusWeaponsMenu , 150, 150);
+       
     }
     
     public Castle getCastle()

@@ -1,14 +1,14 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class firesplat here.
+ * Write a description of class Firesplat here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
 public class Firesplat extends Actor
 {
-    /**
+        /**
      * Act - do whatever the firesplat wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
@@ -31,7 +31,7 @@ public class Firesplat extends Actor
     public Firesplat()
     {
         GreenfootImage img = getImage();
-        img.scale(img.getWidth() - 160 , img.getHeight() - 160);
+        img.scale(img.getWidth() - 10 , img.getHeight() - 10);
         setImage(img);
         //Greenfoot.playSound("EnemyImpact.mp3");
     }
