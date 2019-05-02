@@ -93,14 +93,14 @@ public class MyWorld extends World
         addObject(castle ,370,170);
         addObject(player, 370, 275);
         addObject(enemy , 370 ,540);
-        addObject(castleScoreboard , 559 ,51);
-        addObject(enemyScoreboard , 630 ,51);
-        //addObject(new Clouds(),340, 50);
+        addObject(castleScoreboard , 559 ,41);
+        addObject(enemyScoreboard , 638 ,53);
+        /*addObject(new Clouds(),340, 50);
         addObject(new SnowTree(), 25, 500);
         addObject(new SnowTree(), 35, 400);
         addObject(new SnowTree(), 45, 300);
         addObject(new SnowTree(), 625, 400);
-        addObject(new SnowTree(), 615, 500);
+        addObject(new SnowTree(), 615, 500);*/
        
         castle.attach(score);
         castle.attach(player);

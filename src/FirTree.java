@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class FirTree extends Actor implements ITreeInterface
+public class FirTree extends Tree
 {
       private String type;
       private int size;
