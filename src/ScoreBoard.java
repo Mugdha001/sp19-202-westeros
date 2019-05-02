@@ -35,7 +35,7 @@ public class ScoreBoard extends Actor implements Observer
     }
     private void showScore()
     {
-        String displayHealth = "        ScoreBoard\n\n       :"+castleHealth+"         :"+enemiesRemaining;
+        String displayHealth = "        ScoreBoard\n\n       :"+castleHealth+"           :"+enemiesRemaining;
         
         GreenfootImage img = new GreenfootImage(400,400); 
         img.setFont(new Font("Helvetica", false, true,18));
