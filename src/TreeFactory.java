@@ -8,10 +8,14 @@ import java.util.HashMap;
  */
 public class TreeFactory extends Actor
 {
-   private static final HashMap<String, ITreeInterface> trees = new HashMap<String, ITreeInterface>();
+   private static HashMap<String, Tree> trees = new HashMap<String, Tree>();
 
-   public static ITreeInterface getTree(String type) {
-        ITreeInterface tree =  trees.get(type);
+   public static Tree getTree(String type) {
+        Tree tree =  trees.get(type);
+        System.out.println("size of hashmap: "+ trees.size());
+        for(int i = 0; i< trees.size(); i++){
+            System.out.println(trees);
+        }
 
         if (tree == null) {
             if ("fir".equals(type)) {
@@ -23,4 +27,5 @@ public class TreeFactory extends Actor
         }
         return tree;    
     }
+    
 }
