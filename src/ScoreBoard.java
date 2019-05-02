@@ -55,6 +55,7 @@ public class ScoreBoard extends Actor implements Observer
             this.enemyHealth = enemy;
             if(this.enemyHealth <= 0 && enemiesRemaining > 0)
             {
+                
                 enemiesRemaining--;
                 Enemy e = w.getEnemy();
                 e.setHealth(100);
@@ -74,6 +75,8 @@ public class ScoreBoard extends Actor implements Observer
                     w.addObject(sm,500,250);
                     sm.blink();
                     Greenfoot.setWorld(new MyWorld(2)); 
+                    //getWorld().addObject(new TransitionScreen("Level 1 Comlplete!"), x,y);
+                    
                 }
                 else
                 {
