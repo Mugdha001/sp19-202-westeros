@@ -96,9 +96,11 @@ public class MyWorld extends World
         addObject(enemyScoreboard , 638 ,53);
        
         TreeRegistry.loadRegistry();
-        addObject(TreeRegistry.getTree(1), 60, 300);
-        addObject(TreeRegistry.getTree(2), 35, 400);
-        addObject(TreeRegistry.getTree(2), 80, 350);
+        addObject(TreeRegistry.getTree(1), 59, 311);//33, 303
+        addObject(TreeRegistry.getTree(2), 35, 467);
+        addObject(TreeRegistry.getTree(2), 696, 341);
+        addObject(TreeRegistry.getTree(3), 168, 293);
+        addObject(TreeRegistry.getTree(4), 118, 423);
         
        /* addObject(new SnowTree(), 25, 500);
         addObject(new SnowTree(), 35, 400);

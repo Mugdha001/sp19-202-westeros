@@ -9,16 +9,26 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class FirTree extends Tree
 {
       private String type;
-      private int size;
+      private int size; 
       
-      public FirTree(String t){
+      public FirTree(String t, int s){
           type = t;
+          size = s;
+          setSize();
+          
+          System.out.println("Fir tree size " + size + " created");
       }
       
-      public void setSize(int s){
+      private void setSize(){
         GreenfootImage img = getImage();
-        if(s == 1){
-            img.scale(img.getWidth() - 313 , img.getHeight() - 323);
+        //smallest
+        if(size == 1){
+            img.scale(img.getWidth() - 720 , img.getHeight() - 500);
+        }
+        
+        //biggest
+        else if(size == 2){
+            img.scale(img.getWidth() -620 , img.getHeight() - 435);
         }
         
         setImage(img);
