@@ -13,6 +13,11 @@ public class MyWorld extends World
      * Constructor for objects of class MyWorld.
      * 
      */
+    
+    //command pattern
+    //observer pattern setup
+    //setup levels
+    
     GreenfootSound backgroundMusic = new GreenfootSound("backgroundMusic.mp3");
     Castle castle = new Castle();
     // command pattern starts
@@ -96,17 +101,12 @@ public class MyWorld extends World
         addObject(enemyScoreboard , 638 ,53);
        
         TreeRegistry.loadRegistry();
-        addObject(TreeRegistry.getTree(1), 59, 311);//33, 303
+        addObject(TreeRegistry.getTree(1), 59, 311);
         addObject(TreeRegistry.getTree(2), 35, 467);
         addObject(TreeRegistry.getTree(2), 696, 341);
         addObject(TreeRegistry.getTree(3), 168, 293);
         addObject(TreeRegistry.getTree(4), 118, 423);
         
-       /* addObject(new SnowTree(), 25, 500);
-        addObject(new SnowTree(), 35, 400);
-        addObject(new SnowTree(), 45, 300);
-        addObject(new SnowTree(), 625, 400);
-        addObject(new SnowTree(), 615, 500);*/
        
         castle.attach(score);
         castle.attach(player);
