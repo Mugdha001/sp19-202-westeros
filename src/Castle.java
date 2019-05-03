@@ -13,8 +13,6 @@ public class Castle extends Actor implements Subject
     public void act() 
     {
         // Add your action code here.
-        if (castleHealth==0)
-            Greenfoot.stop();
     }    
     
     public void attach(Observer o)

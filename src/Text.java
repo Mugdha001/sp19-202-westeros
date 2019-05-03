@@ -24,10 +24,10 @@ public class Text extends Actor
         img.setColor(color);
         img.drawString(text,50,50);
         setImage(img);
-     
+        blink();
         //blink(); 
-        if(Greenfoot.mouseClicked(this))
-            blink();
+        //if(Greenfoot.mouseClicked(this))
+        
     }   
     
     public Text(String text, Color color, String font)
@@ -51,7 +51,7 @@ public class Text extends Actor
     
     public void blink()
     {
-        int count = 10000;
+        int count = 100;
         while(count!=0)
         {
             GreenfootImage img = getImage();
@@ -62,6 +62,8 @@ public class Text extends Actor
             img.setTransparency(t);
             count--;
         }
+        //getWorld().removeObject(this);
+
 
     }
     

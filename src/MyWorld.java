@@ -45,7 +45,7 @@ public class MyWorld extends World
         addObject(new Button("Help") , 240,330);
         addObject(new GameTitle() , 380,70);
         addObject(new Wolf(), 60,100);
-        addObject(new Wolf(), 690,100);
+        addObject(new Wolf(), 690,100); 
     }
     
     public MyWorld()
@@ -73,7 +73,7 @@ public class MyWorld extends World
     
     private void prepare()
     {
-        addObject((Actor)mediator,265,18);
+        
         
         mediator.setCommandPattern(player);
         
@@ -87,13 +87,13 @@ public class MyWorld extends World
         GreenfootImage bg = new GreenfootImage("snowy.png");
         bg.scale(getWidth(), getHeight());
         setBackground(bg);
-        
+        addObject((Actor)mediator,265,18);
         addObject(bonusWeaponsMenu , 150, 150);
         addObject(score , 740, 93);
         addObject(castle ,370,189);
         addObject(player, 370, 275);
-        addObject(castleScoreboard , 585 ,49);
-        addObject(enemyScoreboard , 660 ,57);
+        addObject(castleScoreboard , 588 ,76);
+        addObject(enemyScoreboard , 651 ,84);
         addObject(enemy1 , 370 ,540);
         mediator.addTrees();
         

@@ -12,7 +12,7 @@ public class Snowsplat extends Actor
      * Act - do whatever the snowsplat wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    private int life = 5;
+    private int life = 3;
     public void act() 
     {
        life--;
