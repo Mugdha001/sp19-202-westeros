@@ -20,6 +20,7 @@ public class BonusMenuInstruction extends Actor
     
     /**
      * Constructor
+     * k: keyboard key to be included in the instruction
      */
     public BonusMenuInstruction(String k){
         key = k;

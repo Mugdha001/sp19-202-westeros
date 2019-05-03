@@ -17,10 +17,16 @@ public class BonusWeaponsMenu extends Actor
         showTitle();
     }    
     
+    /**
+     * Constructor
+     */
     public BonusWeaponsMenu(){
         showTitle();
     }
     
+    /**
+     * Create Menu title string and display
+     */
     private void showTitle()
     {
         String menuString = "Bonus/Weapons Menu";
