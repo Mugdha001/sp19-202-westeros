@@ -9,18 +9,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Mediator extends Actor implements IMediator
 {
     public void setCommandPattern(Player player){
-        MyWorld world = (MyWorld) getWorld();
-            // command pattern starts
-    IBonusCommand fireBulletBonusCommand = new BonusCommand();
-    IBonusCommand dragonGlassBonusCommand = new BonusCommand();
-    IBonusCommand defaultBulletCommand = new BonusCommand();
-    FireBulletBonusButton fireBulletBonusButton = new FireBulletBonusButton();
-    DragonGlassBonusButton dragonGlassBonusButton = new DragonGlassBonusButton();
-    DefaultBulletButton defaultBulletButton = new DefaultBulletButton();
-    
-    //command pattern ends
-        // Default Bullet weapon
-        //map command to invoker
+        
+        IBonusCommand fireBulletBonusCommand = new BonusCommand();
+        IBonusCommand dragonGlassBonusCommand = new BonusCommand();
+        IBonusCommand defaultBulletCommand = new BonusCommand();
+        FireBulletBonusButton fireBulletBonusButton = new FireBulletBonusButton();
+        DragonGlassBonusButton dragonGlassBonusButton = new DragonGlassBonusButton();
+        DefaultBulletButton defaultBulletButton = new DefaultBulletButton();
+        
          defaultBulletButton.setCommand(defaultBulletCommand);
          //map receiver to command
          defaultBulletCommand.setReceiver(
@@ -30,13 +26,11 @@ public class Mediator extends Actor implements IMediator
               public void doAction() {
                   player.setCurrentWeaponFactory( new PlayerBulletFactory() ) ;
               }
-        }
-        ) ;
+            }
+            ) ;
         player.setDefaultBulletMenuInvoker(defaultBulletButton);
-        
-        
-          //fire bullet bonus
-
+          
+        //fire bullet bonus
          //map command to invoker
          fireBulletBonusButton.setCommand(fireBulletBonusCommand);
          //map receiver to command
@@ -47,13 +41,11 @@ public class Mediator extends Actor implements IMediator
               public void doAction() {
                   player.setCurrentWeaponFactory( new FireBulletFactory() ) ;
               }
-        }
-        ) ;
+            }
+            ) ;
         player.setFireBulletMenuInvoker(fireBulletBonusButton);
-        
          
         //dragon glass bonus
-
          //map command to invoker
          dragonGlassBonusButton.setCommand(dragonGlassBonusCommand);
          //map receiver to command
@@ -69,4 +61,14 @@ public class Mediator extends Actor implements IMediator
         player.setDragonGlassMenuInvoker(dragonGlassBonusButton);
         
     }   
+    
+    public void addTrees(){
+        
+        TreeRegistry.loadRegistry();
+        getWorld().addObject(TreeRegistry.getTree(1), 59, 311);
+        getWorld().addObject(TreeRegistry.getTree(2), 35, 467);
+        getWorld().addObject(TreeRegistry.getTree(2), 696, 341);
+        getWorld().addObject(TreeRegistry.getTree(3), 168, 293);
+        getWorld().addObject(TreeRegistry.getTree(4), 118, 423);
+    }
 }

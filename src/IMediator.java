@@ -7,4 +7,5 @@
 public interface IMediator  
 {
    public void setCommandPattern(Player player);
+   public void addTrees();
 }
