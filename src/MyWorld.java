@@ -101,7 +101,7 @@ public class MyWorld extends World
         addObject(TreeRegistry.getTree(2), 696, 341);
         addObject(TreeRegistry.getTree(3), 168, 293);
         addObject(TreeRegistry.getTree(4), 118, 423);
-        
+        addObject(new Mediator(), 0,0);
        
         castle.attach(score);
         castle.attach(player);
