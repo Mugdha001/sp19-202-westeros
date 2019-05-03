@@ -17,6 +17,9 @@ public class GameTitle extends Actor
         // Add your action code here.
     } 
     
+    /**
+     * Constructor
+     */
     public GameTitle()
     {
         GreenfootImage img = getImage();

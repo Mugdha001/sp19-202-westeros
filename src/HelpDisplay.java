@@ -18,6 +18,7 @@ public class HelpDisplay extends Actor
         getWorld().addObject(new Button("Start") , 550,225);
         getWorld().addObject(new Button("Back") , 550,400);
     }
+    
     /**
      * display Help instructions
      */

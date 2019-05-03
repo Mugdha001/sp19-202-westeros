@@ -17,12 +17,18 @@ public class FireBulletBonus extends Actor
         disappear();
     }  
     
+    /**
+     * Constructor
+     */
     public FireBulletBonus(){
         GreenfootImage img = getImage();
         img.scale(img.getWidth() - 300 , img.getHeight() - 310);
         setImage(img);
     }
     
+    /**
+     * disappear effect
+     */
     public void disappear(){
         Actor player = getOneIntersectingObject(Player.class);
         if(player != null)
