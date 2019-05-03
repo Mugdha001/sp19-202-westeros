@@ -29,6 +29,7 @@ public class MyWorld extends World
     Enemy enemy = new Enemy();//always
     Enemy anotherEnemy = new Enemy();
     Enemy level3Enemy = new Enemy();
+    Dragon dragon = new Dragon();
     BonusWeaponsMenu bonusWeaponsMenu = new BonusWeaponsMenu();
    
     public int iceBulletSpeed;
@@ -92,8 +93,8 @@ public class MyWorld extends World
         addObject(castle ,370,189);
         addObject(player, 370, 275);
         addObject(enemy , 370 ,540);
-        addObject(castleScoreboard , 559 ,41);
-        addObject(enemyScoreboard , 638 ,53);
+        addObject(castleScoreboard , 585 ,49);
+        addObject(enemyScoreboard , 660 ,57);
         mediator.addTrees();
         
         //setting up observer pattern
@@ -119,6 +120,7 @@ public class MyWorld extends World
                      enemy.setHealth(200);
                      anotherEnemy.setHealth(200);
                      iceBulletSpeed = 5;
+                     addObject(dragon ,370 ,62);
                      break;
                      
        
