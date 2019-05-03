@@ -28,7 +28,7 @@ public class PlayerAbsorb extends Actor
     public PlayerAbsorb()
     {
         GreenfootImage img = getImage();
-        img.scale(img.getWidth() - 100 , img.getHeight() - 100);
+        img.scale(img.getWidth() - 180 , img.getHeight() - 180);
         setImage(img);
     }
 }

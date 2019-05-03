@@ -31,6 +31,10 @@ public class PineTree extends Tree
             img.scale(img.getWidth() -140 , img.getHeight() - 360);
         }
         
+         else if(size == 3){
+            img.scale(img.getWidth() -100 , img.getHeight() - 300);
+        }
+        
         setImage(img);
       }
 }

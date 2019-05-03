@@ -29,13 +29,13 @@ public class ScoreBoard extends Actor implements Observer
     public ScoreBoard()
     {   
         castleHealth = 100;
-        enemyHealth = 20;
-        enemiesRemaining = 1;
+        enemyHealth = 100;
+        enemiesRemaining = 3;
         showScore();
     }
     private void showScore()
     {
-        String displayHealth = "        ScoreBoard\n\n\n        "+castleHealth+"     "+enemiesRemaining;
+        String displayHealth = "        ScoreBoard\n Enemy Health: "+enemyHealth+"\n\n\n        "+castleHealth+"     "+enemiesRemaining;
         
         GreenfootImage img = new GreenfootImage(400,400); 
         img.setFont(new Font("Perpetua", false, true,24));
@@ -46,10 +46,19 @@ public class ScoreBoard extends Actor implements Observer
     
     public void update(int castle , int enemy)
     {
+
+            
         MyWorld w = (MyWorld)getWorld();
         if(castle!= -1)
             this.castleHealth = castle;
         
+        if(this.castleHealth <= 0)
+            {
+                getWorld().addObject(new TransitionScreen("Game Over!"), 375,285);
+                Greenfoot.delay(50);
+                Greenfoot.stop();
+            }
+            
         if(enemy!= -1)
         {
             this.enemyHealth = enemy;
@@ -67,22 +76,22 @@ public class ScoreBoard extends Actor implements Observer
                 int level = w.getCurrentLevel();
                 if(level == 1)
                 {
-                   getWorld().addObject(new TransitionScreen("Level 1 Complete!"), 375,280);
+                   getWorld().addObject(new TransitionScreen("Level 1 Complete!"), 375,285);
                    Greenfoot.delay(300);
                    Greenfoot.setWorld(new MyWorld(2)); 
                 }
                 else if (level==2)
                 {
-                   getWorld().addObject(new TransitionScreen("Level 2 Complete!"), 375,290);
+                   getWorld().addObject(new TransitionScreen("Level 2 Complete!"), 375,285);
                    Greenfoot.delay(300);
                    Greenfoot.setWorld(new MyWorld(3)); 
                 }
                 else{
-                   getWorld().addObject(new TransitionScreen("You Win!"), 375,290);
-                   Greenfoot.delay(300);
+                   getWorld().addObject(new TransitionScreen("You Win!"), 375,285);
                    Greenfoot.stop();
                 }
             }
+            
           
         }
     }

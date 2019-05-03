@@ -65,10 +65,16 @@ public class Mediator extends Actor implements IMediator
     public void addTrees(){
         
         TreeRegistry.loadRegistry();
-        getWorld().addObject(TreeRegistry.getTree(1), 59, 311);
-        getWorld().addObject(TreeRegistry.getTree(2), 35, 467);
-        getWorld().addObject(TreeRegistry.getTree(2), 696, 341);
-        getWorld().addObject(TreeRegistry.getTree(3), 168, 293);
+        getWorld().addObject(TreeRegistry.getTree(1), 134, 282);//
+        getWorld().addObject(TreeRegistry.getTree(2), 88, 349);//
+        getWorld().addObject(TreeRegistry.getTree(2), 625, 299);//
+        getWorld().addObject(TreeRegistry.getTree(3), 31, 464);//
         getWorld().addObject(TreeRegistry.getTree(4), 118, 423);
+        getWorld().addObject(TreeRegistry.getTree(1), 560, 306);//
+        getWorld().addObject(TreeRegistry.getTree(6), 698, 395);//
+        getWorld().addObject(TreeRegistry.getTree(1), 518 , 236);//
+        getWorld().addObject(TreeRegistry.getTree(4), 46 , 212);//
+        getWorld().addObject(TreeRegistry.getTree(4), 715 , 202);//
+        //getWorld().addObject(TreeRegistry.getTree(5))
     }
 }

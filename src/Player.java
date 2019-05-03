@@ -19,19 +19,31 @@ public class Player extends Actor implements Observer
     private FireBulletBonusButton fireBulletBonusButton;
     private DragonGlassBonusButton dragonGlassBonusButton;
     private DefaultBulletButton defaultBulletButton;
+    int timeforpause = 10;
 
     Actor castle;
     private ArrayList<WeaponFactory> weaponFactoryList;
+    boolean addMessage = false;
     /**
      * Act - do whatever the Player wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    
     public void act() 
     {
         checkKeys();
         collectBonus();
     } 
     
+    
+    private void addMessage()
+    {
+        Text text2 = new Text("Start", Color.RED, "Perpetua");
+        getWorld().addObject(text2, 240,200);
+        text2.blink();
+        getWorld().removeObject(text2);
+        addMessage = true;
+    }
     public void checkKeys()
     {
         if("space".equals(Greenfoot.getKey()))
@@ -54,7 +66,10 @@ public class Player extends Actor implements Observer
         Xcoord = getX();
         Ycoord = getY();
         if(castleHealth <= 50)
+        {
             updateStrategy();
+           
+        }
         currentShootingStrategy.shoot(world, currentWeaponFactory, Xcoord, Ycoord);
     }
     
