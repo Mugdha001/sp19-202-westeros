@@ -1,9 +1,0 @@
-#BlueJ class context
-comment0.target=Clouds
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ clouds\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=
-comment1.target=void\ act()
-comment1.text=public\ Clouds()\r\n\ \ \ \ {\ \ \ \ \r\n\ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ setBackground(bgImageName);\r\n\ \ \ \ \ \ \ \ bgImage\ \=\ new\ GreenfootImage(getBackground());\r\n\ \ \ \ \ \ \ \ bgBase\ \=\ new\ GreenfootImage(picWidth,\ getHeight());\r\n\ \ \ \ \ \ \ \ bgBase.drawImage(bgImage,\ 0,\ 0);\r\n}
-comment2.params=
-comment2.target=void\ remove()
-numComments=3

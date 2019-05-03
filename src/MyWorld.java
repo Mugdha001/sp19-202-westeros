@@ -11,23 +11,17 @@ public class MyWorld extends World
 
     /**
      * Constructor for objects of class MyWorld.
-     * 
      */
-    
-    //command pattern
-    //observer pattern setup
-    //setup levels
-    
     GreenfootSound backgroundMusic = new GreenfootSound("backgroundMusic.mp3");
-    Castle castle = new Castle();//always
+    Castle castle = new Castle();
     Mediator mediator = new Mediator();
-    ScoreBoard score = new ScoreBoard();//always
+    ScoreBoard score = new ScoreBoard();
     CastleScoreboard castleScoreboard = new CastleScoreboard();
     EnemyScoreboard enemyScoreboard = new EnemyScoreboard();
     Player player = new Player();
     Player2 player2 = new Player2();
     Dragon dragon = new Dragon();
-    Enemy enemy1 = new Enemy(3);//always
+    Enemy enemy1 = new Enemy(3);
     Enemy enemy2 = new Enemy(6);
     Enemy enemy3 = new Enemy(8);
     BonusWeaponsMenu bonusWeaponsMenu = new BonusWeaponsMenu();
@@ -35,14 +29,16 @@ public class MyWorld extends World
     public int iceBulletSpeed;
     private int currentLevel = 0;
 
+    /**
+     * set up the welcome screen display
+     */
     private void setup()
     {
         GreenfootImage bg = new GreenfootImage("welcomescreen.png");
         bg.scale(getWidth(), getHeight());
         setBackground(bg);
         addObject(new Button("Start") , 240,200);
-        addObject(new Button("Quit") , 240,265);
-        addObject(new Button("Help") , 240,330);
+        addObject(new Button("Help") , 240,291);
         addObject(new GameTitle() , 380,70);
         addObject(new Wolf(), 60,100);
         addObject(new Wolf(), 690,100); 
@@ -71,9 +67,11 @@ public class MyWorld extends World
         return currentLevel;
     }
     
+    /**
+     * Prepare and set up patterns, levels etc
+     */
     private void prepare()
     {
-        
         
         mediator.setCommandPattern(player);
         
@@ -83,11 +81,12 @@ public class MyWorld extends World
             return;
         }
         
-        //command pattern ends
         GreenfootImage bg = new GreenfootImage("snowy.png");
         bg.scale(getWidth(), getHeight());
         setBackground(bg);
+        
         addObject((Actor)mediator,265,18);
+        
         addObject(bonusWeaponsMenu , 150, 150);
         addObject(score , 740, 93);
         addObject(castle ,370,189);
@@ -108,8 +107,7 @@ public class MyWorld extends World
             case 1 : iceBulletSpeed = 5;
                     break;
             
-            case 2 : //set speed // add extra enemy //set whitewalker lives
-                     addObject(enemy2 ,105 ,540);
+            case 2 : addObject(enemy2 ,105 ,540);
                      enemy1.setHealth(200);
                      enemy2.setHealth(200);
                      iceBulletSpeed = 5;
@@ -122,25 +120,32 @@ public class MyWorld extends World
                      iceBulletSpeed = 5;
                      addObject(dragon ,370 ,62);
                      break;
-                     
-       
+                 
         }
         
         
     }
     
  
-    
+    /**
+     * Castle: get castle object
+     */
     public Castle getCastle()
     {
         return castle;
     }
     
+    /**
+     * ScoreBoard: get scoreboard object
+     */
     public ScoreBoard getScore()
     {
         return score;
     }
     
+    /**
+     * Enemy: get enemy object
+     */
     public Enemy getEnemy()
     {
         return enemy1;

@@ -16,7 +16,8 @@ public class Button extends Actor
     CrossedSwords cs = new CrossedSwords();
     public void act() 
     {
-        //MouseInfo mouse = Greenfoot.getMouseInfo();
+        //check mouse activity
+        
         if(Greenfoot.mouseMoved(this))
         {
             getWorld().addObject(cs,getX()+100,getY());
@@ -48,6 +49,10 @@ public class Button extends Actor
     
     }  
     
+    /**
+     * text: create button with text
+     * Button: created button
+     */
     public Button(String text)
     {
         function = text;
@@ -61,6 +66,9 @@ public class Button extends Actor
         
     }
     
+    /**
+     * value: value
+     */
     public void setFunction(String value)
     {
         function = value;
