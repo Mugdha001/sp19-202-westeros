@@ -72,7 +72,7 @@ public class MyWorld extends World
     
     private void prepare()
     {
-        addObject((Actor)mediator,0,0);
+        addObject((Actor)mediator,265,18);
         
         mediator.setCommandPattern(player);
         
