@@ -67,22 +67,12 @@ public class ScoreBoard extends Actor implements Observer
                 int level = w.getCurrentLevel();
                 if(level == 1)
                 {
-                   /* ScreenMessage sm = new ScreenMessage("Level 1 Complete!");
-                    w.addObject(sm,500,200);
-                    sm.blink();
-                    sm = new ScreenMessage("Welcome to Level 2!");
-                    w.addObject(sm,500,250);
-                    sm.blink();
-                    */
                    getWorld().addObject(new TransitionScreen("Level 1 Complete!"), 375,280);
                    Greenfoot.delay(300);
                    Greenfoot.setWorld(new MyWorld(2)); 
                 }
                 else if (level==2)
                 {
-                   //ScreenMessage sm = new ScreenMessage("Winner!!");
-                   //w.addObject(sm,500,200);
-                   //sm.blink();
                    getWorld().addObject(new TransitionScreen("Level 2 Complete!"), 375,290);
                    Greenfoot.delay(300);
                    Greenfoot.setWorld(new MyWorld(3)); 
