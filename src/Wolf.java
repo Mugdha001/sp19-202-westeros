@@ -17,6 +17,9 @@ public class Wolf extends Actor
        
     }  
     
+    /**
+     * constructor
+     */
     public Wolf()
     {
         GreenfootImage img = getImage();

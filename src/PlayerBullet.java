@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class PlayerBullet extends Weapon
 {
-   // private boolean spaceDown;
+   
     private int strength = 10;
     /**
      * Act - do whatever the PlayerBullet wants to do. This method is called whenever
@@ -20,6 +20,9 @@ public class PlayerBullet extends Weapon
         remove();
     }  
     
+    /**
+     * remove method
+     */
     public void remove()
     {
         Actor enemy = getOneIntersectingObject(Enemy.class);
@@ -45,6 +48,9 @@ public class PlayerBullet extends Weapon
         }
     }
     
+    /**
+     * Constructor
+     */
     public PlayerBullet()
     {
         //spaceDown = false;
@@ -54,6 +60,9 @@ public class PlayerBullet extends Weapon
         Greenfoot.playSound("PlayerShoot.mp3");
     }
     
+    /**
+     * distance: distance to move
+     */
     public void move(double distance)
     {
         double angle = Math.toRadians( getRotation() ) + 1.5708 ;
@@ -63,6 +72,9 @@ public class PlayerBullet extends Weapon
         setLocation(x, y);
     }
     
+    /**
+     * get strength
+     */
     public int getStrength(){
         return strength ;
     }

@@ -17,18 +17,18 @@ public class FireBullet extends Weapon
         move(5.0);
         remove();
     }
-    
+   
+    /**
+     * Constructor
+     */
     public FireBullet()
     {
-
-
-        //GreenfootImage img = getImage();
-        //img.scale(img.getWidth() - 640, img.getHeight() - 625);
-        //setImage(img);
-
         Greenfoot.playSound("PlayerShoot.mp3");
     }
     
+    /**
+     * remove method
+     */
     public void remove(){
          Actor enemy = getOneIntersectingObject(Enemy.class);
         Actor icebullet = getOneIntersectingObject(IceBullet.class);
@@ -52,6 +52,9 @@ public class FireBullet extends Weapon
         }
     }
     
+    /**
+     * distance: distance to move
+     */
      public void move(double distance)
     {
         double angle = Math.toRadians( getRotation() ) + 1.5708 ;
@@ -60,6 +63,9 @@ public class FireBullet extends Weapon
         setLocation(x, y);
     }
     
+    /**
+     * get strength
+     */
     public int getStrength(){
         return strength ;
     }
