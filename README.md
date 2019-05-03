@@ -40,8 +40,11 @@ Jon Snow (Player) is the protector of the castle. He fights the white walkers (E
  - Suggested various improvements to keep the code clean and simple. 
  - Design and coding of the Observer pattern to handle the ScoreBoard actor. 
  - UML Diagrams for the Observer Pattern
- - User stories completed
  - Created the 1 minute promo video for the game
+ - User stories completed
+   1. As a player, I should be able to see the opponents on startup
+   2. As a player, enemy health should go down by 5% on a hit. Castle health should also go down by 5% on hit
+
 
 2. Jai Chattre
 3. Mugdha Wadikar
