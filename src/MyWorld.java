@@ -20,15 +20,7 @@ public class MyWorld extends World
     
     GreenfootSound backgroundMusic = new GreenfootSound("backgroundMusic.mp3");
     Castle castle = new Castle();
-    // command pattern starts
-    IBonusCommand fireBulletBonusCommand = new BonusCommand();
-    IBonusCommand dragonGlassBonusCommand = new BonusCommand();
-    IBonusCommand defaultBulletCommand = new BonusCommand();
-    FireBulletBonusButton fireBulletBonusButton = new FireBulletBonusButton();
-    DragonGlassBonusButton dragonGlassBonusButton = new DragonGlassBonusButton();
-    DefaultBulletButton defaultBulletButton = new DefaultBulletButton();
-    BonusWeaponsMenu bonusWeaponsMenu = new BonusWeaponsMenu();
-    //command pattern ends
+    Mediator mediator = new Mediator();
     ScoreBoard score = new ScoreBoard();
     CastleScoreboard castleScoreboard = new CastleScoreboard();
     EnemyScoreboard enemyScoreboard = new EnemyScoreboard();
@@ -37,6 +29,7 @@ public class MyWorld extends World
     Enemy enemy = new Enemy();
     Enemy anotherEnemy = new Enemy();
     Enemy level3Enemy = new Enemy();
+    BonusWeaponsMenu bonusWeaponsMenu = new BonusWeaponsMenu();
     
     ShootingStrategy sw = new SingleWeaponStrategy();
     ShootingStrategy dw = new DoubleWeaponStrategy();
@@ -82,7 +75,7 @@ public class MyWorld extends World
     private void prepare()
     {
         //command pattern starts
-        setupCommandPatternForBonusWeapons();
+        mediator.setCommandPattern(player);
         if(currentLevel == 0)
         {
             setup();
@@ -139,60 +132,7 @@ public class MyWorld extends World
         
     }
     
-    public void setupCommandPatternForBonusWeapons(){
-        
-        // Default Bullet weapon
-        //map command to invoker
-         defaultBulletButton.setCommand(defaultBulletCommand);
-         //map receiver to command
-         defaultBulletCommand.setReceiver(
-          new IBonusReceiver() {
-              
-              /** Command Action */
-              public void doAction() {
-                  player.setCurrentWeaponFactory( new PlayerBulletFactory() ) ;
-              }
-        }
-        ) ;
-        player.setDefaultBulletMenuInvoker(defaultBulletButton);
-        
-        
-          //fire bullet bonus
-
-         //map command to invoker
-         fireBulletBonusButton.setCommand(fireBulletBonusCommand);
-         //map receiver to command
-         fireBulletBonusCommand.setReceiver(
-          new IBonusReceiver() {
-              
-              /** Command Action */
-              public void doAction() {
-                  player.setCurrentWeaponFactory( new FireBulletFactory() ) ;
-              }
-        }
-        ) ;
-        player.setFireBulletMenuInvoker(fireBulletBonusButton);
-        
-         
-        //dragon glass bonus
-
-         //map command to invoker
-         dragonGlassBonusButton.setCommand(dragonGlassBonusCommand);
-         //map receiver to command
-         dragonGlassBonusCommand.setReceiver(
-          new IBonusReceiver() {
-              
-              /** Command Action */
-              public void doAction() {
-                  player.setCurrentWeaponFactory( new DragonGlassFactory() ) ;
-              }
-        }
-        ) ;
-        player.setDragonGlassMenuInvoker(dragonGlassBonusButton);
-        
-        
-       
-    }
+ 
     
     public Castle getCastle()
     {
