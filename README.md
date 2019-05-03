@@ -41,6 +41,7 @@ Jon Snow (Player) is the protector of the castle. He fights the white walkers (E
  - Design and coding of the Observer pattern to handle the ScoreBoard actor. 
  - UML Diagrams for the Observer Pattern
  - User stories completed
+ - Created the 1 minute promo video for the game
 
 2. Jai Chattre
 3. Mugdha Wadikar
