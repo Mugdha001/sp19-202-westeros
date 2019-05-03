@@ -15,7 +15,7 @@ public class Player extends Actor implements Observer
     int enemyHealth;
     int Xcoord;
     int Ycoord;
-    ShootingStrategy currentShootingStrategy;
+    IShootingStrategy currentShootingStrategy;
     private FireBulletBonusButton fireBulletBonusButton;
     private DragonGlassBonusButton dragonGlassBonusButton;
     private DefaultBulletButton defaultBulletButton;

@@ -7,10 +7,17 @@
 public class BonusCommand implements IBonusCommand 
 {
     IBonusReceiver bonusReceiver;
+    
+    /**
+     * execute command
+     */
     public void execute(){
         bonusReceiver.doAction();
     }
     
+    /**
+     * receiver: set receiver
+     */
     public void setReceiver(IBonusReceiver receiver){
         bonusReceiver = receiver;
     }
