@@ -16,27 +16,23 @@ public class HelpDisplay extends Actor
     {
         // Add your action code here.
         displayHelp();
+        getWorld().addObject(new Button("Start") , 550,225);
+        getWorld().addObject(new Button("Back") , 550,400);
     }
     
     private void displayHelp()
     {
-        String displayHealth = "NAVIGATE PLAYER: "+"\nPress Left/Right arrow keys\n\n"+"SHOOT: \n"
-            +"Press 'Space' to shoot\n"
-            +"Press 'a' to activate Dragonglass\n bullets\n"
-            + "Press 'd' to activate fire bullets\n\n"
-            +"COLLECT COINS:\n"
-            +"Move Player over coins to \ncollect the coins";   
-        GreenfootImage img = new GreenfootImage(600,500); 
-        img.setFont(new Font("Stensil", false, true,18));
-        img.setColor(Color.RED);
-        img.drawString(displayHealth ,40,230);
-        //img.drawString(shootHelp ,50,300);
-        //img.drawString(collectCoins ,50,375);
-        //img.drawString(shootCommand ,50,450);
-        //img.drawString(shootCommand1 ,50,500);
-
-
-
-        setImage(img);
+        String displayHelp = "NAVIGATE PLAYER: "+"\nPress Left/Right arrow keys\n\n"+"SHOOT: \n"
+           +"Press 'Space' to shoot\n"
+           +"Press 's' to activate Dragonglass\n"
+           +"Press 'a' to activate firebullets\n"
+           + "Press 'd' to switch back to default \nbullets\n\n"
+           +"COLLECT COINS:\n"
+           +"Move Player over coins to \ncollect the coins";
+       GreenfootImage img = new GreenfootImage(600,500);
+       img.setFont(new Font("Stensil", false, true,18));
+       img.setColor(Color.RED);
+       img.drawString(displayHelp ,40,230);
+       setImage(img);
     }
 }
