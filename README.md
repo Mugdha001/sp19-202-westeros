@@ -31,7 +31,7 @@ Jon Snow (Player) is the protector of the castle. He fights the white walkers (E
 ### Project Dashboard
 
 ### Individual Contributions
-1. Nikhil Limaye
+#### 1. Nikhil Limaye
  - Contributed to the design of the overall concept of the game. 
  - Design of players, characters, layout, key presses and basic screen orientation
  - Created UI mockups for the same.
@@ -52,7 +52,7 @@ Jon Snow (Player) is the protector of the castle. He fights the white walkers (E
 
 
 ### Individual Scrum Journals
-Mrunali Sanjay Khandat - https://github.com/nguyensjsu/sp19-202-westeros/blob/master/MrunaliKhandat-Journal.MD
-Nikhil Limaye - https://github.com/nguyensjsu/sp19-202-westeros/blob/master/NikhilLimaye-Journal.md
-Mugdha Wadikar - https://github.com/nguyensjsu/sp19-202-westeros/blob/master/MugdhaWadikar-Journal.md
-Jai Chattre - https://github.com/nguyensjsu/sp19-202-westeros/blob/master/JaiChhatre.md
+Mrunali Sanjay Khandat - https://github.com/nguyensjsu/sp19-202-westeros/blob/master/MrunaliKhandat-Journal.MD  
+Nikhil Limaye - https://github.com/nguyensjsu/sp19-202-westeros/blob/master/NikhilLimaye-Journal.md  
+Mugdha Wadikar - https://github.com/nguyensjsu/sp19-202-westeros/blob/master/MugdhaWadikar-Journal.md  
+Jai Chattre - https://github.com/nguyensjsu/sp19-202-westeros/blob/master/JaiChhatre.md  
