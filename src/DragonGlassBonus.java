@@ -14,13 +14,20 @@ public class DragonGlassBonus extends Actor{
     public void act() 
     {
        disappear();
-    }    
+    } 
+    
+    /**
+     * Constructor
+     */
     public DragonGlassBonus(){
         GreenfootImage img = getImage();
         img.scale(img.getWidth() - 408 , img.getHeight() - 408);
         setImage(img);
     }
     
+    /**
+     * disappear effect
+     */
     public void disappear(){
         Actor player = getOneIntersectingObject(Player.class);
         if(player != null)
