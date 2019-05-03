@@ -18,13 +18,13 @@ public class Help extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(750, 570, 1);
-        showHelp();
-    }
-    
-    private void showHelp()
-    {
         setup();
     }
+   
+    
+    /**
+     * set up the screen display
+     */
     private void setup()
     {
         GreenfootImage bg = new GreenfootImage("welcomescreenhelp.png");

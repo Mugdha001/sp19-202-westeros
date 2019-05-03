@@ -25,7 +25,7 @@ public class HelpDisplay extends Actor
         String displayHelp = "NAVIGATE PLAYER: "+"\nPress Left/Right arrow keys\n\n"+"SHOOT: \n"
            +"Press 'Space' to shoot\n"
            +"Press 's' to activate Dragonglass\n"
-           +"Press 'a' to activate firebullets\n"
+           +"Press 'a' to activate Firebullets\n"
            + "Press 'd' to switch back to default \nbullets\n\n"
            +"COLLECT COINS:\n"
            +"Move Player over coins to \ncollect the coins";
