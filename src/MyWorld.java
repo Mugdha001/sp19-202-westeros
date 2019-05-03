@@ -26,9 +26,9 @@ public class MyWorld extends World
     EnemyScoreboard enemyScoreboard = new EnemyScoreboard();
     Player player = new Player();
     Player2 player2 = new Player2();
-    Enemy enemy = new Enemy();//always
-    Enemy anotherEnemy = new Enemy();
-    Enemy level3Enemy = new Enemy();
+    Enemy enemy1 = new Enemy(3);//always
+    Enemy enemy2 = new Enemy(6);
+    Enemy enemy3 = new Enemy(8);
     BonusWeaponsMenu bonusWeaponsMenu = new BonusWeaponsMenu();
    
     public int iceBulletSpeed;
@@ -91,7 +91,7 @@ public class MyWorld extends World
         addObject(score , 740, 93);
         addObject(castle ,370,189);
         addObject(player, 370, 275);
-        addObject(enemy , 370 ,540);
+        addObject(enemy1 , 370 ,540);
         addObject(castleScoreboard , 559 ,41);
         addObject(enemyScoreboard , 638 ,53);
         mediator.addTrees();
@@ -99,7 +99,7 @@ public class MyWorld extends World
         //setting up observer pattern
         castle.attach(score);
         castle.attach(player);
-        enemy.attach(score);
+        enemy1.attach(score);
         
         // level's logic 
         switch(currentLevel)
@@ -108,16 +108,16 @@ public class MyWorld extends World
                     break;
             
             case 2 : //set speed // add extra enemy //set whitewalker lives
-                     addObject(anotherEnemy ,105 ,540);
-                     enemy.setHealth(200);
-                     anotherEnemy.setHealth(200);
+                     addObject(enemy2 ,105 ,540);
+                     enemy1.setHealth(200);
+                     enemy2.setHealth(200);
                      iceBulletSpeed = 5;
                      break;
                      
-            case 3 : addObject(level3Enemy ,105 ,540);
-                     addObject(anotherEnemy ,205 ,540);
-                     enemy.setHealth(200);
-                     anotherEnemy.setHealth(200);
+            case 3 : addObject(enemy3 ,105 ,540);
+                     addObject(enemy2 ,205 ,540);
+                     enemy1.setHealth(200);
+                     enemy2.setHealth(200);
                      iceBulletSpeed = 5;
                      break;
                      
@@ -141,7 +141,7 @@ public class MyWorld extends World
     
     public Enemy getEnemy()
     {
-        return enemy;
+        return enemy1;
     }
     
 
