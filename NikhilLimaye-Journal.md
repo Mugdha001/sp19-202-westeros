@@ -1,6 +1,6 @@
 # Weekly Scrum Report:
 
-## Week 4: 4/9 - 4/15:
+## Week 1: 4/9 - 4/15:
 ### What tasks did I work on / complete?
 
  . Feedback for code clean up and other technical priorties
@@ -19,7 +19,7 @@
  - None
 
 
-## Week 4: 4/16 - 4/22:
+## Week 2: 4/16 - 4/22:
 ### What tasks did I work on / complete?
  - 	Implemented randomization of enemy fire
  - 	Started with implementing transition of levels
@@ -35,7 +35,7 @@
     Prototype pattern in progress
 
 
-## Week 4: 4/23 - 4/29:
+## Week 3: 4/23 - 4/29:
 ### What tasks did I work on / complete?
  - Finished implementing transition of levels
  - Added background music to the game - plays on a loop
@@ -49,6 +49,17 @@
  - Adding suitable comments to the code
  - Completing documentation
     
+
+### What tasks are blocked waiting on another team member?
+ - None
+ 
+ 
+## Week 4: 4/23 - 4/29:
+### What tasks did I work on / complete?
+
+
+### What am I planning to work on next?
+ - End of sprint
 
 ### What tasks are blocked waiting on another team member?
  - None
