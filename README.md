@@ -24,9 +24,9 @@
 * Nikhil Limaye -
 
 
-## Game: Winterfell
-Winterfell is a game inspired by Game of Thrones. 
-Jon Snow (Player) is the protector of the castle. He fights the white walkers and wants to win the game. In this game, the health of castle decreases in proportion to the bullets hit. Jon collects coins to increase his score and collecting 5 coins gives him an extra shield with added abilities such as extra powered bullets. He keeps navigating around the castle until all white walkers are killed. On finishing one level, he moves to the next level. In level 2 and 3, gameplay remains same except the difficulty level increases where number of white walkers to kill increases along with the speed of their bullets. Finishing level 3 completes the game and Jon wins. Score is updated based on the number of coins collected by Jon and the number of white walkers killed by him. The player loses the game when castle's health drops down to 0.
+## Game: Battle of Winterfell
+The game is a game inspired by the TV show Game of Thrones. 
+Jon Snow (Player) is the protector of the castle. He fights the white walkers (Enemy) and wants to protect his home. In this game, the health of castle decreases in proportion to the bullets hit. Jon absorbs those bullets to protect the castle. He keeps navigating around the castle until all white walkers are killed. He fires his own bullets at the white walkers to defeat them. On finishing one level, he moves to the next level. In level 2 and 3, gameplay remains similar with the difficulty level increases where number of white walkers to kill increases along with the speed of their bullets. Finishing level 3 completes the game and Jon wins. Score is updated based on the number of bullet hits on the castle and the number of white walkers killed by the player. The player loses the game when castle's health drops down to 0.
 
 ## Project Description
 
@@ -38,5 +38,13 @@ Jon Snow (Player) is the protector of the castle. He fights the white walkers an
 ### Project Dashboard
 
 ### Individual Contributions
-Nikhil Limaye - https://github.com/nguyensjsu/sp19-202-westeros/blob/master/NikhilLimaye-Journal.md   
+Nikhil Limaye
+ - Contributed to the design of the overall concept of the game. 
+ - Design of players, characters, layout, key presses and basic screen orientation
+ - Design and coding of the Observer pattern to handle the ScoreBoard actor. 
+ - User stories completed
+
+
+
+
 Mrunali Sanjay Khandat - https://github.com/nguyensjsu/sp19-202-westeros/blob/master/MrunaliKhandat-Journal.MD
