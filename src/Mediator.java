@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Mediator extends Actor implements IMediator
 {
-    public void setCommanPattern(){
+    public void setCommandPattern(){
         System.out.println();
     }   
 }
