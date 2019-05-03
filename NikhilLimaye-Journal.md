@@ -32,7 +32,7 @@
 
 
 ### What tasks are blocked waiting on another team member?
-    Prototype pattern in progress
+ -  Prototype pattern in progress
 
 
 ## Week 3: 4/23 - 4/29:
@@ -40,7 +40,6 @@
  - Finished implementing transition of levels
  - Added background music to the game - plays on a loop
  - Class Diagram for the Observer pattern
- - 
  - Updated Ad Video with end credit screens
  - Level 3 brainstorming! 
 
