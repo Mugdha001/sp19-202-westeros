@@ -6,5 +6,5 @@
  */
 public interface IMediator  
 {
-   public void setCommandPattern();
+   public void setCommandPattern(Player player);
 }
