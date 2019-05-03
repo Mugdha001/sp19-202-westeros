@@ -19,7 +19,6 @@ public class MyWorld extends World
     CastleScoreboard castleScoreboard = new CastleScoreboard();
     EnemyScoreboard enemyScoreboard = new EnemyScoreboard();
     Player player = new Player();
-    Player2 player2 = new Player2();
     Dragon dragon = new Dragon();
     Enemy enemy1 = new Enemy(3);
     Enemy enemy2 = new Enemy(6);
