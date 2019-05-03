@@ -1,16 +1,21 @@
 #BlueJ class context
 comment0.target=Castle
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Castle\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\n\ Write\ a\ description\ of\ class\ Castle\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
 comment1.target=void\ act()
 comment2.params=o
 comment2.target=void\ attach(Observer)
+comment2.text=\n\ o\:\ observer\ to\ be\ attached\n
 comment3.params=castleHealth\ enemyHealth
 comment3.target=void\ notifyObservers(int,\ int)
+comment3.text=\n\ castleHealth\:\ notify\ change\ in\ castleHealth\n\ enemyHealth\:\ notify\ change\ in\ enemyHealth\n
 comment4.params=
 comment4.target=Castle()
+comment4.text=\n\ Constructor\n
 comment5.params=value
 comment5.target=void\ setHealth(int)
+comment5.text=\n\ value\:\ health\ value\n
 comment6.params=
 comment6.target=int\ getHealth()
+comment6.text=\n\ get\ health\ value\n
 numComments=7

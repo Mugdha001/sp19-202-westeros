@@ -17,6 +17,9 @@ public class CrossedSwords extends Actor
         // Add your action code here.
     }  
     
+    /**
+     * Constructor
+     */
     public CrossedSwords()
     {
         GreenfootImage img = getImage();
