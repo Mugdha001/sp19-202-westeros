@@ -11,12 +11,18 @@ public class FirTree extends Tree
       private String type;
       private int size; 
       
+      /**
+       * constructor
+       */
       public FirTree(String t, int s){
           type = t;
           size = s;
           setSize();
       }
       
+      /**
+       * set size
+       */
       private void setSize(){
         GreenfootImage img = getImage();
         //smallest

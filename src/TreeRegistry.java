@@ -10,6 +10,9 @@ public class TreeRegistry extends Actor
 {
     private static HashMap<Integer, Tree> treesMap = new HashMap<Integer, Tree>();
     
+    /**
+     * populate hashmap
+     */
     public static void loadRegistry(){
         treesMap.put(1, new PineTree("pine", 1));
         treesMap.put(2, new PineTree("pine", 2));
@@ -19,6 +22,10 @@ public class TreeRegistry extends Actor
         treesMap.put(6, new FirTree("fir", 3));
     }
     
+    /**
+     * type: type
+     * Tree: get tree object
+     */
     public static Tree getTree(int type){
         Tree tree = treesMap.get(type);
         return (Tree)tree.clone();

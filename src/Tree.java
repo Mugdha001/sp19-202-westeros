@@ -8,10 +8,16 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Tree extends Actor implements Cloneable
 {
+    /**
+     * s: size
+     */
     public void setSize(int s){
         
       }   
       
+      /**
+       * clone method
+       */
      public Object clone() 
     { 
         Object clone = null; 
