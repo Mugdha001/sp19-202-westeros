@@ -31,6 +31,8 @@ public class MyWorld extends World
     Player2 player2 = new Player2();
     Enemy enemy = new Enemy();
     Enemy anotherEnemy = new Enemy();
+    Enemy level3Enemy = new Enemy();
+    
     ShootingStrategy sw = new SingleWeaponStrategy();
     ShootingStrategy dw = new DoubleWeaponStrategy();
     public int iceBulletSpeed;
@@ -117,6 +119,12 @@ public class MyWorld extends World
                      iceBulletSpeed = 5;
                      break;
                      
+            case 3 : addObject(level3Enemy ,105 ,540);
+                     addObject(anotherEnemy ,205 ,540);
+                     enemy.setHealth(200);
+                     anotherEnemy.setHealth(200);
+                     iceBulletSpeed = 5;
+                     break;
                      
        
         }

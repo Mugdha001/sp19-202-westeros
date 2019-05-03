@@ -15,6 +15,7 @@ public class Enemy extends Actor implements Subject
      */
     
     int enemyHealth;
+    private int enemySpeed = 3;
     ArrayList<Observer> obs = new ArrayList<Observer>();
     public void act() 
     {
@@ -27,7 +28,7 @@ public class Enemy extends Actor implements Subject
         if(atWorldEdge()){
             randomMoveEnemy();
         }
-        move(3);
+        move(enemySpeed);
         
     }  
     

@@ -78,12 +78,17 @@ public class ScoreBoard extends Actor implements Observer
                    Greenfoot.delay(300);
                    Greenfoot.setWorld(new MyWorld(2)); 
                 }
-                else
+                else if (level==2)
                 {
                    //ScreenMessage sm = new ScreenMessage("Winner!!");
                    //w.addObject(sm,500,200);
                    //sm.blink();
-                   getWorld().addObject(new TransitionScreen("You win!"), 375,290);
+                   getWorld().addObject(new TransitionScreen("Level 2 Complete!"), 375,290);
+                   Greenfoot.delay(300);
+                   Greenfoot.setWorld(new MyWorld(3)); 
+                }
+                else{
+                    getWorld().addObject(new TransitionScreen("You WIn!"), 375,290);
                    Greenfoot.delay(300);
                    Greenfoot.stop();
                 }
