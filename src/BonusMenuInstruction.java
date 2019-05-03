@@ -8,20 +8,26 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class BonusMenuInstruction extends Actor
 {
+    private String key;
     /**
      * Act - do whatever the BonusMenuInstruction wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    private String key;
     public void act() 
     {
         showInstruction();
     }    
     
+    /**
+     * Constructor
+     */
     public BonusMenuInstruction(String k){
         key = k;
     }
     
+    /**
+     * Display instruction to activate collected bonus
+     */
     private void showInstruction()
     {
         String instruction = ": Press '" + key + "'";
