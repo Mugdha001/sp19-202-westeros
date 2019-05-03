@@ -23,7 +23,7 @@ public class Help extends World
    
     
     /**
-     * set up the screen display
+     * set up the help screen display
      */
     private void setup()
     {
