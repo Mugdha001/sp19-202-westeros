@@ -15,8 +15,6 @@ public class FirTree extends Tree
           type = t;
           size = s;
           setSize();
-          
-          System.out.println("Fir tree size " + size + " created");
       }
       
       private void setSize(){
@@ -26,11 +24,14 @@ public class FirTree extends Tree
             img.scale(img.getWidth() - 720 , img.getHeight() - 500);
         }
         
-        //biggest
+        
         else if(size == 2){
             img.scale(img.getWidth() -620 , img.getHeight() - 435);
         }
         
+        //biggest
+        else if(size == 3)
+            img.scale(img.getWidth() - 500 , img.getHeight() - 350);
         setImage(img);
       }    
 }
