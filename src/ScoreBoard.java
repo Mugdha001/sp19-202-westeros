@@ -35,10 +35,10 @@ public class ScoreBoard extends Actor implements Observer
     }
     private void showScore()
     {
-        String displayHealth = "        ScoreBoard\n\n       :"+castleHealth+"           :"+enemiesRemaining;
+        String displayHealth = "        ScoreBoard\n\n\n        "+castleHealth+"     "+enemiesRemaining;
         
         GreenfootImage img = new GreenfootImage(400,400); 
-        img.setFont(new Font("Helvetica", false, true,18));
+        img.setFont(new Font("Perpetua", false, true,24));
         img.setColor(Color.RED);
         img.drawString(displayHealth ,5,125);
         setImage(img);
@@ -78,7 +78,7 @@ public class ScoreBoard extends Actor implements Observer
                    Greenfoot.setWorld(new MyWorld(3)); 
                 }
                 else{
-                    getWorld().addObject(new TransitionScreen("You WIn!"), 375,290);
+                   getWorld().addObject(new TransitionScreen("You Win!"), 375,290);
                    Greenfoot.delay(300);
                    Greenfoot.stop();
                 }
