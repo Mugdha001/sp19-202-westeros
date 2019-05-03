@@ -37,7 +37,8 @@ Jon Snow (Player) is the protector of the castle. He fights the white walkers (E
  - Created UI mockups for the same.
  - Contributed to designing different levels of the game
  - Coded transition of the game using transition screens
- - Suggested various improvements to keep the code clean and simple. 
+ - As a champion of the XP value "Simplicity", I suggested various improvements to keep the code clean and simple. Improvements that 
+   would help us maintain the code better and easier to extend
  - Design and coding of the Observer pattern to handle the ScoreBoard actor. 
  - UML Diagrams for the Observer Pattern
  - Created the 1 minute promo video for the game
