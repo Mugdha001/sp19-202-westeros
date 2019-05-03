@@ -6,16 +6,22 @@ import java.util.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
+
+
 public class Enemy extends Actor implements Subject
 {
     private int timebetweenshots = 0;
+    private int enemySpeed = 1;
     /**
      * Act - do whatever the Enemy wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     
     int enemyHealth;
-    private int enemySpeed = 3;
+    public Enemy(int speed){
+        enemySpeed = speed;
+    }
+    
     ArrayList<Observer> obs = new ArrayList<Observer>();
     public void act() 
     {
@@ -31,6 +37,7 @@ public class Enemy extends Actor implements Subject
         move(enemySpeed);
         
     }  
+    
     
     public boolean atWorldEdge()
     {

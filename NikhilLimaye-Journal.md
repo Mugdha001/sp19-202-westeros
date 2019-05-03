@@ -21,18 +21,41 @@
 
 ## Week 4: 4/16 - 4/22:
 ### What tasks did I work on / complete?
- - 	Implemented transition of levels
- -  New transition screens for level changes
- -  Created a brand new start up screen - Start, Help, Quit buttons
- -  Launching a new game on clicking Start
+ - 	Implemented randomization of enemy fire
+ - 	Started with implementing transition of levels
  - 	Added background music to the game - plays on a loop
 
 
 ### What am I planning to work on next?
+	New Startup screen to launch a game
+	Transitioning through levels of the game
     
 
 ### What tasks are blocked waiting on another team member?
+    None
+
+
+## Week 4: 4/23 - 4/29:
+### What tasks did I work on / complete?
+ - 	Finished implementing transition of levels
+ - 	Added background music to the game - plays on a loop
+ -  Class Diagram of the whole project
+ -  Updated Ad Video with end credit screens
+ -	Level 3 brainstorming! 
+ - 
+
+### What am I planning to work on next?
+ - 	Code refactoring
+ -  Adding suitable comments to the code
+ - 	Helping with Level 3
     
+
+### What tasks are blocked waiting on another team member?
+    None
+
+
+
+
     
 
 
