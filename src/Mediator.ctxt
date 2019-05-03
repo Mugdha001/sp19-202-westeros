@@ -12,4 +12,6 @@ comment3.text=Command\ Action
 comment4.params=
 comment4.target=void\ doAction()
 comment4.text=Command\ Action
-numComments=5
+comment5.params=
+comment5.target=void\ addTrees()
+numComments=6

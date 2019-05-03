@@ -19,20 +19,18 @@ public class MyWorld extends World
     //setup levels
     
     GreenfootSound backgroundMusic = new GreenfootSound("backgroundMusic.mp3");
-    Castle castle = new Castle();
+    Castle castle = new Castle();//always
     Mediator mediator = new Mediator();
-    ScoreBoard score = new ScoreBoard();
+    ScoreBoard score = new ScoreBoard();//always
     CastleScoreboard castleScoreboard = new CastleScoreboard();
     EnemyScoreboard enemyScoreboard = new EnemyScoreboard();
     Player player = new Player();
     Player2 player2 = new Player2();
-    Enemy enemy = new Enemy();
+    Enemy enemy = new Enemy();//always
     Enemy anotherEnemy = new Enemy();
     Enemy level3Enemy = new Enemy();
     BonusWeaponsMenu bonusWeaponsMenu = new BonusWeaponsMenu();
-    
-    ShootingStrategy sw = new SingleWeaponStrategy();
-    ShootingStrategy dw = new DoubleWeaponStrategy();
+   
     public int iceBulletSpeed;
     private int currentLevel = 0;
 
@@ -74,8 +72,10 @@ public class MyWorld extends World
     
     private void prepare()
     {
-        //command pattern starts
+        addObject((Actor)mediator,0,0);
+        
         mediator.setCommandPattern(player);
+        
         if(currentLevel == 0)
         {
             setup();
@@ -86,27 +86,22 @@ public class MyWorld extends World
         GreenfootImage bg = new GreenfootImage("snowy.png");
         bg.scale(getWidth(), getHeight());
         setBackground(bg);
-        //addObject(backgroundScore , 150,0);
+        
         addObject(bonusWeaponsMenu , 150, 150);
         addObject(score , 740, 93);
-        addObject(castle ,370,170);
+        addObject(castle ,370,189);
         addObject(player, 370, 275);
         addObject(enemy , 370 ,540);
         addObject(castleScoreboard , 559 ,41);
         addObject(enemyScoreboard , 638 ,53);
-       
-        TreeRegistry.loadRegistry();
-        addObject(TreeRegistry.getTree(1), 59, 311);
-        addObject(TreeRegistry.getTree(2), 35, 467);
-        addObject(TreeRegistry.getTree(2), 696, 341);
-        addObject(TreeRegistry.getTree(3), 168, 293);
-        addObject(TreeRegistry.getTree(4), 118, 423);
+        mediator.addTrees();
         
-       
+        //setting up observer pattern
         castle.attach(score);
         castle.attach(player);
         enemy.attach(score);
         
+        // level's logic 
         switch(currentLevel)
         {
             case 1 : iceBulletSpeed = 5;
