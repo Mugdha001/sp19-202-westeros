@@ -8,17 +8,21 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class TransitionScreen extends Actor
 {
+    
+    private String message = "";
+    CrossedSwords cs = new CrossedSwords();
     /**
      * Act - do whatever the TransitionScreen wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    private String message = "";
-    CrossedSwords cs = new CrossedSwords();
     public void act() 
     {
         blink();
     }
     
+    /**
+     * Constructor
+     */
     public TransitionScreen(String text)
     {
         GreenfootImage img = getImage();
@@ -30,6 +34,9 @@ public class TransitionScreen extends Actor
         setImage(img);
     }
     
+    /**
+     * blink effect
+     */
     public void blink()
     {
         int count = 10000;

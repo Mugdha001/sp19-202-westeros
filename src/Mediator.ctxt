@@ -1,8 +1,9 @@
 #BlueJ class context
 comment0.target=Mediator
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Mediator\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\n\ Write\ a\ description\ of\ class\ Mediator\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=player
 comment1.target=void\ setCommandPattern(Player)
+comment1.text=\n\ player\:\ set\ command\ pattern\ for\ the\ player\n
 comment2.params=
 comment2.target=void\ doAction()
 comment2.text=Command\ Action
@@ -14,4 +15,5 @@ comment4.target=void\ doAction()
 comment4.text=Command\ Action
 comment5.params=
 comment5.target=void\ addTrees()
+comment5.text=\n\ add\ trees\ in\ the\ world\n
 numComments=6

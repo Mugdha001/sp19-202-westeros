@@ -11,6 +11,9 @@ public class PineTree extends Tree
       private String type;
       private int size; 
       
+      /**
+       * Constructor
+       */
       public PineTree(String t, int s){
           type = t;
           size = s;
@@ -19,6 +22,9 @@ public class PineTree extends Tree
           System.out.println("Pine tree size " + size + " created");
       }
       
+      /**
+       * set size
+       */
       private void setSize(){
         GreenfootImage img = getImage();
         //smallest
@@ -26,11 +32,12 @@ public class PineTree extends Tree
             img.scale(img.getWidth() - 170 , img.getHeight() - 450);
         }
         
-        //biggest
+        
         else if(size == 2){
             img.scale(img.getWidth() -140 , img.getHeight() - 360);
         }
         
+        //biggest
          else if(size == 3){
             img.scale(img.getWidth() -100 , img.getHeight() - 300);
         }

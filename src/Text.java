@@ -8,15 +8,17 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Text extends Actor
 {
-    /**
-     * Act - do whatever the Text wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    
     private static final int MAX_DELAY = 20;
     private int delay;
     private String font;
     private Color color;
     private String text;
+    
+    /**
+     * Act - do whatever the Text wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+     */
     public void act() 
     {
         GreenfootImage img = new GreenfootImage(200,200); 
@@ -30,6 +32,11 @@ public class Text extends Actor
         
     }   
     
+    /**
+     * text: text content
+     * color: color
+     * font: font
+     */
     public Text(String text, Color color, String font)
     {
         this.text = text;
@@ -49,6 +56,9 @@ public class Text extends Actor
         */
     }
     
+    /**
+     * blink effect
+     */
     public void blink()
     {
         int count = 100;
@@ -63,15 +73,19 @@ public class Text extends Actor
             count--;
         }
         //getWorld().removeObject(this);
-
-
     }
     
+    /**
+     * value: set font
+     */
     public void setFont(String value)
     {
         font = value;
     }
     
+    /**
+     * value: set color
+     */
     public void setColor(Color value)
     {
         color = value;

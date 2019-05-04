@@ -8,6 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Mediator extends Actor implements IMediator
 {
+    /**
+     * player: set command pattern for the player
+     */
     public void setCommandPattern(Player player){
         
         IBonusCommand fireBulletBonusCommand = new BonusCommand();
@@ -30,7 +33,7 @@ public class Mediator extends Actor implements IMediator
             ) ;
         player.setDefaultBulletMenuInvoker(defaultBulletButton);
           
-        //fire bullet bonus
+         //fire bullet bonus
          //map command to invoker
          fireBulletBonusButton.setCommand(fireBulletBonusCommand);
          //map receiver to command
@@ -45,7 +48,7 @@ public class Mediator extends Actor implements IMediator
             ) ;
         player.setFireBulletMenuInvoker(fireBulletBonusButton);
          
-        //dragon glass bonus
+         //dragon glass bonus
          //map command to invoker
          dragonGlassBonusButton.setCommand(dragonGlassBonusCommand);
          //map receiver to command
@@ -62,19 +65,21 @@ public class Mediator extends Actor implements IMediator
         
     }   
     
+    /**
+     * add trees in the world
+     */
     public void addTrees(){
         
         TreeRegistry.loadRegistry();
-        getWorld().addObject(TreeRegistry.getTree(1), 134, 282);//
-        getWorld().addObject(TreeRegistry.getTree(2), 88, 349);//
-        getWorld().addObject(TreeRegistry.getTree(2), 625, 299);//
-        getWorld().addObject(TreeRegistry.getTree(3), 31, 464);//
-        getWorld().addObject(TreeRegistry.getTree(4), 118, 423);
-        getWorld().addObject(TreeRegistry.getTree(1), 560, 306);//
-        getWorld().addObject(TreeRegistry.getTree(6), 698, 395);//
-        getWorld().addObject(TreeRegistry.getTree(1), 518 , 236);//
-        getWorld().addObject(TreeRegistry.getTree(4), 46 , 212);//
-        getWorld().addObject(TreeRegistry.getTree(4), 715 , 202);//
-        //getWorld().addObject(TreeRegistry.getTree(5))
+        getWorld().addObject(TreeRegistry.getTree(1), 134, 282);//pine size 1
+        getWorld().addObject(TreeRegistry.getTree(2), 88, 349);// pine size 2
+        getWorld().addObject(TreeRegistry.getTree(2), 625, 299);// pine size 2
+        getWorld().addObject(TreeRegistry.getTree(3), 31, 464);// pine size 3
+        getWorld().addObject(TreeRegistry.getTree(4), 118, 423);// fir size 1
+        getWorld().addObject(TreeRegistry.getTree(1), 560, 306);// pine size 1
+        getWorld().addObject(TreeRegistry.getTree(6), 698, 395);// fir size 3
+        getWorld().addObject(TreeRegistry.getTree(1), 518 , 236);// pine size 1
+        getWorld().addObject(TreeRegistry.getTree(4), 46 , 212);// fir size 1
+        getWorld().addObject(TreeRegistry.getTree(4), 715 , 202);// fir size 1
     }
 }

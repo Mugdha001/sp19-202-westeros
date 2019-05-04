@@ -8,19 +8,27 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Weapon extends Actor
 {
+    
+    
+    protected int strength;
+    
     /**
      * Act - do whatever the Weapon wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    
-    protected int strength;
     public void act() 
     {
         // Add your action code here.
     }    
     
+    /**
+     * remove method
+     */
     public void remove(){}
     
+    /**
+     * distance: distance to move
+     */
     public void move(double distance)
     {
         double angle = Math.toRadians( getRotation() ) + 1.5708 ;

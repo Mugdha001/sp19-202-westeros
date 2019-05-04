@@ -11,6 +11,9 @@ public class DragonGlassBonusButton extends Actor implements IBonusInvoker
     IBonusCommand bonusCommand;
     String key;
     
+    /**
+     * Constructor
+     */
     public DragonGlassBonusButton(){
         key = "s";
         GreenfootImage img = getImage();
@@ -18,6 +21,9 @@ public class DragonGlassBonusButton extends Actor implements IBonusInvoker
         setImage(img);
     }
     
+    /**
+     * act method
+     */
     public void act() 
     {
         if(Greenfoot.isKeyDown(key))
@@ -26,10 +32,16 @@ public class DragonGlassBonusButton extends Actor implements IBonusInvoker
         }
     }  
     
+    /**
+     * check key press
+     */
     public void keyPressed(){
         bonusCommand.execute();
     }
     
+    /**
+     * cmd: command to be mapped to invoker
+     */
     public void setCommand(IBonusCommand cmd){
         bonusCommand = cmd;
     }    

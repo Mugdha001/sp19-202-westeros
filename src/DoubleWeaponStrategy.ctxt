@@ -1,8 +1,10 @@
 #BlueJ class context
 comment0.target=DoubleWeaponStrategy
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ DoubleWeaponStrategy\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\n\ Write\ a\ description\ of\ class\ DoubleWeaponStrategy\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
 comment1.target=DoubleWeaponStrategy()
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ DouxbleWeaponStrategy\n
 comment2.params=world\ currentWeaponFactory\ Xcoord\ Ycoord
 comment2.target=void\ shoot(greenfoot.World,\ WeaponFactory,\ int,\ int)
+comment2.text=\n\ shoot\ method\n\ world\:\ world\n\ currentWeaponFactory\:\ current\ Weapon\ Factory\n\ Xcoord\:\ x\ coordinate\n\ Ycoord\:\ y\ coordinate\n
 numComments=3

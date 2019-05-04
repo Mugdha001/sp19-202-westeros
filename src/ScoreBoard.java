@@ -14,7 +14,7 @@ public class ScoreBoard extends Actor implements Observer
     int enemiesRemaining;
     boolean setDragonGlassBonus = false;
     boolean setFireBonus = false;
-    //boolean respawn = false;
+    
     /**
      * Act - do whatever the ScoreBoard wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -26,6 +26,9 @@ public class ScoreBoard extends Actor implements Observer
         addFireBonus();
     }   
     
+    /**
+     * Constructor
+     */
     public ScoreBoard()
     {   
         castleHealth = 100;
@@ -33,6 +36,10 @@ public class ScoreBoard extends Actor implements Observer
         enemiesRemaining = 3;
         showScore();
     }
+    
+    /**
+     * display score on the screen
+     */
     private void showScore()
     {
         String displayHealth = "        ScoreBoard\n Enemy Health: "+enemyHealth+"\n\n\n        "+castleHealth+"     "+enemiesRemaining;
@@ -44,10 +51,12 @@ public class ScoreBoard extends Actor implements Observer
         setImage(img);
     }
     
+    /**
+     * update castle health and enemy health on scoreboard
+     */
     public void update(int castle , int enemy)
     {
-
-            
+   
         MyWorld w = (MyWorld)getWorld();
         if(castle!= -1)
             this.castleHealth = castle;
@@ -96,6 +105,9 @@ public class ScoreBoard extends Actor implements Observer
         }
     }
     
+    /**
+     * add dragon glass bonus 
+     */
     public void addDragonGlassBonus()
     {
         if(castleHealth <= 40 && !setDragonGlassBonus){
@@ -104,6 +116,9 @@ public class ScoreBoard extends Actor implements Observer
         }
     }
     
+    /**
+     * add fire bonus
+     */
     public void addFireBonus(){
         if(castleHealth <= 60 && !setFireBonus){
             getWorld().addObject(new FireBulletBonus(), 500, 290);

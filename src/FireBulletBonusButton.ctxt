@@ -1,12 +1,16 @@
 #BlueJ class context
 comment0.target=FireBulletBonusButton
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ FireBulletBonusButton\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\n\ Write\ a\ description\ of\ class\ FireBulletBonusButton\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
 comment1.target=FireBulletBonusButton()
+comment1.text=\n\ Constructor\n
 comment2.params=
 comment2.target=void\ act()
+comment2.text=\n\ act\ method\n
 comment3.params=
 comment3.target=void\ keyPressed()
+comment3.text=\n\ check\ key\ press\n
 comment4.params=cmd
 comment4.target=void\ setCommand(IBonusCommand)
+comment4.text=\n\ cmd\:\ command\ to\ be\ mapped\ to\ invoker\n
 numComments=5

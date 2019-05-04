@@ -8,26 +8,32 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Firesplat extends Actor
 {
-        /**
+    
+    private int life = 5;
+    
+     /**
      * Act - do whatever the firesplat wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    private int life = 5;
     public void act() 
     {
-        // Add your action code here.
-       
         //Greenfoot.playSound("firesplat_sound.wav");
         life--;
         if(life == 0)
             remove();
     }   
     
+    /**
+     * remove object from world
+     */
     public void remove()
     {
         getWorld().removeObject(this);
     }
     
+    /**
+     * Constructor
+     */
     public Firesplat()
     {
         GreenfootImage img = getImage();

@@ -10,12 +10,12 @@ import java.util.ArrayList;
 public class Player extends Actor implements Observer
 {
     private boolean spaceDown;
-    private WeaponFactory currentWeaponFactory; // what is this doing????????
+    private WeaponFactory currentWeaponFactory; 
     int castleHealth;
     int enemyHealth;
     int Xcoord;
     int Ycoord;
-    ShootingStrategy currentShootingStrategy;
+    IShootingStrategy currentShootingStrategy;
     private FireBulletBonusButton fireBulletBonusButton;
     private DragonGlassBonusButton dragonGlassBonusButton;
     private DefaultBulletButton defaultBulletButton;
@@ -28,14 +28,15 @@ public class Player extends Actor implements Observer
      * Act - do whatever the Player wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    
     public void act() 
     {
         checkKeys();
         collectBonus();
     } 
     
-    
+    /**
+     * add message
+     */
     private void addMessage()
     {
         Text text2 = new Text("Start", Color.RED, "Perpetua");
@@ -44,6 +45,10 @@ public class Player extends Actor implements Observer
         getWorld().removeObject(text2);
         addMessage = true;
     }
+    
+    /**
+     * check keys
+     */
     public void checkKeys()
     {
         if("space".equals(Greenfoot.getKey()))
@@ -60,6 +65,9 @@ public class Player extends Actor implements Observer
         }
     }
     
+    /**
+     * shoot
+     */
     private void doshoot()
     {
         World world = getWorld();
@@ -73,7 +81,9 @@ public class Player extends Actor implements Observer
         currentShootingStrategy.shoot(world, currentWeaponFactory, Xcoord, Ycoord);
     }
     
-    
+    /**
+     * Constructor
+     */
     public Player()
     {
         weaponFactoryList = new ArrayList<WeaponFactory>();
@@ -83,12 +93,18 @@ public class Player extends Actor implements Observer
         castleHealth = 100;   
     }
     
+    /**
+     * update weapon strategy
+     */
     public void updateStrategy()
     {
         currentShootingStrategy = new DoubleWeaponStrategy();
     }
     
-   
+   /**
+    * castle: castle health
+    * enemy: enemy health
+    */
     public void update(int castle , int enemy)
     {
         if(castle!= -1)
@@ -100,6 +116,9 @@ public class Player extends Actor implements Observer
             
     }
     
+    /**
+     * collect bonus
+     */
      private void collectBonus(){
         Actor dragonGlassBonus = getOneIntersectingObject(DragonGlassBonus.class);
         Actor fireBonus = getOneIntersectingObject(FireBulletBonus.class);
@@ -118,17 +137,30 @@ public class Player extends Actor implements Observer
         
     }
     
+    /**
+     * set invoker
+     */
     public void setFireBulletMenuInvoker(FireBulletBonusButton bonusInvoker){
         fireBulletBonusButton = bonusInvoker;
     }
     
+    /**
+     * bonusInvoker: set invoker
+     */
     public void setDragonGlassMenuInvoker(DragonGlassBonusButton bonusInvoker){
         dragonGlassBonusButton = bonusInvoker;
     }
     
+    /**
+     * bonusInvoker: set invoker
+     */
     public void setDefaultBulletMenuInvoker(DefaultBulletButton bonusInvoker){
         defaultBulletButton = bonusInvoker;
     }
+    
+    /**
+     * wf: set weapon factory
+     */
     public void setCurrentWeaponFactory(WeaponFactory wf){
         currentWeaponFactory = wf;
     }

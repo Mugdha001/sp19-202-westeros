@@ -8,11 +8,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class EnemyRespawn extends Actor
 {
+    private int life = 10;
     /**
      * Act - do whatever the EnemyRespawn wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    private int life = 10;
     public void act() 
     {
         life--;
@@ -20,6 +20,9 @@ public class EnemyRespawn extends Actor
             remove(); 
     }  
     
+    /**
+     * Constructor
+     */
     public EnemyRespawn()
     {
         GreenfootImage img = getImage();
@@ -28,6 +31,9 @@ public class EnemyRespawn extends Actor
         Greenfoot.playSound("Respawn.mp3");
     }
     
+    /**
+     * remove object from world
+     */
     public void remove()
     {
         getWorld().removeObject(this);

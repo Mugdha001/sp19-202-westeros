@@ -14,23 +14,25 @@ public class HelpDisplay extends Actor
      */
     public void act() 
     {
-        // Add your action code here.
         displayHelp();
         getWorld().addObject(new Button("Start") , 550,225);
         getWorld().addObject(new Button("Back") , 550,400);
     }
     
+    /**
+     * display Help instructions
+     */
     private void displayHelp()
     {
         String displayHelp = "NAVIGATE PLAYER: "+"\nPress Left/Right arrow keys\n\n"+"SHOOT: \n"
-           +"Press 'Space' to shoot\n"
-           +"Press 's' to activate Dragonglass\n"
-           +"Press 'a' to activate firebullets\n"
-           + "Press 'd' to switch back to default \nbullets\n\n"
+           +"-Press 'Space' to shoot\n"
+           +"-Press 's' to activate Dragonglass\nBonus\n"
+           +"-Press 'a' to activate Firebullets\nBonus\n"
+           + "-Press 'd' to switch back to \ndefault bullets\n\n"
            +"COLLECT COINS:\n"
-           +"Move Player over coins to \ncollect the coins";
+           +"Move Player over Bonus coins to \ncollect them";
        GreenfootImage img = new GreenfootImage(600,500);
-       img.setFont(new Font("Stensil", false, true,18));
+       img.setFont(new Font("Stensil", false, true,15));
        img.setColor(Color.RED);
        img.drawString(displayHelp ,40,230);
        setImage(img);

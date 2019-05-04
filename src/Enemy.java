@@ -12,17 +12,22 @@ public class Enemy extends Actor implements Subject
 {
     private int timebetweenshots = 0;
     private int enemySpeed = 1;
-    /**
-     * Act - do whatever the Enemy wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    
     int enemyHealth;
+    ArrayList<Observer> obs = new ArrayList<Observer>();
+    
+    /**
+     * Constructor parameterized
+     */
     public Enemy(int speed){
         enemySpeed = speed;
     }
     
-    ArrayList<Observer> obs = new ArrayList<Observer>();
+
+    
+    /**
+     * Act - do whatever the Enemy wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+     */
     public void act() 
     {
         
@@ -38,51 +43,73 @@ public class Enemy extends Actor implements Subject
         
     }  
     
-    
+    /**
+     * check edges
+     */
     public boolean atWorldEdge()
     {
         if(getX() < 100 || getX() > getWorld().getWidth() - 100){
-            //System.out.println("At right");
             return true;
         }
         else
             return false;
     }
     
+    /**
+     * shoot
+     */
     public void shoot()
     {
         IceBullet icebullet = new IceBullet();
         getWorld().addObject(icebullet, getX(), getY());
     }
     
+    /**
+     * Constructor
+     */
     public Enemy()
     {
         enemyHealth = 100;
     }
     
+    /**
+     * o: attach observer
+     */
     public void attach(Observer o)
     {
         obs.add(o);
     }
     
+    /**
+     * castleHealth: notify changes in castleHealth
+     * enemyHealth: notify changes in enemyHealth
+     */
     public void notifyObservers(int castleHealth, int enemyHealth )
     {
         for(Observer o : obs)
             o.update(-1,enemyHealth);
     }
 
-    
+    /**
+     * value: enemy health value
+     */
     public void setHealth(int value)
     {
         this.enemyHealth = value;
         notifyObservers(-1, this.enemyHealth);
     }
     
+    /**
+     * int: health value
+     */
     public int getHealth()
     {
         return enemyHealth;
     }
     
+    /**
+     * random movement of enemy
+     */
     public void randomMoveEnemy(){
          if (getX() <= getWorld().getWidth() -2 && getX()>100) {
          setLocation(getX() - 2, getY());

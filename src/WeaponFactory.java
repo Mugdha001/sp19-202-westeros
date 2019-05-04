@@ -6,8 +6,7 @@
  */
 public abstract class WeaponFactory  
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    
 
     /**
      * Constructor for objects of class WeaponFactory
@@ -17,5 +16,8 @@ public abstract class WeaponFactory
         
     }
 
+    /**
+     * Weapon: get weapon
+     */
     public abstract Weapon getWeapon() ;
 }
