@@ -29,7 +29,8 @@ We identified the following patterns and integrated them into the game -
 
 ### Burndown Map
 
-### Project Dashboard
+### Project Dashboard  
+https://github.com/nguyensjsu/sp19-202-westeros/projects/1
 
 ### Individual Contributions
 #### 1. Nikhil Limaye
