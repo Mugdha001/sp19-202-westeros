@@ -67,17 +67,17 @@ https://github.com/nguyensjsu/sp19-202-westeros/projects/1
 
 #### 3. Mugdha Wadikar
  - Actively participated in game brainstorming, design and development 
- - Creation of user stories, their distribution and documentation.
- - Design of background screens, enemy and player movements. 
- - Created background screens and custom images for the game.
+ - Creation of user stories, their distribution and documentation
+ - Design of background screens, enemy and player movements.
+ - Created background screens and custom images for the game
  - Player movement and navigation
- - Design and coding of the Factory Method pattern to create weapon factories.
- - Implemented level design and development for level 1, 2 and 3. 
+ - Design and coding of the Factory Method pattern to create weapon factories
+ - Implemented level design and development for level 1, 2 and 3
  - UML Class Diagram for the Factory Method Pattern
  - Use Case Overview Diagram
  - Use Case Specifications document pertaining to individual feature stories
  - User stories completed
-   1. As a player I should be able to fire the bullet I chose whenever I press the space key
+   1. As a player I should be able to fire the bullet I chose whenever I press the space key.
    2. As a player, I should be able to navigate left-right on the screen.
    3. As a player, I should see randomized enemy movement on screen.
  - Technical user story - Setting up Factory Method Pattern to create weapon factories: Fire Bullet, Ice Bullet, Player Bullet, Dragon Glass Bullet.
