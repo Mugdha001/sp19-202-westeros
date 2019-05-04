@@ -58,7 +58,7 @@ https://github.com/nguyensjsu/sp19-202-westeros/projects/1
 - Created Sequence diagram for use case: Collect Bonus coins and use them.
 - Contributed to creating the power point presentation for the final demo.
 - Implemented Mediator pattern to decouple actors and world classes.
-- Implemented Command pattern for providing a Bonus/ Weapon menu to the player. Based on the keyboard keys pressed by the player, menu options of defult bullets, fire bullets and dragon glass daggers are selected and the player uses the updated weapon factory to continue firing.
+- Implemented Command pattern for providing a Bonus/ Weapon menu to the player. Based on the keyboard keys pressed by the player, menu options of default bullets, fire bullets and dragon glass daggers are selected and the player uses the updated weapon factory to continue firing.
 - Implemented Prototype pattern to simplify creation of tree objects based on their size.
 - Created UML class diagrams for the implemented patterns(Mediator, Command, Prototype).
 - Created custom images for various actors like DragonGlassBonus, FireBulletBonus, Castle etc.
