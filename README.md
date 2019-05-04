@@ -1,13 +1,4 @@
 
-*Please do the following:*
-
-1. Edit this readme file first
-
-2. Read './document/README.md' for instructions about team repo submissions.
-
-
-# Team Project Repo 
-
 ## Team Name- Westeros
 
 ## Team Members
@@ -76,6 +67,8 @@ We identified the following patterns and integrated them into the game -
 #### 3. Mugdha Wadikar
 #### 4. Mrunali Khandat
 
+### Link to Promo Video  
+https://www.youtube.com/watch?v=-KmXbH8_Xe4 
 
 ### Individual Scrum Journals
 Mrunali Sanjay Khandat - https://github.com/nguyensjsu/sp19-202-westeros/blob/master/MrunaliKhandat-Journal.MD  
