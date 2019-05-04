@@ -20,7 +20,7 @@ We identified the following patterns and integrated them into the game -
 2. Observer  - To notify the scoreboard according to hits on the enemy and the castle. Bonus coins also appear based on changes in castle health.  
 3. Command  - To implement Bonus Menu with options- keys a, s, d for corresponding weapons/ bonuses (Default Bullet, DragonGlass, Fire Bullet).  
 4. Strategy  - To implement change in attack strategy of the player (Single and Double strength bullets) depending on castle health.
-5. Mediator  - Decoupling of the World Object with Actor objects to have loose coupling betweeen them.
+5. Mediator  - Decoupling of the World Object with Actor objects to have loose coupling between them.
 6. Prototype - Cloning objects - here, trees in the game are cloned as per the type specified by the client(MyWorld), and not create brand new objects.
 
 ## Project Progress
