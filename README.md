@@ -81,7 +81,7 @@ https://github.com/nguyensjsu/sp19-202-westeros/projects/1
    2. As a player, I should be able to navigate left-right on the screen.
    3. As a player, I should see randomized enemy movement on screen.
  - Technical user story - Setting up Factory Method Pattern to create weapon factories: Fire Bullet, Ice Bullet, Player Bullet, Dragon Glass Bullet.
- - As a champion of the XP value "Courage", I suggested various improvements to keep the code game dynamic. This included introducing enemy movement, dragon movement and adding extra elements to screen to make the game more exciting to play. Revamping the initial screen to make the game more fun.
+ - As a champion of the XP value "Courage", I suggested various improvements to keep the game dynamic. This included introducing enemy movement, dragon movement and adding extra elements to screen to make the game more exciting to play. I also revamped the initial screen to make the game more fun.
  
 
 
