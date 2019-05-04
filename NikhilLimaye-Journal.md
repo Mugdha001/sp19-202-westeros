@@ -3,7 +3,7 @@
 ## Week 1: 4/9 - 4/15:
 ### What tasks did I work on / complete?
 
- . Feedback for code clean up and other technical priorties
+ - Feedback for code clean up and other technical priorties
  - Implemented a full fledged startup screen - All objects involved
  - Implemented Observer pattern for regular updation of the scoreboard
  - Brainstorming sessions to finalize the following - 
@@ -14,8 +14,8 @@
 
 ### What am I planning to work on next?
  - User story implementation - Enemy should fire at random times in random directions
- - Level transitions code base 
- - 
+ - Level transitions code base
+ - End to end testing of workflows
 
 ### What tasks are blocked waiting on another team member?
  - None
