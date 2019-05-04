@@ -12,7 +12,7 @@
  -  Brainstormed on design patterns to be used
  
 I chose "Courage" and as a part of this XP value, I made certain suggestions:
-Took a step to implement a shooting strategy game that monitors health of castle rather than monitoring health of the player as opposed to general notion of monitoring player health. Also, took a step to keep enemy movement dynamic to mke the game more interesting to play.
+Took a step to implement a shooting strategy game that monitors health of castle rather than monitoring health of the player as opposed to general notion of monitoring player health. Also, took a step to keep enemy movement dynamic to make the game more interesting to play.
 
 ### What am I planning to work on next?
  -  User story implementation - Enemy should move randomly

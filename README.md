@@ -66,6 +66,25 @@ https://github.com/nguyensjsu/sp19-202-westeros/projects/1
 - Championed the "Feedback" value of XP. Throughtout the game's implementation, I was responsible for encouraging team members to focus on the decided features and closely monitoring the progress of every weekly iteration. I ensured that every feature was demonstrated early, that any change/correction suggested to those features was made in time and that the entire project was delivered in a timely manner.
 
 #### 3. Mugdha Wadikar
+ - Actively participated in game brainstorming, design and development 
+ - Creation of user stories, their distribution and documentation.
+ - Design of background screens, enemy and player movements. 
+ - Created background screens and custom images for the game.
+ - Player movement and navigation
+ - Design and coding of the Factory Method pattern to create weapon factories.
+ - Implemented level design and development for level 1, 2 and 3. 
+ - UML Class Diagram for the Factory Method Pattern
+ - Use Case Overview Diagram
+ - Use Case Specifications document pertaining to individual feature stories
+ - User stories completed
+   1. As a player I should be able to fire the bullet I chose whenever I press the space key
+   2. As a player, I should be able to navigate left-right on the screen.
+   3. As a player, I should see randomized enemy movement on screen.
+ - Technical user story - Setting up Factory Method Pattern to create weapon factories: Fire Bullet, Ice Bullet, Player Bullet, Dragon Glass Bullet.
+ - As a champion of the XP value "Courage", I suggested various improvements to keep the code game dynamic. This included introducing enemy movement, dragon movement and adding extra elements to screen to make the game more exciting to play. Revamping the initial screen to make the game more fun.
+ 
+
+
 #### 4. Mrunali Khandat
 
 ### Link to Promo Video  
