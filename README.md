@@ -18,8 +18,8 @@
 * [Nikhil Limaye](https://github.com/NikhilLimaye/)
 
 ## Game: Battle of Winterfell
-The game is inspired by the TV show Game of Thrones. 
-Jon Snow (Player) is the protector of the castle. He fights the white walkers (Enemy) and wants to protect his home. In this game, the health of castle decreases in proportion to the bullets hit. Jon absorbs the ice bullets, fired by the enemy, to protect the castle. He keeps navigating around the castle until all white walkers are killed. He fires his own bullets at the white walkers to defeat them. The player On finishing one level, he moves to the next level. In level 2 and 3, gameplay remains similar with the difficulty level increases where number of white walkers to kill increases along with the speed of their bullets. Finishing level 3 completes the game and Jon wins. Score is updated based on the number of bullet hits on the castle and the number of white walkers killed by the player. The player loses the game when castle's health drops down to 0.
+The game is inspired by the TV show "Game of Thrones". 
+Jon Snow (Player) is the protector of the castle. He fights the white walkers (Enemy) and wants to protect his home. In this game, the health of castle decreases in proportion to the bullets hit. Jon absorbs the ice bullets, fired by the enemy, to protect the castle. He keeps navigating around the castle until all white walkers are killed. He fires his own bullets at the white walkers to defeat them. The player can fire 3 different types of weapons- default bullets, fire bullets (acquired after collecting Fire Bullet Bonus) and dragon glass daggers (acquired after collecting Dragon Glass Bonus). These Bonus Coins appear at a particular stage in the game - Fire Bullet Bonus coin appears when castle health drops below 60 and Dragon Glass Bonus coin appears when it drops below 40. On finishing one level, he moves to the next level. In level 2 and 3, gameplay remains similar with the difficulty level increases where number of white walkers to kill increases along with the speed of their bullets. Finishing level 3 completes the game and Jon wins. Score is updated based on the number of bullet hits on the castle and the number of white walkers killed by the player. The player loses the game when castle's health drops down to 0.
 
 ## Project Description
 The entire game has been developed in Greenfoot 3.5.3. All coding done from scratch with no existing frameworks. 
@@ -58,21 +58,23 @@ We identified the following patterns and integrated them into the game -
 
 
 #### 2. Jai Chhatre
-- developed idea
-- Significantly contributed to class design
-- collect bonus
-- displayed bonus menu
-- created custom images
-- refactored code, created api documentation(Java Docs)
-- contributed to power point presentation
-- contributed 
-- implemented Mediator pattern:
-- implemented Command pattern:
-- implemented Prototype pattern:
-- UML diagrams for Command, Mediator, Prototype
-- "Feedback" : 
-3. Mugdha Wadikar
-4. Mrunali Khandat
+- Participated in early discussions to decide the idea behind the game. Contributed to designing the game features.
+- Significantly contributed in finalizing class design and creating a class diagram for the entire project.
+- Participated in creation of user stories, their distribution and documentation.
+- Implemented feature where the player can move and collect the bonus coins. After collecting the bonus coins, they should disappear.
+- Implemented feature where the collected bonuses and available weapon options are displayed as a "Bonus/ Weapon Menu".
+- Created Sequence diagram for use case: Collect Bonus coins and use them.
+- Contributed to creating the power point presentation for the final demo.
+- Implemented Mediator pattern to decouple actors and world classes.
+- Implemented Command pattern for providing a Bonus/ Weapon menu to the player. Based on the keyboard keys pressed by the player, menu options of defult bullets, fire bullets and dragon glass daggers are selected and the player uses the updated weapon factory to continue firing.
+- Implemented Prototype pattern to simplify creation of tree objects based on their size.
+- Created UML class diagrams for the implemented patterns(Mediator, Command, Prototype).
+- Created custom images for various actors like DragonGlassBonus, FireBulletBonus, Castle etc.
+- Refactored code extensively, added API documentation and helpful comments for the entire code base.
+- Championed the "Feedback" value of XP. Throughtout the game's implementation, I was responsible for encouraging team members to focus on the decided features and closely monitoring the progress of every weekly iteration. I ensured that every feature was demonstrated early, that any change/correction suggested to those features was made in time and that the entire project was delivered in a timely manner.
+
+#### 3. Mugdha Wadikar
+#### 4. Mrunali Khandat
 
 
 ### Individual Scrum Journals
