@@ -75,4 +75,4 @@ https://www.youtube.com/watch?v=-KmXbH8_Xe4
 Mrunali Sanjay Khandat - https://github.com/nguyensjsu/sp19-202-westeros/blob/master/MrunaliKhandat-Journal.MD  
 Nikhil Limaye - https://github.com/nguyensjsu/sp19-202-westeros/blob/master/NikhilLimaye-Journal.md  
 Mugdha Wadikar - https://github.com/nguyensjsu/sp19-202-westeros/blob/master/MugdhaWadikar-Journal.md  
-Jai Chattre - https://github.com/nguyensjsu/sp19-202-westeros/blob/master/JaiChhatre.md  
+Jai Chhatre - https://github.com/nguyensjsu/sp19-202-westeros/blob/master/JaiChhatre.md  
