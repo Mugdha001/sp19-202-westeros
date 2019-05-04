@@ -36,14 +36,30 @@
 ## Week 3: 4/23 - 4/29:
 ### What tasks did I work on / complete?
 
-- Improvised shooting method such that shooting strategy updates for any chosen weapon    
+- Improvised shooting method in strategy pattern implemented   
 - Changed castle image  
 - Changed background image of the sky     
 
 ### What am I planning to work on next?
-	    
+	Add movements to clouds  
+	Add Help page
 
 ### What tasks are blocked waiting on another team member?
-    None
+    Waiting for startup screen
+	
+## Week 4: 4/23 - 4/29:
+### What tasks did I work on / complete?
+
+- Brainstorming on level three  
+- Created Help page for 'Help' option   
+- Sequence Diagram for Strategy pattern
+- Activity Diagram  
+  
+
+### What am I planning to work on next?
+	- End of Sprint  
+
+### What tasks are blocked waiting on another team member?
+    - None
 	
 	
