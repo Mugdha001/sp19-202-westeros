@@ -10,6 +10,7 @@ public class DragonGlass extends Weapon
 {   
     private boolean spaceDown;
     private int strength=10 ;
+    
     /**
      * Act - do whatever the DragonGlass wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -20,9 +21,16 @@ public class DragonGlass extends Weapon
         remove();
     }  
     
+    /**
+     * Constructor
+     */
     public void DragonGlass(){
         Greenfoot.playSound("PlayerShoot.mp3");
     }
+    
+    /**
+     * remove method
+     */
     public void remove(){
         Actor enemy = getOneIntersectingObject(Enemy.class);
         Actor icebullet = getOneIntersectingObject(IceBullet.class);
@@ -47,6 +55,9 @@ public class DragonGlass extends Weapon
         }
     }
     
+    /**
+     * distance: distance to move
+     */
      public void move(double distance)
     {
         double angle = Math.toRadians( getRotation() ) + 1.5708 ;
@@ -56,6 +67,9 @@ public class DragonGlass extends Weapon
         setLocation(x, y);
     }
     
+    /**
+     * get strength
+     */
     public int getStrength(){
         return strength ;
     }

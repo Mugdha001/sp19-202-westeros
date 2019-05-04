@@ -6,10 +6,11 @@
  */
 public class DragonGlassFactory extends WeaponFactory
 {
-    
+    /**
+     * Weapon: get weapon
+     */
     public Weapon getWeapon()
     {
-        // put your code here
         return new DragonGlass() ;
     }
 }
