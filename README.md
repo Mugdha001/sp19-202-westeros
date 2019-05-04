@@ -90,6 +90,7 @@ https://github.com/nguyensjsu/sp19-202-westeros/projects/1
 - Discussed and decided for functionalities of the games and design patterns that can be used to implement the functionalities  
 - Contributed to the discussions involving design of class diagram  
 - Created UI wireframes for the project  
+- Created Activity Diagram for the project  
 - Improved on UI by adding new castle images, tried adding moving clouds, changing background    
 - Contributed to getting perfect images for the UI, converting them to 2-D objects  
 - Design and Development of Strategy Pattern  
@@ -99,7 +100,7 @@ https://github.com/nguyensjsu/sp19-202-westeros/projects/1
 - As a champion of 'Communication' XP value, I encouraged my teammates to ask questions whenever in doubt. Apart from that, we had a chat everyday regarding the status of assigned tasks. Due to communication, major blockers were avoided. I also encouraged my teammates to ask as many questions as they can for other teammates' work; like a customer. This helped us understand our product from the perspective of end users.  
 - User stories implemented-
 1. As a player, if my bullet hits the enemy, it should explode and then vanish; if the bullet does not hit any obstacle, it should vanish from game screen  
-2. Setting up of Strategy Pattern - to set a new bullet shooting strategy based on castle health  
+2. Setting up of Strategy Pattern - to set a new bullet shooting strategy based on castle health, when castle health goes down to 50 %    
   
     
 ### Link to Promo Video  
