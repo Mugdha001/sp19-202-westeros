@@ -18,8 +18,6 @@ public class PineTree extends Tree
           type = t;
           size = s;
           setSize();
-          
-          System.out.println("Pine tree size " + size + " created");
       }
       
       /**

@@ -51,7 +51,7 @@ public class MyWorld extends World
     public MyWorld(int level)
     {    
         super(750,570,1); 
-        //backgroundMusic.playLoop();
+        backgroundMusic.playLoop();
         currentLevel = level;
         prepare();
     }

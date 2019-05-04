@@ -20,9 +20,8 @@ We identified the following patterns and integrated them into the game -
 2. Observer  - To notify the scoreboard according to hits on the enemy and the castle. Bonus coins also appear based on changes in castle health.  
 3. Command  - To implement Bonus Menu with options- keys a, s, d for corresponding weapons/ bonuses (Default Bullet, DragonGlass, Fire Bullet).  
 4. Strategy  - To implement change in attack strategy of the player (Single and Double strength bullets) depending on castle health.
-5. Mediator  - Decoupling of the World Object with Actor objects to have loose coupling betweeen them.
+5. Mediator  - Decoupling of the World Object with Actor objects to have loose coupling between them.
 6. Prototype - Cloning objects - here, trees in the game are cloned as per the type specified by the client(MyWorld), and not create brand new objects.
-
 
 ## Project Progress
 [Task board](https://docs.google.com/spreadsheets/d/1DSEwbavSd_8pse69NMivcuutHHYLBUjinzsDAwG56OA/edit?usp=sharing)
@@ -65,6 +64,7 @@ https://github.com/nguyensjsu/sp19-202-westeros/projects/1
 - Refactored code extensively, added API documentation and helpful comments for the entire code base.
 - Championed the **"Feedback"** value of XP. Throughtout the game's implementation, I was responsible for encouraging team members to focus on the decided features and closely monitoring the progress of every weekly iteration. I ensured that every feature was demonstrated early, that any change/correction suggested to those features was made in time and that the entire project was delivered in a timely manner.
 
+
 #### 3. Mugdha Wadikar
  - Actively participated in game brainstorming, design and development 
  - Creation of user stories, their distribution and documentation
@@ -84,7 +84,6 @@ https://github.com/nguyensjsu/sp19-202-westeros/projects/1
  - As a champion of the XP value **"Courage"**, I suggested various improvements to keep the game dynamic. This included introducing enemy movement, dragon movement and adding extra elements to screen to make the game more exciting to play. I also revamped the initial screen to make the game more fun.
  
 
-
 #### 4. Mrunali Khandat
 - Brainstormed to come up with project ideas  
 - Discussed and decided for functionalities of the games and design patterns that can be used to implement the functionalities  
@@ -101,6 +100,9 @@ https://github.com/nguyensjsu/sp19-202-westeros/projects/1
 1. As a player, if my bullet hits the enemy, it should explode and then vanish; if the bullet does not hit any obstacle, it should vanish from game screen  
 2. Setting up of Strategy Pattern - to set a new bullet shooting strategy based on castle health  
   
+### Overall Class Diagram
+https://github.com/nguyensjsu/sp19-202-westeros/blob/master/docs/UML%20Diagrams/Class%20Diagram_Overall.png
+
 ### Use cases: 
 https://github.com/nguyensjsu/sp19-202-westeros/blob/master/docs/Use%20Case%20Specification.pdf
 
