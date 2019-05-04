@@ -37,9 +37,9 @@ https://github.com/nguyensjsu/sp19-202-westeros/projects/1
  - Created UI mockups for the same.
  - Contributed to designing different levels of the game
  - Coded transition of the game using transition screens
- - As a champion of the XP value "Simplicity", I suggested various improvements to keep the code clean and simple. Improvements that 
+ - As a champion of the XP value **"Simplicity"**, I suggested various improvements to keep the code clean and simple. Improvements that 
    would help us maintain the code better and easier to extend
- - Design and coding of the Observer pattern to handle the ScoreBoard actor. 
+ - Design and coding of the **Observer pattern** to handle the ScoreBoard actor. 
  - UML Diagrams for the Observer Pattern
  - Created the 1 minute promo video for the game
  - User stories completed
@@ -57,13 +57,13 @@ https://github.com/nguyensjsu/sp19-202-westeros/projects/1
 - Implemented feature where the collected bonuses and available weapon options are displayed as a "Bonus/ Weapon Menu".
 - Created Sequence diagram for use case: Collect Bonus coins and use them.
 - Contributed to creating the power point presentation for the final demo.
-- Implemented Mediator pattern to decouple actors and world classes.
-- Implemented Command pattern for providing a Bonus/ Weapon menu to the player. Based on the keyboard keys pressed by the player, menu options of default bullets, fire bullets and dragon glass daggers are selected and the player uses the updated weapon factory to continue firing.
-- Implemented Prototype pattern to simplify creation of tree objects based on their size.
+- Implemented **Mediator pattern** to decouple actors and world classes.
+- Implemented **Command pattern** for providing a Bonus/ Weapon menu to the player. Based on the keyboard keys pressed by the player, menu options of default bullets, fire bullets and dragon glass daggers are selected and the player uses the updated weapon factory to continue firing.
+- Implemented **Prototype pattern** to simplify creation of tree objects based on their size.
 - Created UML class diagrams for the implemented patterns(Mediator, Command, Prototype).
 - Created custom images for various actors like DragonGlassBonus, FireBulletBonus, Castle etc.
 - Refactored code extensively, added API documentation and helpful comments for the entire code base.
-- Championed the "Feedback" value of XP. Throughtout the game's implementation, I was responsible for encouraging team members to focus on the decided features and closely monitoring the progress of every weekly iteration. I ensured that every feature was demonstrated early, that any change/correction suggested to those features was made in time and that the entire project was delivered in a timely manner.
+- Championed the **"Feedback"** value of XP. Throughtout the game's implementation, I was responsible for encouraging team members to focus on the decided features and closely monitoring the progress of every weekly iteration. I ensured that every feature was demonstrated early, that any change/correction suggested to those features was made in time and that the entire project was delivered in a timely manner.
 
 #### 3. Mugdha Wadikar
  - Actively participated in game brainstorming, design and development 
@@ -71,7 +71,7 @@ https://github.com/nguyensjsu/sp19-202-westeros/projects/1
  - Design of background screens, enemy and player movements.
  - Created background screens and custom images for the game
  - Player movement and navigation
- - Design and coding of the Factory Method pattern to create weapon factories
+ - Design and coding of the **Factory Method pattern** to create weapon factories
  - Implemented level design and development for level 1, 2 and 3
  - UML Class Diagram for the Factory Method Pattern
  - Use Case Overview Diagram
@@ -81,7 +81,7 @@ https://github.com/nguyensjsu/sp19-202-westeros/projects/1
    2. As a player, I should be able to navigate left-right on the screen.
    3. As a player, I should see randomized enemy movement on screen.
  - Technical user story - Setting up Factory Method Pattern to create weapon factories: Fire Bullet, Ice Bullet, Player Bullet, Dragon Glass Bullet.
- - As a champion of the XP value "Courage", I suggested various improvements to keep the game dynamic. This included introducing enemy movement, dragon movement and adding extra elements to screen to make the game more exciting to play. I also revamped the initial screen to make the game more fun.
+ - As a champion of the XP value **"Courage"**, I suggested various improvements to keep the game dynamic. This included introducing enemy movement, dragon movement and adding extra elements to screen to make the game more exciting to play. I also revamped the initial screen to make the game more fun.
  
 
 
@@ -92,11 +92,11 @@ https://github.com/nguyensjsu/sp19-202-westeros/projects/1
 - Created UI wireframes for the project  
 - Improved on UI by adding new castle images, tried adding moving clouds, changing background    
 - Contributed to getting perfect images for the UI, converting them to 2-D objects  
-- Design and Development of Strategy Pattern  
+- Design and Development of **Strategy Pattern**  
 - Created UML class diagram for Strategy Pattern  
 - Created Sequence diagram for Strategy Pattern  
 - Created 'Help' page in startup screen  
-- As a champion of 'Communication' XP value, I encouraged my teammates to ask questions whenever in doubt. Apart from that, we had a chat everyday regarding the status of assigned tasks. Due to communication, major blockers were avoided. I also encouraged my teammates to ask as many questions as they can for other teammates' work; like a customer. This helped us understand our product from the perspective of end users.  
+- As a champion of **'Communication'** XP value, I encouraged my teammates to ask questions whenever in doubt. Apart from that, we had a chat everyday regarding the status of assigned tasks. Due to communication, major blockers were avoided. I also encouraged my teammates to ask as many questions as they can for other teammates' work; like a customer. This helped us understand our product from the perspective of end users.  
 - User stories implemented-
 1. As a player, if my bullet hits the enemy, it should explode and then vanish; if the bullet does not hit any obstacle, it should vanish from game screen  
 2. Setting up of Strategy Pattern - to set a new bullet shooting strategy based on castle health  
