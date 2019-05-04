@@ -27,8 +27,6 @@ We identified the following patterns and integrated them into the game -
 ## Project Progress
 [Task board](https://docs.google.com/spreadsheets/d/1DSEwbavSd_8pse69NMivcuutHHYLBUjinzsDAwG56OA/edit?usp=sharing)
 
-### Burndown Map
-
 ### Project Dashboard  
 https://github.com/nguyensjsu/sp19-202-westeros/projects/1
 
@@ -103,7 +101,15 @@ https://github.com/nguyensjsu/sp19-202-westeros/projects/1
 1. As a player, if my bullet hits the enemy, it should explode and then vanish; if the bullet does not hit any obstacle, it should vanish from game screen  
 2. Setting up of Strategy Pattern - to set a new bullet shooting strategy based on castle health  
   
-    
+### Use cases: 
+https://github.com/nguyensjsu/sp19-202-westeros/blob/master/docs/Use%20Case%20Specification.pdf
+
+### Activity diagram
+https://github.com/nguyensjsu/sp19-202-westeros/blob/master/docs/UML%20Diagrams/Activity-Diagram.png
+
+### UI Mockups
+https://github.com/nguyensjsu/sp19-202-westeros/tree/master/mockups/UI%20Mockups
+  
 ### Link to Promo Video  
 https://www.youtube.com/watch?v=-KmXbH8_Xe4 
 
