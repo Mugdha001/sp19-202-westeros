@@ -1,6 +1,6 @@
 # Weekly Scrum Report:
 
-## Week 4: 4/9 - 4/15:
+## Week 1: 4/9 - 4/15:
 ### What tasks did I work on / complete?
 
 - Implemented normal bullet shooting for both player and enemy  
@@ -19,3 +19,31 @@
 
 ### What tasks are blocked waiting on another team member?
     None
+
+	
+## Week 2: 4/16 - 4/22:
+### What tasks did I work on / complete?
+
+- Implemented Strategy pattern based on observed health of castle  
+- Added elements like tree, clouds in the game screen   
+
+### What am I planning to work on next?
+	Improving visuals of the game, levels of the game    
+
+### What tasks are blocked waiting on another team member?
+    None
+
+## Week 3: 4/23 - 4/29:
+### What tasks did I work on / complete?
+
+- Improvised shooting method such that shooting strategy updates for any chosen weapon    
+- Changed castle image  
+- Changed background image of the sky     
+
+### What am I planning to work on next?
+	    
+
+### What tasks are blocked waiting on another team member?
+    None
+	
+	
